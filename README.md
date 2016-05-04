@@ -11,7 +11,7 @@
 
 
 ```php
-require_once 'CHMLib.php'; // You don't have this if you use Composer
+require_once 'CHMLib.php'; // You don't need this if you use Composer
 
 $chm = \CHMLib\CHM::fromFile('YourFile.chm');
 foreach ($chm->getEntries(\CHMLib\Entry::TYPE_FILE) as $entry) {
