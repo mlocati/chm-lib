@@ -153,11 +153,13 @@ class CHM
     /**
      * Get the entries contained in this CHM.
      *
-     * @param int $what
-     * @param callable $callback
+     * @param int|null $type One or more Entry::TYPE_... values (defaults to Entry::TYPE_FILE | Entry::TYPE_DIRECTORY if null).
      */
-    public function getEntries($type = Entry::TYPE_FILE | Entry::TYPE_DIRECTORY)
+    public function getEntries($type = null)
     {
+        if ($type === null) {
+            $type = Entry::TYPE_FILE | Entry::TYPE_DIRECTORY;
+        }
         $result = array();
         foreach ($this->entries as $entry) {
             if (($entry->getType() && $type) !== 0) {
