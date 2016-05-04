@@ -50,8 +50,10 @@ class ParseSampleFilesTest extends \PHPUnit_Framework_TestCase
     {
         $chm = $sampleData->getCHM();
         $foundFiles = array();
-        foreach ($chm->getEntries(Entry::TYPE_FILE) as $entry) {
-            $foundFiles[] = $entry->getPath();
+        foreach ($chm->getEntries(-1 & ~Entry::TYPE_DIRECTORY) as $entry) {
+            if (strpos($entry->getPath(), ':') === false) {
+                $foundFiles[] = $entry->getPath();
+            }
         }
         $extraFoundFiles = array_diff($foundFiles, $sampleData->getExtractedFiles());
         $this->assertEmpty($extraFoundFiles, 'Some extra files found');

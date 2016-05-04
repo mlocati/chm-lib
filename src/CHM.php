@@ -162,7 +162,7 @@ class CHM
         }
         $result = array();
         foreach ($this->entries as $entry) {
-            if (($entry->getType() && $type) !== 0) {
+            if (($entry->getType() & $type) !== 0) {
                 $result[] = $entry;
             }
         }
