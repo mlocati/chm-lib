@@ -97,7 +97,7 @@ class FileReader extends Reader
 
     /**
      * {@inheritdoc}
-     * 
+     *
      * @see Reader::getLength()
      */
     public function getLength()
@@ -107,7 +107,7 @@ class FileReader extends Reader
 
     /**
      * {@inheritdoc}
-     * 
+     *
      * @see Reader::readString()
      */
     public function readString($length)

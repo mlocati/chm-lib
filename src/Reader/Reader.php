@@ -19,9 +19,9 @@ abstract class Reader
     /**
      * Get the current position.
      *
-     * @return int
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return int
      */
     abstract public function getPosition();
 
@@ -37,9 +37,9 @@ abstract class Reader
      *
      * @param int $length The number of bytes to read.
      *
-     * @return string
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return string
      */
     abstract public function readString($length);
 
@@ -48,9 +48,9 @@ abstract class Reader
      *
      * @param int $length The number of bytes to read.
      *
-     * @return int[]
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return int[]
      */
     public function readBytes($length)
     {
@@ -74,9 +74,9 @@ abstract class Reader
     /**
      * Read a byte.
      *
-     * @return int
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return int
      */
     public function readByte()
     {
@@ -88,9 +88,9 @@ abstract class Reader
     /**
      * Read an unsigned 16-bit integer (little endian).
      *
-     * @return int
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return int
      */
     public function readUInt16()
     {
@@ -102,9 +102,9 @@ abstract class Reader
     /**
      * Read an unsigned 32-bit integer (little endian).
      *
-     * @return int
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return int
      */
     public function readUInt32()
     {
@@ -125,9 +125,9 @@ abstract class Reader
     /**
      * Read a signed 32-bit integer (little endian).
      *
-     * @return int
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return int
      */
     public function readInt32()
     {
@@ -147,9 +147,9 @@ abstract class Reader
     /**
      * Read an unsigned 64-bit integer (little endian).
      *
-     * @return int|float
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return int|float
      */
     public function readUInt64()
     {
@@ -184,9 +184,9 @@ abstract class Reader
     /**
      * Read a GUID.
      *
-     * @return string
-     *
      * @throws \Exception Throws an Exception in case of errors.
+     *
+     * @return string
      *
      * @example '{5D02926A-212E-11D0-9DF9-00A0C922E6EC}'
      */

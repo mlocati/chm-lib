@@ -39,9 +39,9 @@ abstract class Section
      * @param int $offset The position where the data starts (relative to the start of this section).
      * @param int $length The length of the (compressed) data.
      *
-     * @return string
-     *
      * @throws Exception Throws an Exception in case of errors.
+     *
+     * @return string
      */
     abstract public function getContents($offset, $length);
 }

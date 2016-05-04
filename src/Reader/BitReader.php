@@ -58,7 +58,7 @@ class BitReader extends StringReader
     /**
      * Make sure that there are at least $n (<=16) bits in the buffer.
      * If less than $n bits are there, read a 16-bit little-endian word from the byte array.
-     * 
+     *
      * @param int $n The minimum number of bits that should be available in the remaining bit buffer.
      *
      * @return int Return the number of remaining bits in the buffer.
@@ -134,9 +134,9 @@ class BitReader extends StringReader
      * @param int $offset The offset at which the data should be inserted.
      * @param int $length The number of bytes to read.
      *
-     * @return array Return the $buffer array with filled-in bytes.
-     *
      * @throws Exception Throws an Exception in case of errors.
+     *
+     * @return array Return the $buffer array with filled-in bytes.
      */
     public function readFully($buffer, $offset, $length)
     {

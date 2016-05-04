@@ -258,9 +258,9 @@ class Inflater
      * @param BitReader $reader The reader that provides the data.
      * @param int $numberOfBytes The number of decompressed bytes to retrieve.
      *
-     * @return string
-     *
      * @throws Exception Throws an Exception in case of errors.
+     *
+     * @return string
      */
     public function inflate($reset, BitReader $reader, $numberOfBytes)
     {

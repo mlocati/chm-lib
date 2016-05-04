@@ -185,9 +185,9 @@ class CHM
     /**
      * Retrieve the list of the entries contained in this CHM.
      *
-     * @return Entry[]
-     *
      * @throws Exception Throws an Exception in case of errors.
+     *
+     * @return Entry[]
      */
     protected function retrieveEntryList()
     {

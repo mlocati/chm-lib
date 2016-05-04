@@ -37,7 +37,7 @@ class PMGI extends Header
 
     /**
      * Get the length of the free space and/or the QuickRef area at the end of the directory chunk.
-     * 
+     *
      * @return int
      */
     public function getFreeSpace()

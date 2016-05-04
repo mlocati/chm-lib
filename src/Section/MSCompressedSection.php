@@ -99,7 +99,7 @@ class MSCompressedSection extends Section
             throw new Exception("Unsupported LZX Reset Table version: $resetTableVersion");
         }
         $addressTableSize = $resetTableReader->readUInt32();
-        /* Size of table entry (8) */ $resetTableReader->readUInt32(); 
+        /* Size of table entry (8) */ $resetTableReader->readUInt32();
         /* Header length (40) */ $resetTableReader->readUInt32();
         $this->uncompressedLength = $resetTableReader->readUInt64();
         $this->compressedLength = $resetTableReader->readUInt64();
@@ -160,8 +160,7 @@ class MSCompressedSection extends Section
                             $len = ($thisBlockNo + 1 < count($this->addressTable)) ?
                                 ($this->addressTable[$thisBlockNo + 1] - $this->addressTable[$thisBlockNo])
                                 :
-                                ($this->compressedLength - $this->addressTable[$thisBlockNo])
-                            ;
+                                ($this->compressedLength - $this->addressTable[$thisBlockNo]);
                             $reader->setPosition($this->sectionOffset + $this->addressTable[$thisBlockNo]);
                             $bitReader = new BitReader($reader->readString($len));
                             $cache[$i] = $inflater->inflate(

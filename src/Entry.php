@@ -200,9 +200,9 @@ class Entry
     /**
      * Get the contents of this entry.
      *
-     * @return string
-     *
      * @throws Exception Throws an Exception in case of errors.
+     *
+     * @return string
      */
     public function getContents()
     {

@@ -204,14 +204,14 @@ class Tree
         }
     }
 
-    /** 
+    /**
      * Decode a Huffman symbol from the bitstream using the stated table and return it.
      *
      * @param BitReader $reader The reader that provides the data.
      *
-     * @return int
-     *
      * @throws Exception Throws an Exception in case of errors.
+     *
+     * @return int
      */
     public function readHuffmanSymbol(BitReader $reader)
     {
@@ -232,7 +232,7 @@ class Tree
     }
 
     /**
-     * Clear the code lengths table. 
+     * Clear the code lengths table.
      */
     public function clear()
     {
