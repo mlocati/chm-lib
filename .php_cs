@@ -2,8 +2,6 @@
 
 return Symfony\CS\Config\Config::create()
     ->fixers(array(
-        // Don't touch class/file name
-        '-psr0',
         // Don't vertically align phpdoc tags
         '-phpdoc_params',
         // Allow 'return null'
@@ -11,7 +9,7 @@ return Symfony\CS\Config\Config::create()
     ))
     ->finder(
         Symfony\CS\Finder\DefaultFinder::create()
-            ->exclude(array('web/concrete/vendor'))
+            ->exclude(array('vendor'))
             ->in(__DIR__)
     )
 ;
