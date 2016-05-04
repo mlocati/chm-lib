@@ -216,7 +216,7 @@ abstract class Reader
     public function readCompressedUInt32()
     {
         $result = 0;
-        for (;;) {
+        for (; ;) {
             $result <<= 7;
             $byte = $this->readByte();
             if ($byte < 0x80) {
