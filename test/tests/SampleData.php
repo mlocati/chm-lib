@@ -192,8 +192,8 @@ class SampleData
                                 }
                                 throw $x;
                             }
-                            $instances[] = new static($chmFile, $extractedDirectory);
                         }
+                        $instances[] = new static($chmFile, $extractedDirectory);
                     }
                 }
             }
