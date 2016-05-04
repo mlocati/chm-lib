@@ -1,5 +1,7 @@
 /.settings/
 /test/samples/
 /tmp/
+/vendor/
 /.project
 /.buildpath
+/composer.lock
