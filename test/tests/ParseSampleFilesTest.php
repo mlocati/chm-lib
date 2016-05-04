@@ -30,7 +30,7 @@ class ParseSampleFilesTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('CHMLib\Entry', $entry);
         $expectedContent = file_get_contents($sampleData->getExtractedDirectory().'/'.$extractedFile);
         $extractedContent = $entry->getContents();
-        $this->assertSame($expectedContent, $extractedContent, "Wrong extracted content for file $extractedFile");
+        $this->assertSame($expectedContent, $extractedContent, "Wrong extracted content for file $extractedFile in archive {$sampleData->getCHMFile()}");
     }
 
     public function findAllFilesProvider()
