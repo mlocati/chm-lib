@@ -112,7 +112,7 @@ class MSCompressedSection extends Section
         if ($contentEntry === null) {
             throw new Exception("Missing required entry: '::DataSpace/Storage/MSCompressed/Content");
         }
-        if ($this->compressedLength !== $contentEntry->getLength()) {
+        if ($this->compressedLength > $contentEntry->getLength()) {
             throw new Exception("Compressed section size should be {$this->compressedLength}, but it's {$contentEntry->getLength()}");
         }
         $this->sectionOffset = $chm->getITSF()->getContentOffset() + $contentEntry->getOffset();
