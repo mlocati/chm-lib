@@ -3,6 +3,7 @@
 namespace CHMLib\Test;
 
 use CHMLib\CHM;
+use Exception;
 
 class SampleData
 {
@@ -165,15 +166,76 @@ class SampleData
                     $chmFile = $samplesDirectory.'/'.$f;
                     if (is_file($chmFile)) {
                         $extractedDirectory = substr($chmFile, 0, -4);
-                        if (is_dir($extractedDirectory)) {
+                        if (!is_dir($extractedDirectory)) {
+                            if (file_exists($extractedDirectory)) {
+                                continue;
+                            }
+                            if (@mkdir($extractedDirectory) === false) {
+                                throw new Exception("Failed to create directory $extractedDirectory");
+                            }
+                            try {
+                                $cmd = '7z';
+                                $cmd .= ' x';
+                                $cmd .= ' -o'.escapeshellarg(str_replace('/', DIRECTORY_SEPARATOR, $extractedDirectory));
+                                $cmd .= ' '.escapeshellarg(str_replace('/', DIRECTORY_SEPARATOR, $chmFile));
+                                $cmd .= ' 2>&1';
+                                $output = array();
+                                $rc = -1;
+                                @exec($cmd, $output, $rc);
+                                if ($rc !== 0) {
+                                    throw new Exception("Failed to decompress CHM file '$chmFile' with 7-zip: ".implode("\n", $output));
+                                }
+                            } catch (Exception $x) {
+                                try {
+                                    self::removeDirectory($extractedDirectory);
+                                } catch (Exception $foo) {
+                                }
+                                throw $x;
+                            }
                             $instances[] = new static($chmFile, $extractedDirectory);
                         }
                     }
                 }
             }
+            if (empty($instances)) {
+                throw new Exception('No sample CHM file found!');
+            }
             static::$instances = $instances;
         }
 
         return static::$instances;
+    }
+
+    /**
+     * Recursively delete a directory.
+     *
+     * @param string $path
+     */
+    private static function removeDirectory($path)
+    {
+        if (is_dir($path)) {
+            $items = @scandir($path);
+            if ($items === false) {
+                throw new Exception("Failed to list contents of directory $path");
+            }
+            foreach ($items as $item) {
+                switch ($item) {
+                    case '.':
+                    case '..':
+                        break;
+                    default:
+                        $full = "$path/$item";
+                        if (is_dir($full)) {
+                            self::removeDirectory($full);
+                        } elseif (@unlink($full) === false) {
+                            throw new Exception("Failed to delete file $full");
+                        }
+                        break;
+                }
+            }
+            if (@rmdir($path) === false) {
+                throw new Exception("Failed to delete directory $full");
+            }
+        }
     }
 }
