@@ -2,5 +2,5 @@
 /.* export-ignore
 /*.yml export-ignore
 /*.xml export-ignore
-/README.md
-/composer-travis-ci.json
+/README.md export-ignore
+/composer-travis-ci.json export-ignore
