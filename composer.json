@@ -8,6 +8,7 @@
         "extract",
         "decompress",
         "list",
+        "lzx"
     ],
     "homepage": "https://github.com/mlocati/chm-lib",
     "license": "MIT",
