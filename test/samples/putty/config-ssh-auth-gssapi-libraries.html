@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Preference order for GSSAPI libraries</title>
+<link rel="previous" href="config-ssh-auth-gssapi-delegation.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-tty.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-auth-gssapi-libraries"></a>4.22.2 Preference order for GSSAPI libraries</h1>
+<p>
+GSSAPI is a mechanism which allows more than one authentication method to be accessed through the same interface. Therefore, more than one authentication library may exist on your system which can be accessed using GSSAPI.
+</p>
+<p>
+PuTTY contains native support for a few well-known such libraries, and will look for all of them on your system and use whichever it finds. If more than one exists on your system and you need to use a specific one, you can adjust the order in which it will search using this preference list control.
+</p>
+<p>
+One of the options in the preference list is to use a user-specified GSSAPI library. If the library you want to use is not mentioned by name in PuTTY's list of options, you can enter its full pathname in the &#8216;User-supplied GSSAPI library path&#8217; field, and move the &#8216;User-supplied GSSAPI library&#8217; option in the preference list to make sure it is selected before anything else.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

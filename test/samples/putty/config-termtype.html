@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Terminal-type string&#8217;</title>
+<link rel="previous" href="config-username-from-env.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-termspeed.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-termtype"></a>4.14.3 &#8216;<a name="i0"></a>Terminal-type string&#8217;</h1>
+<p>
+Most servers you might connect to with PuTTY are designed to be connected to from lots of different types of terminal. In order to send the right <a name="i1"></a>control sequences to each one, the server will need to know what type of terminal it is dealing with. Therefore, each of the SSH, Telnet and Rlogin protocols allow a text string to be sent down the connection describing the terminal. On a <a name="i2"></a>Unix server, this selects an entry from the <a name="i3"></a><code>termcap</code> or <a name="i4"></a><code>terminfo</code> database that tells applications what <a name="i5"></a>control sequences to send to the terminal, and what character sequences to expect the <a name="i6"></a>keyboard to generate.
+</p>
+<p>
+PuTTY attempts to emulate the Unix <a name="i7"></a><code>xterm</code> program, and by default it reflects this by sending <code>xterm</code> as a terminal-type string. If you find this is not doing what you want - perhaps the remote system reports &#8216;Unknown terminal type&#8217; - you could try setting this to something different, such as <a name="i8"></a><code>vt220</code>.
+</p>
+<p>
+If you're not sure whether a problem is due to the terminal type setting or not, you probably need to consult the manual for your application or your server.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

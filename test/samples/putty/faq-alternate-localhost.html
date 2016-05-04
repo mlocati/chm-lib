@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Since I upgraded Windows XP to Service Pack 2, I can't use addresses like 127.0.0.2.</title>
+<link rel="previous" href="faq-screen.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-missing-slash.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-alternate-localhost"></a>A.7.20 Since I upgraded <a name="i0"></a>Windows XP to Service Pack 2, I can't use addresses like <code>127.0.0.2</code>.</h1>
+<p>
+Some people who ask PuTTY to listen on <a name="i1"></a>localhost addresses other than <code>127.0.0.1</code> to forward services such as <a name="i2"></a>SMB and <a name="i3"></a>Windows Terminal Services have found that doing so no longer works since they upgraded to WinXP SP2.
+</p>
+<p>
+This is apparently an issue with SP2 that is acknowledged by Microsoft in MS Knowledge Base article <a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;884020">884020</a>. The article links to a fix you can download.
+</p>
+<p>
+(<em>However</em>, we've been told that SP2 <em>also</em> fixes the bug that means you need to use non-<code>127.0.0.1</code> addresses to forward Terminal Services in the first place.)
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

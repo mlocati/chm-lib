@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Don't start a shell or command at all&#8217;</title>
+<link rel="previous" href="config-command.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-comp.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-noshell"></a>4.18.2 &#8216;Don't start a <a name="i0"></a>shell or <a name="i1"></a>command at all&#8217;</h1>
+<p>
+If you tick this box, PuTTY will not attempt to run a shell or command after connecting to the remote server. You might want to use this option if you are only using the SSH connection for <a name="i2"></a>port forwarding, and your user account on the server does not have the ability to run a shell.
+</p>
+<p>
+This feature is only available in <a name="i3"></a>SSH protocol version 2 (since the version 1 protocol assumes you will always want to run a shell).
+</p>
+<p>
+This feature can also be enabled using the <code>-N</code> command-line option; see <a href="using-cmdline-noshell.html#using-cmdline-noshell">section 3.8.3.13</a>.
+</p>
+<p>
+If you use this feature in Plink, you will not be able to terminate the Plink process by any graceful means; the only way to kill it will be by pressing Control-C or sending a kill signal from another program.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

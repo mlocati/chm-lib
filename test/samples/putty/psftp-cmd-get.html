@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The get command: fetch a file from the server</title>
+<link rel="previous" href="psftp-cmd-lcd.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-cmd-put.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-cmd-get"></a>6.2.9 The <code>get</code> command: fetch a file from the server</h1>
+<p>
+To <a name="i0"></a>download a file from the server and store it on your local PC, you use the <code>get</code> command.
+</p>
+<p>
+In its simplest form, you just use this with a file name:
+</p>
+<pre><code>get myfile.dat
+</code></pre>
+<p>
+If you want to store the file locally under a different name, specify the local file name after the remote one:
+</p>
+<pre><code>get myfile.dat newname.dat
+</code></pre>
+<p>
+This will fetch the file on the server called <code>myfile.dat</code>, but will save it to your local machine under the name <code>newname.dat</code>.
+</p>
+<p>
+To fetch an entire directory <a name="i1"></a>recursively, you can use the <code>-r</code> option:
+</p>
+<pre><code>get -r mydir
+get -r mydir newname
+</code></pre>
+<p>
+(If you want to fetch a file whose name starts with a hyphen, you may have to use the <code>--</code> special argument, which stops <code>get</code> from interpreting anything as a switch after it. For example, &#8216;<code>get -- -silly-name-</code>&#8217;.)
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

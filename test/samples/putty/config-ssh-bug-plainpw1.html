@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Refuses all SSH-1 password camouflage&#8217;</title>
+<link rel="previous" href="config-ssh-bug-ignore1.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-bug-rsa1.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-bug-plainpw1"></a>4.26.2 &#8216;Refuses all SSH-1 <a name="i0"></a>password camouflage&#8217;</h1>
+<p>
+When talking to an SSH-1 server which cannot deal with ignore messages (see <a href="config-ssh-bug-ignore1.html#config-ssh-bug-ignore1">section 4.26.1</a>), PuTTY will attempt to disguise the length of the user's password by sending additional padding <em>within</em> the password packet. This is technically a violation of the SSH-1 specification, and so PuTTY will only do it when it cannot use standards-compliant ignore messages as camouflage. In this sense, for a server to refuse to accept a padded password packet is not really a bug, but it does make life inconvenient if the server can also not handle ignore messages.
+</p>
+<p>
+If this &#8216;bug&#8217; is detected, PuTTY will assume that neither ignore messages nor padding are acceptable, and that it thus has no choice but to send the user's password with no form of camouflage, so that an eavesdropping user will be easily able to find out the exact length of the password. If this bug is enabled when talking to a correct server, the session will succeed, but will be more vulnerable to eavesdroppers than it could be.
+</p>
+<p>
+This is an SSH-1-specific bug. SSH-2 is secure against this type of attack.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

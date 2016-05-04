@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Controlling the window title</title>
+<link rel="previous" href="config-behaviour.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-warnonclose.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-title"></a>4.9.1 Controlling the <a name="i0"></a>window title</h1>
+<p>
+The &#8216;Window title&#8217; edit box allows you to set the title of the PuTTY window. By default the window title will contain the <a name="i1"></a>host name followed by &#8216;PuTTY&#8217;, for example <code>server1.example.com - PuTTY</code>. If you want a different window title, this is where to set it.
+</p>
+<p>
+PuTTY allows the server to send <code>xterm</code> <a name="i2"></a>control sequences which modify the title of the window in mid-session (unless this is disabled - see <a href="config-features-retitle.html#config-features-retitle">section 4.6.5</a>); the title string set here is therefore only the <em>initial</em> window title.
+</p>
+<p>
+As well as the <em>window</em> title, there is also an <code>xterm</code> sequence to modify the <a name="i3"></a>title of the window's <em>icon</em>. This makes sense in a windowing system where the window becomes an icon when minimised, such as Windows 3.1 or most X Window System setups; but in the Windows 95-like user interface it isn't as applicable.
+</p>
+<p>
+By default, PuTTY only uses the server-supplied <em>window</em> title, and ignores the icon title entirely. If for some reason you want to see both titles, check the box marked &#8216;Separate window and icon titles&#8217;. If you do this, PuTTY's window title and Taskbar <a name="i4"></a>caption will change into the server-supplied icon title if you <a name="i5"></a>minimise the PuTTY window, and change back to the server-supplied window title if you restore it. (If the server has not bothered to supply a window or icon title, none of this will happen.)
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

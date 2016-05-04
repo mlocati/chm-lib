@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>PSFTP transfers files much slower than PSCP.</title>
+<link rel="previous" href="faq-outofmem2.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-bce.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-psftp-slow"></a>A.7.7 PSFTP transfers files much slower than PSCP.</h1>
+<p>
+The throughput of PSFTP 0.54 should be much better than 0.53b and prior; we've added code to the SFTP backend to queue several blocks of data rather than waiting for an acknowledgement for each. (The SCP backend did not suffer from this performance issue because SCP is a much simpler protocol.)
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

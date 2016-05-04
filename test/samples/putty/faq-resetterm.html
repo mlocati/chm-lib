@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>When I change some terminal settings, nothing happens.</title>
+<link rel="previous" href="faq-bce.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-idleout.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-resetterm"></a>A.7.9 When I change some terminal settings, nothing happens.</h1>
+<p>
+Some of the terminal options (notably <a name="i0"></a>Auto Wrap and background-colour screen erase) actually represent the <em>default</em> setting, rather than the currently active setting. The server can send sequences that modify these options in mid-session, but when the terminal is reset (by server action, or by you choosing &#8216;Reset Terminal&#8217; from the System menu) the defaults are restored.
+</p>
+<p>
+In versions 0.53b and prior, if you change one of these options in the middle of a session, you will find that the change does not immediately take effect. It will only take effect once you reset the terminal.
+</p>
+<p>
+In version 0.54, the behaviour has changed - changes to these settings take effect immediately.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

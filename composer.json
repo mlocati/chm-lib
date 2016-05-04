@@ -1,0 +1,30 @@
+{
+    "name": "mlocati/chm-lib",
+    "type": "library",
+    "description": "Read CHM (Microsoft Compiled HTML Help) files",
+    "keywords": [
+        "chm",
+        "help",
+        "extract",
+        "decompress",
+        "list",
+    ],
+    "homepage": "https://github.com/mlocati/chm-lib",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michele Locati",
+            "homepage": "https://github.com/mlocati",
+            "email": "mlocati@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CHMLib\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3"
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Why do I see &#8216;Fatal: Protocol error: Expected control record&#8217; in PSCP?</title>
+<link rel="previous" href="faq-incorrect-mac.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-colours.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-pscp-protocol"></a>A.7.2 Why do I see &#8216;Fatal: Protocol error: Expected control record&#8217; in PSCP?</h1>
+<p>
+This happens because PSCP was expecting to see data from the server that was part of the PSCP protocol exchange, and instead it saw data that it couldn't make any sense of at all.
+</p>
+<p>
+This almost always happens because the <a name="i0"></a>startup scripts in your account on the server machine are generating output. This is impossible for PSCP, or any other SCP client, to work around. You should never use startup files (<code>.bashrc</code>, <code>.cshrc</code> and so on) which generate output in non-interactive sessions.
+</p>
+<p>
+This is not actually a PuTTY problem. If PSCP fails in this way, then all other SCP clients are likely to fail in exactly the same way. The problem is at the server end.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

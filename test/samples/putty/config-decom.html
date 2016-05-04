@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;DEC Origin Mode initially on&#8217;</title>
+<link rel="previous" href="config-autowrap.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-crlf.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-decom"></a>4.3.2 &#8216;DEC Origin Mode initially on&#8217;</h1>
+<p>
+<a name="i0"></a>DEC Origin Mode is a minor option which controls how PuTTY interprets cursor-position <a name="i1"></a>control sequences sent by the server.
+</p>
+<p>
+The server can send a control sequence that restricts the <a name="i2"></a>scrolling region of the display. For example, in an editor, the server might reserve a line at the top of the screen and a line at the bottom, and might send a control sequence that causes scrolling operations to affect only the remaining lines.
+</p>
+<p>
+With DEC Origin Mode on, <a name="i3"></a>cursor coordinates are counted from the top of the scrolling region. With it turned off, cursor coordinates are counted from the top of the whole screen regardless of the scrolling region.
+</p>
+<p>
+It is unlikely you would need to change this option, but if you find a full-screen application is displaying pieces of text in what looks like the wrong part of the screen, you could try turning DEC Origin Mode on to see whether that helps.
+</p>
+<p>
+DEC Origin Mode can be turned on and off by control sequences sent by the server. This configuration option controls the <em>default</em> state, which will be restored when you reset the terminal (see <a href="reset-terminal.html#reset-terminal">section 3.1.3.6</a>). However, if you modify this option in mid-session using &#8216;Change Settings&#8217;, it will take effect immediately.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

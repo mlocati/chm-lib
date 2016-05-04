@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Using Plink for interactive logins</title>
+<link rel="previous" href="plink-usage.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="plink-usage-batch.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="plink-usage-interactive"></a>7.2.1 Using Plink for interactive logins</h1>
+<p>
+To make a simple interactive connection to a remote server, just type <code>plink</code> and then the host name:
+</p>
+<pre><code>Z:\sysosd&gt;plink login.example.com
+
+Debian GNU/Linux 2.2 flunky.example.com
+flunky login:
+</code></pre>
+<p>
+You should then be able to log in as normal and run a session. The output sent by the server will be written straight to your command prompt window, which will most likely not interpret terminal <a name="i0"></a>control codes in the way the server expects it to. So if you run any full-screen applications, for example, you can expect to see strange characters appearing in your window. Interactive connections like this are not the main point of Plink.
+</p>
+<p>
+In order to connect with a different protocol, you can give the command line options <code>-ssh</code>, <code>-telnet</code>, <code>-rlogin</code> or <code>-raw</code>. To make an SSH connection, for example:
+</p>
+<pre><code>Z:\sysosd&gt;plink -ssh login.example.com
+login as:
+</code></pre>
+<p>
+If you have already set up a PuTTY saved session, then instead of supplying a host name, you can give the saved session name. This allows you to use public-key authentication, specify a user name, and use most of the other features of PuTTY:
+</p>
+<pre><code>Z:\sysosd&gt;plink my-ssh-session
+Sent username "fred"
+Authenticating with public key "fred@winbox"
+Last login: Thu Dec  6 19:25:33 2001 from :0.0
+fred@flunky:~$
+</code></pre>
+<p>
+(You can also use the <code>-load</code> command-line option to load a saved session; see <a href="using-cmdline-load.html#using-cmdline-load">section 3.8.3.1</a>. If you use <code>-load</code>, the saved session exists, and it specifies a hostname, you cannot also specify a <code>host</code> or <code>user@host</code> argument - it will be treated as part of the remote command.)
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

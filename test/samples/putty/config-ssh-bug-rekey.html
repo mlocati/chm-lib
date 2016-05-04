@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Handles SSH-2 key re-exchange badly&#8217;</title>
+<link rel="previous" href="config-ssh-bug-pksessid2.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-bug-maxpkt2.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-bug-rekey"></a>4.26.10 &#8216;Handles SSH-2 key re-exchange badly&#8217;</h1>
+<p>
+Some SSH servers cannot cope with <a name="i0"></a>repeat key exchange at all, and will ignore attempts by the client to start one. Since PuTTY pauses the session while performing a repeat key exchange, the effect of this would be to cause the session to hang after an hour (unless you have your rekey timeout set differently; see <a href="config-ssh-kex-rekey.html#config-ssh-kex-rekey">section 4.19.2</a> for more about rekeys). Other, very old, SSH servers handle repeat key exchange even more badly, and disconnect upon receiving a repeat key exchange request.
+</p>
+<p>
+If this bug is detected, PuTTY will never initiate a repeat key exchange. If this bug is enabled when talking to a correct server, the session should still function, but may be less secure than you would expect.
+</p>
+<p>
+This is an SSH-2-specific bug.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

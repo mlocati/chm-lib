@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>How can I use PuTTY to make an SSH connection from within another program?</title>
+<link rel="previous" href="faq-vb.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-details.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-ipc"></a>A.4.3 How can I use PuTTY to make an SSH connection from within another program?</h1>
+<p>
+Probably your best bet is to use Plink, the command-line connection tool. If you can start Plink as a second Windows process, and arrange for your primary process to be able to send data to the Plink process, and receive data from it, through pipes, then you should be able to make SSH connections from your program.
+</p>
+<p>
+This is what CVS for Windows does, for example.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

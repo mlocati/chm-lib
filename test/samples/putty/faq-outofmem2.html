@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>When attempting a file transfer, either PSCP or PSFTP says &#8216;Out of memory&#8217; and dies.</title>
+<link rel="previous" href="faq-outofmem.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-psftp-slow.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-outofmem2"></a>A.7.6 When attempting a file transfer, either PSCP or PSFTP says &#8216;<a name="i0"></a>Out of memory&#8217; and dies.</h1>
+<p>
+This is almost always caused by your <a name="i1"></a>login scripts on the server generating output. PSCP or PSFTP will receive that output when they were expecting to see the start of a file transfer protocol, and they will attempt to interpret the output as file-transfer protocol. This will usually lead to an &#8216;out of memory&#8217; error for much the same reasons as given in <a href="faq-outofmem.html#faq-outofmem">question A.7.5</a>.
+</p>
+<p>
+This is a setup problem in your account on your server, <em>not</em> a PSCP/PSFTP bug. Your login scripts should <em>never</em> generate output during non-interactive sessions; secure file transfer is not the only form of remote access that will break if they do.
+</p>
+<p>
+On Unix, a simple fix is to ensure that all the parts of your login script that might generate output are in <code>.profile</code> (if you use a Bourne shell derivative) or <code>.login</code> (if you use a C shell). Putting them in more general files such as <code>.bashrc</code> or <code>.cshrc</code> is liable to lead to problems.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

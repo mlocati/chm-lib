@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Answerback to ^E&#8217;</title>
+<link rel="previous" href="config-blink.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-localecho.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-answerback"></a>4.3.7 &#8216;<a name="i0"></a>Answerback to ^E&#8217;</h1>
+<p>
+This option controls what PuTTY will send back to the server if the server sends it the ^E <a name="i1"></a>enquiry character. Normally it just sends the string &#8216;PuTTY&#8217;.
+</p>
+<p>
+If you accidentally write the contents of a binary file to your terminal, you will probably find that it contains more than one ^E character, and as a result your next command line will probably read &#8216;PuTTYPuTTYPuTTY...&#8217; as if you had typed the answerback string multiple times at the keyboard. If you set the answerback string to be empty, this problem should go away, but doing so might cause other problems.
+</p>
+<p>
+Note that this is <em>not</em> the feature of PuTTY which the server will typically use to determine your terminal type. That feature is the &#8216;<a name="i2"></a>Terminal-type string&#8217; in the Connection panel; see <a href="config-termtype.html#config-termtype">section 4.14.3</a> for details.
+</p>
+<p>
+You can include control characters in the answerback string using <code>^C</code> notation. (Use <code>^~</code> to get a literal <code>^</code>.)
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

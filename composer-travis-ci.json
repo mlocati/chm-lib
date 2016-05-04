@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "CHMLib\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3",
+        "phpunit/phpunit": "4.6.10"
+    }
+}

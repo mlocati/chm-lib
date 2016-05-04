@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Server refused our public key&#8217; or &#8216;Key refused&#8217;</title>
+<link rel="previous" href="errors-cant-load-key.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="errors-access-denied.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="errors-refused"></a>10.8 &#8216;Server refused our public key&#8217; or &#8216;Key refused&#8217;</h1>
+<p>
+Various forms of this error are printed in the PuTTY window, or written to the PuTTY Event Log (see <a href="using-eventlog.html#using-eventlog">section 3.1.3.1</a>) when trying public-key authentication.
+</p>
+<p>
+If you see one of these messages, it means that PuTTY has sent a public key to the server and offered to authenticate with it, and the server has refused to accept authentication. This usually means that the server is not configured to accept this key to authenticate this user.
+</p>
+<p>
+This is almost certainly not a problem with PuTTY. If you see this type of message, the first thing you should do is check your <em>server</em> configuration carefully. Common errors include having the wrong permissions or ownership set on the public key or the user's home directory on the server. Also, read the PuTTY Event Log; the server may have sent diagnostic messages explaining exactly what problem it had with your setup.
+</p>
+<p>
+<a href="pubkey-gettingready.html#pubkey-gettingready">Section 8.3</a> has some hints on server-side public key setup.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

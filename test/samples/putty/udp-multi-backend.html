@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Multiple backends treated equally</title>
+<link rel="previous" href="udp-portability.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="udp-globals.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="udp-multi-backend"></a>D.2 Multiple backends treated equally</h1>
+<p>
+PuTTY is not an SSH client with some other stuff tacked on the side. PuTTY is a generic, multiple-backend, remote VT-terminal client which happens to support one backend which is larger, more popular and more useful than the rest. Any extra feature which can possibly be general across all backends should be so: localising features unnecessarily into the SSH back end is a design error. (For example, we had several code submissions for proxy support which worked by hacking <code>ssh.c</code>. Clearly this is completely wrong: the <code>network.h</code> abstraction is the place to put it, so that it will apply to all back ends equally, and indeed we eventually put it there after another contributor sent a better patch.)
+</p>
+<p>
+The rest of PuTTY should try to avoid knowing anything about specific back ends if at all possible. To support a feature which is only available in one network protocol, for example, the back end interface should be extended in a general manner such that <em>any</em> back end which is able to provide that feature can do so. If it so happens that only one back end actually does, that's just the way it is, but it shouldn't be relied upon by any code.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

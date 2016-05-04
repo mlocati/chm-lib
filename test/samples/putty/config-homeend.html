@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Changing the action of the Home and End keys</title>
+<link rel="previous" href="config-backspace.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-funkeys.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-homeend"></a>4.4.2 Changing the action of the <a name="i0"></a>Home and End keys</h1>
+<p>
+The Unix terminal emulator <a name="i1"></a><code>rxvt</code> disagrees with the rest of the world about what character sequences should be sent to the server by the Home and End keys.
+</p>
+<p>
+<a name="i2"></a><code>xterm</code>, and other terminals, send <code>ESC [1~</code> for the Home key, and <code>ESC [4~</code> for the End key. <code>rxvt</code> sends <code>ESC [H</code> for the Home key and <code>ESC [Ow</code> for the End key.
+</p>
+<p>
+If you find an application on which the Home and End keys aren't working, you could try switching this option to see if it helps.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

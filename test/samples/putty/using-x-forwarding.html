@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Using X11 forwarding in SSH</title>
+<link rel="previous" href="using-translation.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="using-port-forwarding.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="using-x-forwarding"></a>3.4 Using <a name="i0"></a>X11 forwarding in SSH</h1>
+<p>
+The SSH protocol has the ability to securely forward X Window System <a name="i1"></a>graphical applications over your encrypted SSH connection, so that you can run an application on the SSH server machine and have it put its windows up on your local machine without sending any X network traffic in the clear.
+</p>
+<p>
+In order to use this feature, you will need an X display server for your Windows machine, such as Cygwin/X, X-Win32, or Exceed. This will probably install itself as display number 0 on your local machine; if it doesn't, the manual for the <a name="i2"></a>X server should tell you what it does do.
+</p>
+<p>
+You should then tick the &#8216;Enable X11 forwarding&#8217; box in the X11 panel (see <a href="config-ssh-x11.html#config-ssh-x11">section 4.24</a>) before starting your SSH session. The <a name="i3"></a>&#8216;X display location&#8217; box is blank by default, which means that PuTTY will try to use a sensible default such as <code>:0</code>, which is the usual display location where your X server will be installed. If that needs changing, then change it.
+</p>
+<p>
+Now you should be able to log in to the SSH server as normal. To check that X forwarding has been successfully negotiated during connection startup, you can check the PuTTY Event Log (see <a href="using-eventlog.html#using-eventlog">section 3.1.3.1</a>). It should say something like this:
+</p>
+<pre><code>2001-12-05 17:22:01 Requesting X11 forwarding
+2001-12-05 17:22:02 X11 forwarding enabled
+</code></pre>
+<p>
+If the remote system is Unix or Unix-like, you should also be able to see that the <a name="i4"></a><code>DISPLAY</code> environment variable has been set to point at display 10 or above on the SSH server machine itself:
+</p>
+<pre><code>fred@unixbox:~$ echo $DISPLAY
+unixbox:10.0
+</code></pre>
+<p>
+If this works, you should then be able to run X applications in the remote session and have them display their windows on your PC.
+</p>
+<p>
+For more options relating to X11 forwarding, see <a href="config-ssh-x11.html#config-ssh-x11">section 4.24</a>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Why do I see &#8216;Incorrect MAC received on packet&#8217;?</title>
+<link rel="previous" href="faq-trouble.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-pscp-protocol.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-incorrect-mac"></a>A.7.1 Why do I see &#8216;Incorrect MAC received on packet&#8217;?</h1>
+<p>
+One possible cause of this that used to be common is a bug in old SSH-2 servers distributed by <code>ssh.com</code>. (This is not the only possible cause; see <a href="errors-crc.html#errors-crc">section 10.11</a> in the documentation.) Version 2.3.0 and below of their SSH-2 server constructs Message Authentication Codes in the wrong way, and expects the client to construct them in the same wrong way. PuTTY constructs the MACs correctly by default, and hence these old servers will fail to work with it.
+</p>
+<p>
+If you are using PuTTY version 0.52 or better, this should work automatically: PuTTY should detect the buggy servers from their version number announcement, and automatically start to construct its MACs in the same incorrect manner as they do, so it will be able to work with them.
+</p>
+<p>
+If you are using PuTTY version 0.51 or below, you can enable the workaround by going to the SSH panel and ticking the box labelled &#8216;Imitate SSH2 MAC bug&#8217;. It's possible that you might have to do this with 0.52 as well, if a buggy server exists that PuTTY doesn't know about.
+</p>
+<p>
+In this context MAC stands for <a name="i0"></a>Message Authentication Code. It's a cryptographic term, and it has nothing at all to do with Ethernet MAC (Media Access Control) addresses.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

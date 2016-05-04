@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Network error: Connection reset by peer&#8217;</title>
+<link rel="previous" href="errors-connaborted.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="errors-connrefused.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="errors-connreset"></a>10.15 &#8216;Network error: Connection reset by peer&#8217;</h1>
+<p>
+This error occurs when the machines at each end of a network connection lose track of the state of the connection between them. For example, you might see it if your SSH server crashes, and manages to reboot fully before you next attempt to send data to it.
+</p>
+<p>
+However, the most common reason to see this message is if you are connecting through a <a name="i0"></a>firewall or a <a name="i1"></a>NAT router which has timed the connection out. See <a href="faq-idleout.html#faq-idleout">question A.7.10</a> in the FAQ for more details. You may be able to improve the situation by using keepalives; see <a href="config-keepalive.html#config-keepalive">section 4.13.1</a> for details on this.
+</p>
+<p>
+Note that Windows can produce this error in some circumstances without seeing a connection reset from the server, for instance if the connection to the network is lost.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Enable TCP keepalives&#8217;</title>
+<link rel="previous" href="config-nodelay.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-address-family.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-tcp-keepalives"></a>4.13.3 &#8216;Enable <a name="i0"></a>TCP keepalives&#8217;</h1>
+<p>
+<em>NOTE:</em> TCP keepalives should not be confused with the application-level keepalives described in <a href="config-keepalive.html#config-keepalive">section 4.13.1</a>. If in doubt, you probably want application-level keepalives; TCP keepalives are provided for completeness.
+</p>
+<p>
+The idea of TCP keepalives is similar to application-level keepalives, and the same caveats apply. The main differences are:
+</p>
+<ul><li>
+TCP keepalives are available on <em>all</em> connection types, including Raw and Rlogin.
+</li>
+<li>
+The interval between TCP keepalives is usually much longer, typically two hours; this is set by the operating system, and cannot be configured within PuTTY.
+</li>
+<li>
+If the operating system does not receive a response to a keepalive, it may send out more in quick succession and terminate the connection if no response is received.
+</li>
+</ul>
+<p>
+TCP keepalives may be more useful for ensuring that <a name="i1"></a>half-open connections are terminated than for keeping a connection alive.
+</p>
+<p>
+TCP keepalives are disabled by default.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

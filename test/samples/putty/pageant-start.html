@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Getting started with Pageant</title>
+<link rel="previous" href="pageant.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="pageant-mainwin.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="pageant-start"></a>9.1 Getting started with Pageant</h1>
+<p>
+Before you run Pageant, you need to have a private key in <code>*.<a name="i0"></a>PPK</code> format. See <a href="pubkey.html#pubkey">chapter 8</a> to find out how to generate and use one.
+</p>
+<p>
+When you run Pageant, it will put an icon of a computer wearing a hat into the <a name="i1"></a>System tray. It will then sit and do nothing, until you load a private key into it.
+</p>
+<p>
+If you click the Pageant icon with the right mouse button, you will see a menu. Select &#8216;View Keys&#8217; from this menu. The Pageant main window will appear. (You can also bring this window up by double-clicking on the Pageant icon.)
+</p>
+<p>
+The Pageant window contains a list box. This shows the private keys Pageant is holding. When you start Pageant, it has no keys, so the list box will be empty. After you add one or more keys, they will show up in the list box.
+</p>
+<p>
+To add a key to Pageant, press the &#8216;Add Key&#8217; button. Pageant will bring up a file dialog, labelled &#8216;Select Private Key File&#8217;. Find your private key file in this dialog, and press &#8216;Open&#8217;.
+</p>
+<p>
+Pageant will now load the private key. If the key is protected by a passphrase, Pageant will ask you to type the passphrase. When the key has been loaded, it will appear in the list in the Pageant window.
+</p>
+<p>
+Now start PuTTY and open an SSH session to a site that accepts your key. PuTTY will notice that Pageant is running, retrieve the key automatically from Pageant, and use it to authenticate. You can now open as many PuTTY sessions as you like without having to type your passphrase again.
+</p>
+<p>
+(PuTTY can be configured not to try to use Pageant, but it will try by default. See <a href="config-ssh-tryagent.html#config-ssh-tryagent">section 4.21.3</a> and <a href="using-cmdline-agentauth.html#using-cmdline-agentauth">section 3.8.3.9</a> for more information.)
+</p>
+<p>
+When you want to shut down Pageant, click the right button on the Pageant icon in the System tray, and select &#8216;Exit&#8217; from the menu. Closing the Pageant main window does <em>not</em> shut down Pageant.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

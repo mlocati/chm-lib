@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Using public key authentication with PSCP</title>
+<link rel="previous" href="pscp-retval.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="pscp-pubkey"></a>5.2.4 Using <a name="i0"></a>public key authentication with PSCP</h1>
+<p>
+Like PuTTY, PSCP can authenticate using a public key instead of a password. There are three ways you can do this.
+</p>
+<p>
+Firstly, PSCP can use PuTTY saved sessions in place of hostnames (see <a href="pscp-usage-basics-host.html#pscp-usage-basics-host">section 5.2.1.2</a>). So you would do this:
+</p>
+<ul><li>
+Run PuTTY, and create a PuTTY saved session (see <a href="config-saving.html#config-saving">section 4.1.2</a>) which specifies your private key file (see <a href="config-ssh-privkey.html#config-ssh-privkey">section 4.21.8</a>). You will probably also want to specify a username to log in as (see <a href="config-username.html#config-username">section 4.14.1</a>).
+</li>
+<li>
+In PSCP, you can now use the name of the session instead of a hostname: type <code>pscp sessionname:file localfile</code>, where <code>sessionname</code> is replaced by the name of your saved session.
+</li>
+</ul>
+<p>
+Secondly, you can supply the name of a private key file on the command line, with the <code>-i</code> option. See <a href="using-cmdline-identity.html#using-cmdline-identity">section 3.8.3.18</a> for more information.
+</p>
+<p>
+Thirdly, PSCP will attempt to authenticate using Pageant if Pageant is running (see <a href="pageant.html#pageant">chapter 9</a>). So you would do this:
+</p>
+<ul><li>
+Ensure Pageant is running, and has your private key stored in it.
+</li>
+<li>
+Specify a user and host name to PSCP as normal. PSCP will automatically detect Pageant and try to use the keys within it.
+</li>
+</ul>
+<p>
+For more general information on public-key authentication, see <a href="pubkey.html#pubkey">chapter 8</a>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

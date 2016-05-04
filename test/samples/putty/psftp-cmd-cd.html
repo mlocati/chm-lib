@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The cd and pwd commands: changing the remote working directory</title>
+<link rel="previous" href="psftp-cmd-help.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-cmd-lcd.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-cmd-cd"></a>6.2.7 The <code>cd</code> and <code>pwd</code> commands: changing the remote <a name="i0"></a>working directory</h1>
+<p>
+PSFTP maintains a notion of your &#8216;working directory&#8217; on the server. This is the default directory that other commands will operate on. For example, if you type <code>get filename.dat</code> then PSFTP will look for <code>filename.dat</code> in your remote working directory on the server.
+</p>
+<p>
+To change your remote working directory, use the <code>cd</code> command. If you don't provide an argument, <code>cd</code> will return you to your home directory on the server (more precisely, the remote directory you were in at the start of the connection).
+</p>
+<p>
+To display your current remote working directory, type <code>pwd</code>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

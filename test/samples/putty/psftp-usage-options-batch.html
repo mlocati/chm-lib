@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>-batch: avoid interactive prompts</title>
+<link rel="previous" href="psftp-option-be.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-commands.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-usage-options-batch"></a>6.1.4 <a name="i0"></a><code>-batch</code>: avoid interactive prompts</h1>
+<p>
+If you use the <code>-batch</code> option, PSFTP will never give an interactive prompt while establishing the connection. If the server's host key is invalid, for example (see <a href="gs-hostkey.html#gs-hostkey">section 2.2</a>), then the connection will simply be abandoned instead of asking you what to do next.
+</p>
+<p>
+This may help PSFTP's behaviour when it is used in automated scripts: using <code>-batch</code>, if something goes wrong at connection time, the batch job will fail rather than hang.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

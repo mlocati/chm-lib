@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>-N: suppress starting a shell or command</title>
+<link rel="previous" href="using-cmdline-pty.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="using-cmdline-ncmode.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="using-cmdline-noshell"></a>3.8.3.13 <a name="i0"></a><code>-N</code>: suppress starting a <a name="i1"></a>shell or command</h1>
+<p>
+The <code>-N</code> option prevents PuTTY from attempting to start a shell or command on the remote server. You might want to use this option if you are only using the SSH connection for port forwarding, and your user account on the server does not have the ability to run a shell.
+</p>
+<p>
+This feature is only available in SSH protocol version 2 (since the version 1 protocol assumes you will always want to run a shell).
+</p>
+<p>
+This option is equivalent to the &#8216;Don't start a shell or command at all&#8217; checkbox in the SSH panel of the PuTTY configuration box (see <a href="config-ssh-noshell.html#config-ssh-noshell">section 4.18.2</a>).
+</p>
+<p>
+This option is not available in the file transfer tools PSCP and PSFTP.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

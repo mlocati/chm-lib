@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Is there an option to turn off the annoying host key prompts?</title>
+<link rel="previous" href="faq-password-remember.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-server.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-hostkeys"></a>A.2.9 Is there an option to turn off the <a name="i0"></a>annoying host key prompts?</h1>
+<p>
+No, there isn't. And there won't be. Even if you write it yourself and send us the patch, we won't accept it.
+</p>
+<p>
+Those annoying host key prompts are the <em>whole point</em> of SSH. Without them, all the cryptographic technology SSH uses to secure your session is doing nothing more than making an attacker's job slightly harder; instead of sitting between you and the server with a packet sniffer, the attacker must actually subvert a router and start modifying the packets going back and forth. But that's not all that much harder than just sniffing; and without host key checking, it will go completely undetected by client or server.
+</p>
+<p>
+Host key checking is your guarantee that the encryption you put on your data at the client end is the <em>same</em> encryption taken off the data at the server end; it's your guarantee that it hasn't been removed and replaced somewhere on the way. Host key checking makes the attacker's job <em>astronomically</em> hard, compared to packet sniffing, and even compared to subverting a router. Instead of applying a little intelligence and keeping an eye on Bugtraq, the attacker must now perform a brute-force attack against at least one military-strength cipher. That insignificant host key prompt really does make <em>that</em> much difference.
+</p>
+<p>
+If you're having a specific problem with host key checking - perhaps you want an automated batch job to make use of PSCP or Plink, and the interactive host key prompt is hanging the batch process - then the right way to fix it is to add the correct host key to the Registry in advance, or if the Registry is not available, to use the <code>-hostkey</code> command-line option. That way, you retain the <em>important</em> feature of host key checking: the right key will be accepted and the wrong ones will not. Adding an option to turn host key checking off completely is the wrong solution and we will not do it.
+</p>
+<p>
+If you have host keys available in the common <a name="i1"></a><code>known_hosts</code> format, we have a script called <a href="http://tartarus.org/~simon-git/gitweb/?p=putty.git;a=blob;f=contrib/kh2reg.py;hb=HEAD"><code>kh2reg.py</code></a> to convert them to a Windows .REG file, which can be installed ahead of time by double-clicking or using <code>REGEDIT</code>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

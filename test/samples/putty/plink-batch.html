@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Using Plink in batch files and scripts</title>
+<link rel="previous" href="plink-option-s.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="plink-cvs.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="plink-batch"></a>7.3 Using Plink in <a name="i0"></a>batch files and <a name="i1"></a>scripts</h1>
+<p>
+Once you have set up Plink to be able to log in to a remote server without any interactive prompting (see <a href="plink-usage-batch.html#plink-usage-batch">section 7.2.2</a>), you can use it for lots of scripting and batch purposes. For example, to start a backup on a remote machine, you might use a command like:
+</p>
+<pre><code>plink root@myserver /etc/backups/do-backup.sh
+</code></pre>
+<p>
+Or perhaps you want to fetch all system log lines relating to a particular web area:
+</p>
+<pre><code>plink mysession grep /~fred/ /var/log/httpd/access.log &gt; fredlog
+</code></pre>
+<p>
+Any non-interactive command you could usefully run on the server command line, you can run in a batch file using Plink in this way.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

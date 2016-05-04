@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Key exchange algorithm selection</title>
+<link rel="previous" href="config-ssh-kex.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-kex-rekey.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-kex-order"></a>4.19.1 <a name="i0"></a>Key exchange algorithm selection</h1>
+<p>
+PuTTY supports a variety of SSH-2 key exchange methods, and allows you to choose which one you prefer to use; configuration is similar to cipher selection (see <a href="config-ssh-encryption.html#config-ssh-encryption">section 4.20</a>).
+</p>
+<p>
+PuTTY currently supports the following varieties of <a name="i1"></a>Diffie-Hellman key exchange:
+</p>
+<ul><li>
+&#8216;Group 14&#8217;: a well-known 2048-bit group.
+</li>
+<li>
+&#8216;Group 1&#8217;: a well-known 1024-bit group. This is less secure than group 14, but may be faster with slow client or server machines, and may be the only method supported by older server software.
+</li>
+<li>
+&#8216;<a name="i2"></a>Group exchange&#8217;: with this method, instead of using a fixed group, PuTTY requests that the server suggest a group to use for key exchange; the server can avoid groups known to be weak, and possibly invent new ones over time, without any changes required to PuTTY's configuration. We recommend use of this method, if possible.
+</li>
+</ul>
+<p>
+In addition, PuTTY supports <a name="i3"></a>RSA key exchange, which requires much less computational effort on the part of the client, and somewhat less on the part of the server, than Diffie-Hellman key exchange.
+</p>
+<p>
+If the first algorithm PuTTY finds is below the &#8216;warn below here&#8217; line, you will see a warning box when you make the connection, similar to that for cipher selection (see <a href="config-ssh-encryption.html#config-ssh-encryption">section 4.20</a>).
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

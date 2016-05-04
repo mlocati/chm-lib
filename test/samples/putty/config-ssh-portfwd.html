@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The Tunnels panel</title>
+<link rel="previous" href="config-ssh-xauthority.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-portfwd-localhost.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-portfwd"></a>4.25 <a name="i0"></a>The Tunnels panel</h1>
+<p>
+The Tunnels panel allows you to configure tunnelling of arbitrary connection types through an SSH connection.
+</p>
+<p>
+Port forwarding allows you to tunnel other types of <a name="i1"></a>network connection down an SSH session. See <a href="using-port-forwarding.html#using-port-forwarding">section 3.5</a> for a general discussion of port forwarding and how it works.
+</p>
+<p>
+The port forwarding section in the Tunnels panel shows a list of all the port forwardings that PuTTY will try to set up when it connects to the server. By default no port forwardings are set up, so this list is empty.
+</p>
+<p>
+To add a port forwarding:
+</p>
+<ul><li>
+Set one of the &#8216;Local&#8217; or &#8216;Remote&#8217; radio buttons, depending on whether you want to <a name="i2"></a>forward a local port to a remote destination (&#8216;Local&#8217;) or <a name="i3"></a>forward a remote port to a local destination (&#8216;Remote&#8217;). Alternatively, select &#8216;Dynamic&#8217; if you want PuTTY to <a name="i4"></a>provide a local SOCKS 4/4A/5 proxy on a local port (note that this proxy only supports TCP connections; the SSH protocol does not support forwarding <a name="i5"></a>UDP).
+</li>
+<li>
+Enter a source <a name="i6"></a>port number into the &#8216;Source port&#8217; box. For local forwardings, PuTTY will listen on this port of your PC. For remote forwardings, your SSH server will listen on this port of the remote machine. Note that most servers will not allow you to listen on <a name="i7"></a>port numbers less than 1024.
+</li>
+<li>
+If you have selected &#8216;Local&#8217; or &#8216;Remote&#8217; (this step is not needed with &#8216;Dynamic&#8217;), enter a hostname and port number separated by a colon, in the &#8216;Destination&#8217; box. Connections received on the source port will be directed to this destination. For example, to connect to a POP-3 server, you might enter <code>popserver.example.com:110</code>. (If you need to enter a literal <a name="i8"></a>IPv6 address, enclose it in square brackets, for instance &#8216;<code>[::1]:2200</code>&#8217;.)
+</li>
+<li>
+Click the &#8216;Add&#8217; button. Your forwarding details should appear in the list box.
+</li>
+</ul>
+<p>
+To remove a port forwarding, simply select its details in the list box, and click the &#8216;Remove&#8217; button.
+</p>
+<p>
+In the &#8216;Source port&#8217; box, you can also optionally enter an <a name="i9"></a>IP address to listen on, by specifying (for instance) <code>127.0.0.5:79</code>. See <a href="using-port-forwarding.html#using-port-forwarding">section 3.5</a> for more information on how this works and its restrictions.
+</p>
+<p>
+In place of port numbers, you can enter <a name="i10"></a>service names, if they are known to the local system. For instance, in the &#8216;Destination&#8217; box, you could enter <code>popserver.example.com:pop3</code>.
+</p>
+<p>
+You can <a name="i11"></a>modify the currently active set of port forwardings in mid-session using &#8216;Change Settings&#8217; (see <a href="using-changesettings.html#using-changesettings">section 3.1.3.4</a>). If you delete a local or dynamic port forwarding in mid-session, PuTTY will stop listening for connections on that port, so it can be re-used by another program. If you delete a remote port forwarding, note that:
+</p>
+<ul><li>
+The SSH-1 protocol contains no mechanism for asking the server to stop listening on a remote port.
+</li>
+<li>
+The SSH-2 protocol does contain such a mechanism, but not all SSH servers support it. (In particular, <a name="i12"></a>OpenSSH does not support it in any version earlier than 3.9.)
+</li>
+</ul>
+<p>
+If you ask to delete a remote port forwarding and PuTTY cannot make the server actually stop listening on the port, it will instead just start refusing incoming connections on that port. Therefore, although the port cannot be reused by another program, you can at least be reasonably sure that server-side programs can no longer access the service at your end of the port forwarding.
+</p>
+<p>
+If you delete a forwarding, any existing connections established using that forwarding remain open. Similarly, changes to global settings such as &#8216;Local ports accept connections from other hosts&#8217; only take effect on new forwardings.
+</p>
+<p>
+If the connection you are forwarding over SSH is itself a second SSH connection made by another copy of PuTTY, you might find the &#8216;logical host name&#8217; configuration option useful to warn PuTTY of which host key it should be expecting. See <a href="config-loghost.html#config-loghost">section 4.13.5</a> for details of this.
+</p>
+
+<ul>
+<li><a href="config-ssh-portfwd-localhost.html#config-ssh-portfwd-localhost">4.25.1 Controlling the visibility of forwarded ports</a></li>
+<li><a href="config-ssh-portfwd-address-family.html#config-ssh-portfwd-address-family">4.25.2 Selecting Internet protocol version for forwarded ports</a></li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

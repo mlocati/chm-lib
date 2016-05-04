@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Return key sends Telnet New Line instead of ^M&#8217;</title>
+<link rel="previous" href="config-telnetkey.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-rlogin.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-telnetnl"></a>4.16.4 &#8216;Return key sends <a name="i0"></a>Telnet New Line instead of ^M&#8217;</h1>
+<p>
+Unlike most other remote login protocols, the Telnet protocol has a special &#8216;<a name="i1"></a>new line&#8217; code that is not the same as the usual line endings of Control-M or Control-J. By default, PuTTY sends the Telnet New Line code when you press Return, instead of sending Control-M as it does in most other protocols.
+</p>
+<p>
+Most Unix-style Telnet servers don't mind whether they receive Telnet New Line or Control-M; some servers do expect New Line, and some servers prefer to see ^M. If you are seeing surprising behaviour when you press Return in a Telnet session, you might try turning this option off to see if it helps.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

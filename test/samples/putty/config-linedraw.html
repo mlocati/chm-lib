@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Controlling display of line-drawing characters</title>
+<link rel="previous" href="config-cyr.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-linedrawpaste.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-linedraw"></a>4.10.4 Controlling display of <a name="i0"></a>line-drawing characters</h1>
+<p>
+VT100-series terminals allow the server to send <a name="i1"></a>control sequences that shift temporarily into a separate character set for drawing simple lines and boxes. However, there are a variety of ways in which PuTTY can attempt to find appropriate characters, and the right one to use depends on the locally configured <a name="i2"></a>font. In general you should probably try lots of options until you find one that your particular font supports.
+</p>
+<ul><li>
+&#8216;Use Unicode line drawing code points&#8217; tries to use the box characters that are present in <a name="i3"></a>Unicode. For good Unicode-supporting fonts this is probably the most reliable and functional option.
+</li>
+<li>
+&#8216;Poor man's line drawing&#8217; assumes that the font <em>cannot</em> generate the line and box characters at all, so it will use the <code>+</code>, <code>-</code> and <code>|</code> characters to draw approximations to boxes. You should use this option if none of the other options works.
+</li>
+<li>
+&#8216;Font has XWindows encoding&#8217; is for use with fonts that have a special encoding, where the lowest 32 character positions (below the ASCII printable range) contain the line-drawing characters. This is unlikely to be the case with any standard Windows font; it will probably only apply to custom-built fonts or fonts that have been automatically converted from the X Window System.
+</li>
+<li>
+&#8216;Use font in both ANSI and OEM modes&#8217; tries to use the same font in two different character sets, to obtain a wider range of characters. This doesn't always work; some fonts claim to be a different size depending on which character set you try to use.
+</li>
+<li>
+&#8216;Use font in OEM mode only&#8217; is more reliable than that, but can miss out other characters from the main character set.
+</li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

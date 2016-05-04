@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Log file name&#8217;</title>
+<link rel="previous" href="config-logging.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-logfileexists.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-logfilename"></a>4.2.1 &#8216;Log file name&#8217;</h1>
+<p>
+In this edit box you enter the name of the file you want to log the session to. The &#8216;Browse&#8217; button will let you look around your file system to find the right place to put the file; or if you already know exactly where you want it to go, you can just type a pathname into the edit box.
+</p>
+<p>
+There are a few special features in this box. If you use the <code>&amp;</code> character in the file name box, PuTTY will insert details of the current session in the name of the file it actually opens. The precise replacements it will do are:
+</p>
+<ul><li>
+<code>&amp;Y</code> will be replaced by the current year, as four digits.
+</li>
+<li>
+<code>&amp;M</code> will be replaced by the current month, as two digits.
+</li>
+<li>
+<code>&amp;D</code> will be replaced by the current day of the month, as two digits.
+</li>
+<li>
+<code>&amp;T</code> will be replaced by the current time, as six digits (HHMMSS) with no punctuation.
+</li>
+<li>
+<code>&amp;H</code> will be replaced by the host name you are connecting to.
+</li>
+<li>
+<code>&amp;P</code> will be replaced by the port number you are connecting to on the target host.
+</li>
+</ul>
+<p>
+For example, if you enter the host name <code>c:\puttylogs\log-&amp;h-&amp;y&amp;m&amp;d-&amp;t.dat</code>, you will end up with files looking like
+</p>
+<pre><code>log-server1.example.com-20010528-110859.dat
+log-unixbox.somewhere.org-20010611-221001.dat
+</code></pre>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

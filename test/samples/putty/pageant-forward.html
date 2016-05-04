@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Using agent forwarding</title>
+<link rel="previous" href="pageant-cmdline-command.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="pageant-security.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="pageant-forward"></a>9.4 Using <a name="i0"></a>agent forwarding</h1>
+<p>
+Agent forwarding is a mechanism that allows applications on your SSH server machine to talk to the agent on your client machine.
+</p>
+<p>
+Note that at present, agent forwarding in SSH-2 is only available when your SSH server is <a name="i1"></a>OpenSSH. The <a name="i2"></a><code>ssh.com</code> server uses a different agent protocol, which PuTTY does not yet support.
+</p>
+<p>
+To enable agent forwarding, first start Pageant. Then set up a PuTTY SSH session in which &#8216;Allow agent forwarding&#8217; is enabled (see <a href="config-ssh-agentfwd.html#config-ssh-agentfwd">section 4.21.6</a>). Open the session as normal. (Alternatively, you can use the <code>-A</code> command line option; see <a href="using-cmdline-agent.html#using-cmdline-agent">section 3.8.3.10</a> for details.)
+</p>
+<p>
+If this has worked, your applications on the server should now have access to a Unix domain socket which the SSH server will forward back to PuTTY, and PuTTY will forward on to the agent. To check that this has actually happened, you can try this command on Unix server machines:
+</p>
+<pre><code>unixbox:~$ echo $SSH_AUTH_SOCK
+/tmp/ssh-XXNP18Jz/agent.28794
+unixbox:~$
+</code></pre>
+<p>
+If the result line comes up blank, agent forwarding has not been enabled at all.
+</p>
+<p>
+Now if you run <code>ssh</code> on the server and use it to connect through to another server that accepts one of the keys in Pageant, you should be able to log in without a password:
+</p>
+<pre><code>unixbox:~$ ssh -v otherunixbox
+[...]
+debug: next auth method to try is publickey
+debug: userauth_pubkey_agent: trying agent key my-putty-key
+debug: ssh-userauth2 successful: method publickey
+[...]
+</code></pre>
+<p>
+If you enable agent forwarding on <em>that</em> SSH connection as well (see the manual for your server-side SSH client to find out how to do this), your authentication keys will still be available on the next machine you connect to - two SSH connections away from where they're actually stored.
+</p>
+<p>
+In addition, if you have a private key on one of the SSH servers, you can send it all the way back to Pageant using the local <a name="i3"></a><code>ssh-add</code> command:
+</p>
+<pre><code>unixbox:~$ ssh-add ~/.ssh/id_rsa
+Need passphrase for /home/fred/.ssh/id_rsa
+Enter passphrase for /home/fred/.ssh/id_rsa:
+Identity added: /home/fred/.ssh/id_rsa (/home/simon/.ssh/id_rsa)
+unixbox:~$
+</code></pre>
+<p>
+and then it's available to every machine that has agent forwarding available (not just the ones downstream of the place you added it).
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

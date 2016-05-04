@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>What does PuTTY leave on a system? How can I clean up after it?</title>
+<link rel="previous" href="faq-publicpc.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-dsa.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-cleanup"></a>A.8.2 What does PuTTY leave on a system? How can I <a name="i0"></a>clean up after it?</h1>
+<p>
+PuTTY will leave some Registry entries, and a random seed file, on the PC (see <a href="faq-settings.html#faq-settings">question A.5.2</a>). If you are using PuTTY on a public PC, or somebody else's PC, you might want to clean these up when you leave. You can do that automatically, by running the command <code>putty -cleanup</code>. (Note that this only removes settings for the currently logged-in user on <a name="i1"></a>multi-user systems.)
+</p>
+<p>
+If PuTTY was installed from the installer package, it will also appear in &#8216;Add/Remove Programs&#8217;. Older versions of the uninstaller do not remove the above-mentioned registry entries and file.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

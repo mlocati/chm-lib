@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Since my SSH server was upgraded to OpenSSH 3.1p1/3.4p1, I can no longer connect with PuTTY.</title>
+<link rel="previous" href="faq-keyboard.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-ssh2key-ssh1conn.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-openssh-bad-openssl"></a>A.7.16 Since my SSH server was upgraded to <a name="i0"></a>OpenSSH 3.1p1/3.4p1, I can no longer connect with PuTTY.</h1>
+<p>
+There is a known problem when OpenSSH has been built against an incorrect version of OpenSSL; the quick workaround is to configure PuTTY to use SSH protocol 2 and the Blowfish cipher.
+</p>
+<p>
+For more details and OpenSSH patches, see <a href="http://bugzilla.mindrot.org/show_bug.cgi?id=138">bug 138</a> in the OpenSSH BTS.
+</p>
+<p>
+This is not a PuTTY-specific problem; if you try to connect with another client you'll likely have similar problems. (Although PuTTY's default cipher differs from many other clients.)
+</p>
+<p>
+<em>OpenSSH 3.1p1:</em> configurations known to be broken (and symptoms):
+</p>
+<ul><li>
+SSH-2 with AES cipher (PuTTY says &#8216;Assertion failed! Expression: (len &amp; 15) == 0&#8217; in <code>sshaes.c</code>, or &#8216;Out of memory&#8217;, or crashes)
+</li>
+<li>
+SSH-2 with 3DES (PuTTY says &#8216;Incorrect MAC received on packet&#8217;)
+</li>
+<li>
+SSH-1 with Blowfish (PuTTY says &#8216;Incorrect CRC received on packet&#8217;)
+</li>
+<li>
+SSH-1 with 3DES
+</li>
+</ul>
+<p>
+<em>OpenSSH 3.4p1:</em> as of 3.4p1, only the problem with SSH-1 and Blowfish remains. Rebuild your server, apply the patch linked to from bug 138 above, or use another cipher (e.g., 3DES) instead.
+</p>
+<p>
+<em>Other versions:</em> we occasionally get reports of the same symptom and workarounds with older versions of OpenSSH, although it's not clear the underlying cause is the same.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

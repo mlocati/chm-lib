@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The chmod command: change permissions on remote files</title>
+<link rel="previous" href="psftp-cmd-dir.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-cmd-del.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-cmd-chmod"></a>6.2.14 The <code>chmod</code> command: change permissions on remote files</h1>
+<p>
+<a name="i0"></a>PSFTP allows you to modify the file permissions on files and directories on the server. You do this using the <code>chmod</code> command, which works very much like the Unix <code>chmod</code> command.
+</p>
+<p>
+The basic syntax is <code>chmod modes file</code>, where <code>modes</code> represents a modification to the file permissions, and <code>file</code> is the filename to modify. You can specify multiple files or wildcards. For example:
+</p>
+<pre><code>chmod go-rwx,u+w privatefile
+chmod a+r public*
+chmod 640 groupfile1 groupfile2
+</code></pre>
+<p>
+The <code>modes</code> parameter can be a set of octal digits in the Unix style. (If you don't know what this means, you probably don't want to be using it!) Alternatively, it can be a list of permission modifications, separated by commas. Each modification consists of:
+</p>
+<ul><li>
+The people affected by the modification. This can be <code>u</code> (the owning user), <code>g</code> (members of the owning group), or <code>o</code> (everybody else - &#8216;others&#8217;), or some combination of those. It can also be <code>a</code> (&#8216;all&#8217;) to affect everybody at once.
+</li>
+<li>
+A <code>+</code> or <code>-</code> sign, indicating whether permissions are to be added or removed.
+</li>
+<li>
+The actual permissions being added or removed. These can be <a name="i1"></a><code>r</code> (permission to read the file), <a name="i2"></a><code>w</code> (permission to write to the file), and <a name="i3"></a><code>x</code> (permission to execute the file, or in the case of a directory, permission to access files within the directory).
+</li>
+</ul>
+<p>
+So the above examples would do:
+</p>
+<ul><li>
+The first example: <code>go-rwx</code> removes read, write and execute permissions for members of the owning group and everybody else (so the only permissions left are the ones for the file owner). <code>u+w</code> adds write permission for the file owner.
+</li>
+<li>
+The second example: <code>a+r</code> adds read permission for everybody to all files and directories starting with &#8216;public&#8217;.
+</li>
+</ul>
+<p>
+In addition to all this, there are a few extra special cases for <a name="i4"></a>Unix systems. On non-Unix systems these are unlikely to be useful:
+</p>
+<ul><li>
+You can specify <code>u+s</code> and <code>u-s</code> to add or remove the Unix <a name="i5"></a>set-user-ID bit. This is typically only useful for special purposes; refer to your Unix documentation if you're not sure about it.
+</li>
+<li>
+You can specify <code>g+s</code> and <code>g-s</code> to add or remove the Unix <a name="i6"></a>set-group-ID bit. On a file, this works similarly to the set-user-ID bit (see your Unix documentation again); on a directory it ensures that files created in the directory are accessible by members of the group that owns the directory.
+</li>
+<li>
+You can specify <code>+t</code> and <code>-t</code> to add or remove the Unix &#8216;<a name="i7"></a>sticky bit&#8217;. When applied to a directory, this means that the owner of a file in that directory can delete the file (whereas normally only the owner of the <em>directory</em> would be allowed to).
+</li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

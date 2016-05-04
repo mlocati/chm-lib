@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Chokes on SSH-1 RSA authentication&#8217;</title>
+<link rel="previous" href="config-ssh-bug-plainpw1.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-bug-ignore2.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-bug-rsa1"></a>4.26.3 &#8216;Chokes on SSH-1 <a name="i0"></a>RSA authentication&#8217;</h1>
+<p>
+Some SSH-1 servers cannot deal with RSA authentication messages at all. If <a name="i1"></a>Pageant is running and contains any SSH-1 keys, PuTTY will normally automatically try RSA authentication before falling back to passwords, so these servers will crash when they see the RSA attempt.
+</p>
+<p>
+If this bug is detected, PuTTY will go straight to password authentication. If this bug is enabled when talking to a correct server, the session will succeed, but of course RSA authentication will be impossible.
+</p>
+<p>
+This is an SSH-1-specific bug.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

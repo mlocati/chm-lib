@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Can PSCP or PSFTP transfer files in ASCII mode?</title>
+<link rel="previous" href="faq-server.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-ports.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-pscp-ascii"></a>A.2.11 Can PSCP or PSFTP transfer files in <a name="i0"></a>ASCII mode?</h1>
+<p>
+Unfortunately not.
+</p>
+<p>
+Until recently, this was a limitation of the file transfer protocols: the SCP and SFTP protocols had no notion of transferring a file in anything other than binary mode. (This is still true of SCP.)
+</p>
+<p>
+The current draft protocol spec of SFTP proposes a means of implementing ASCII transfer. At some point PSCP/PSFTP may implement this proposal.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

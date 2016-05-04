@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Generating a new key</title>
+<link rel="previous" href="pubkey-puttygen.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="puttygen-keytype.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="puttygen-generating"></a>8.2.1 Generating a new key</h1>
+<p>
+This is a general outline of the procedure for generating a new key pair. The following sections describe the process in more detail.
+</p>
+<ul><li>
+First, you need to select which type of key you want to generate, and also select the strength of the key. This is described in more detail in <a href="puttygen-keytype.html#puttygen-keytype">section 8.2.2</a> and <a href="puttygen-strength.html#puttygen-strength">section 8.2.3</a>.
+</li>
+<li>
+Then press the &#8216;Generate&#8217; button, to actually generate the key. <a href="puttygen-generate.html#puttygen-generate">Section 8.2.4</a> describes this step.
+</li>
+<li>
+Once you have generated the key, select a comment field (<a href="puttygen-comment.html#puttygen-comment">section 8.2.6</a>) and a passphrase (<a href="puttygen-passphrase.html#puttygen-passphrase">section 8.2.7</a>).
+</li>
+<li>
+Now you're ready to save the private key to disk; press the &#8216;Save private key&#8217; button. (See <a href="puttygen-savepriv.html#puttygen-savepriv">section 8.2.8</a>).
+</li>
+</ul>
+<p>
+Your key pair is now ready for use. You may also want to copy the public key to your server, either by copying it out of the &#8216;Public key for pasting into authorized_keys file&#8217; box (see <a href="puttygen-pastekey.html#puttygen-pastekey">section 8.2.10</a>), or by using the &#8216;Save public key&#8217; button (<a href="puttygen-savepub.html#puttygen-savepub">section 8.2.9</a>). However, you don't need to do this immediately; if you want, you can load the private key back into PuTTYgen later (see <a href="puttygen-load.html#puttygen-load">section 8.2.11</a>) and the public key will be available for copying and pasting again.
+</p>
+<p>
+<a href="pubkey-gettingready.html#pubkey-gettingready">Section 8.3</a> describes the typical process of configuring PuTTY to attempt public-key authentication, and configuring your SSH server to accept it.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

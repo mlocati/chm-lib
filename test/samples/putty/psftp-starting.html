@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Starting PSFTP</title>
+<link rel="previous" href="psftp.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-option-b.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-starting"></a>6.1 Starting PSFTP</h1>
+<p>
+The usual way to start PSFTP is from a command prompt, much like PSCP. To do this, it will need either to be on your <a name="i0"></a><code>PATH</code> or in your current directory. To add the directory containing PSFTP to your <code>PATH</code> environment variable, type into the console window:
+</p>
+<pre><code>set PATH=C:\path\to\putty\directory;%PATH%
+</code></pre>
+<p>
+Unlike PSCP, however, PSFTP has no complex command-line syntax; you just specify a host name and perhaps a user name:
+</p>
+<pre><code>psftp server.example.com
+</code></pre>
+<p>
+or perhaps
+</p>
+<pre><code>psftp fred@server.example.com
+</code></pre>
+<p>
+Alternatively, if you just type <code>psftp</code> on its own (or double-click the PSFTP icon in the Windows GUI), you will see the PSFTP prompt, and a message telling you PSFTP has not connected to any server:
+</p>
+<pre><code>C:\&gt;psftp
+psftp: no hostname specified; use "open host.name" to connect
+psftp&gt;
+</code></pre>
+<p>
+At this point you can type <code>open server.example.com</code> or <code>open fred@server.example.com</code> to start a session.
+</p>
+<p>
+PSFTP accepts all the general command line options supported by the PuTTY tools, except the ones which make no sense in a file transfer utility. See <a href="using-general-opts.html#using-general-opts">section 3.8.3</a> for a description of these options. (The ones not supported by PSFTP are clearly marked.)
+</p>
+<p>
+PSFTP also supports some of its own options. The following sections describe PSFTP's specific command-line options.
+</p>
+
+<ul>
+<li><a href="psftp-option-b.html#psftp-option-b">6.1.1 <code>-b</code>: specify a file containing batch commands</a></li>
+<li><a href="psftp-option-bc.html#psftp-option-bc">6.1.2 <code>-bc</code>: display batch commands as they are run</a></li>
+<li><a href="psftp-option-be.html#psftp-option-be">6.1.3 <code>-be</code>: continue batch processing on errors</a></li>
+<li><a href="psftp-usage-options-batch.html#psftp-usage-options-batch">6.1.4 <code>-batch</code>: avoid interactive prompts</a></li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

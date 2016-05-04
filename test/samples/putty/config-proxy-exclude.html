@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Excluding parts of the network from proxying</title>
+<link rel="previous" href="config-proxy-type.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-proxy-dns.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-proxy-exclude"></a>4.15.2 Excluding parts of the network from proxying</h1>
+<p>
+Typically you will only need to use a proxy to connect to non-local parts of your network; for example, your proxy might be required for connections outside your company's internal network. In the &#8216;Exclude Hosts/IPs&#8217; box you can enter ranges of IP addresses, or ranges of DNS names, for which PuTTY will avoid using the proxy and make a direct connection instead.
+</p>
+<p>
+The &#8216;Exclude Hosts/IPs&#8217; box may contain more than one exclusion range, separated by commas. Each range can be an IP address or a DNS name, with a <code>*</code> character allowing wildcards. For example:
+</p>
+<pre><code>*.example.com
+</code></pre>
+<p>
+This excludes any host with a name ending in <code>.example.com</code> from proxying.
+</p>
+<pre><code>192.168.88.*
+</code></pre>
+<p>
+This excludes any host with an IP address starting with 192.168.88 from proxying.
+</p>
+<pre><code>192.168.88.*,*.example.com
+</code></pre>
+<p>
+This excludes both of the above ranges at once.
+</p>
+<p>
+Connections to the local host (the host name <a name="i0"></a><code>localhost</code>, and any <a name="i1"></a>loopback IP address) are never proxied, even if the proxy exclude list does not explicitly contain them. It is very unlikely that this behaviour would ever cause problems, but if it does you can change it by enabling &#8216;Consider proxying local host connections&#8217;.
+</p>
+<p>
+Note that if you are doing <a name="i2"></a>DNS at the proxy (see <a href="config-proxy-dns.html#config-proxy-dns">section 4.15.3</a>), you should make sure that your proxy exclusion settings do not depend on knowing the IP address of a host. If the name is passed on to the proxy without PuTTY looking it up, it will never know the IP address and cannot check it against your list.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

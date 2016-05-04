@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Username and password</title>
+<link rel="previous" href="config-proxy-dns.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-proxy-command.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-proxy-auth"></a>4.15.4 <a name="i0"></a>Username and <a name="i1"></a>password</h1>
+<p>
+If your proxy requires <a name="i2"></a>authentication, you can enter a username and a password in the &#8216;Username&#8217; and &#8216;Password&#8217; boxes.
+</p>
+<p>
+<a name="i3"></a>Note that if you save your session, the proxy password will be saved in plain text, so anyone who can access your PuTTY configuration data will be able to discover it.
+</p>
+<p>
+Authentication is not fully supported for all forms of proxy:
+</p>
+<ul><li>
+Username and password authentication is supported for HTTP proxies and SOCKS 5 proxies.
+<ul><li>
+With SOCKS 5, authentication is via <a name="i4"></a>CHAP if the proxy supports it (this is not supported in <a name="i5"></a>PuTTYtel); otherwise the password is sent to the proxy in <a name="i6"></a>plain text.
+</li>
+<li>
+With HTTP proxying, the only currently supported authentication method is <a name="i7"></a>&#8216;basic&#8217;, where the password is sent to the proxy in <a name="i8"></a>plain text.
+</li>
+</ul>
+
+</li>
+<li>
+SOCKS 4 can use the &#8216;Username&#8217; field, but does not support passwords.
+</li>
+<li>
+You can specify a way to include a username and password in the Telnet/Local proxy command (see <a href="config-proxy-command.html#config-proxy-command">section 4.15.5</a>).
+</li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

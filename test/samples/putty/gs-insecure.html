@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Starting a session</title>
+<link rel="previous" href="gs.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="gs-hostkey.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="gs-insecure"></a>2.1 <a name="i0"></a>Starting a session</h1>
+<p>
+When you start PuTTY, you will see a <a name="i1"></a>dialog box. This dialog box allows you to control everything PuTTY can do. See <a href="config.html#config">chapter 4</a> for details of all the things you can control.
+</p>
+<p>
+You don't usually need to change most of the configuration options. To start the simplest kind of session, all you need to do is to enter a few basic parameters.
+</p>
+<p>
+In the &#8216;Host Name&#8217; box, enter the Internet <a name="i2"></a>host name of the server you want to connect to. You should have been told this by the provider of your login account.
+</p>
+<p>
+Now select a login <a name="i3"></a>protocol to use, from the &#8216;Connection type&#8217; buttons. For a login session, you should select <a name="i4"></a>Telnet, <a name="i5"></a>Rlogin or <a name="i6"></a>SSH. See <a href="which-one.html#which-one">section 1.2</a> for a description of the differences between the three protocols, and advice on which one to use. The fourth protocol, <a name="i7"></a><em>Raw</em>, is not used for interactive login sessions; you would usually use this for debugging other Internet services (see <a href="using-rawprot.html#using-rawprot">section 3.6</a>). The fifth option, <em>Serial</em>, is used for connecting to a local serial line, and works somewhat differently: see <a href="using-serial.html#using-serial">section 3.7</a> for more information on this.
+</p>
+<p>
+When you change the selected protocol, the number in the &#8216;Port&#8217; box will change. This is normal: it happens because the various login services are usually provided on different network ports by the server machine. Most servers will use the standard port numbers, so you will not need to change the port setting. If your server provides login services on a non-standard port, your system administrator should have told you which one. (For example, many <a name="i8"></a>MUDs run Telnet service on a port other than 23.)
+</p>
+<p>
+Once you have filled in the &#8216;Host Name&#8217;, &#8216;Protocol&#8217;, and possibly &#8216;Port&#8217; settings, you are ready to connect. Press the &#8216;Open&#8217; button at the bottom of the dialog box, and PuTTY will begin trying to connect you to the server.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

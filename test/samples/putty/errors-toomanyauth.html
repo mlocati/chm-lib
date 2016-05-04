@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Server sent disconnect message type 2 (protocol error): "Too many authentication failures for root"&#8217;</title>
+<link rel="previous" href="errors-cipher-warning.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="errors-memory.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="errors-toomanyauth"></a>10.4 &#8216;Server sent disconnect message type 2 (protocol error): "Too many authentication failures for root"&#8217;</h1>
+<p>
+This message is produced by an <a name="i0"></a>OpenSSH (or <a name="i1"></a>Sun SSH) server if it receives more failed authentication attempts than it is willing to tolerate.
+</p>
+<p>
+This can easily happen if you are using Pageant and have a large number of keys loaded into it, since these servers count each offer of a public key as an authentication attempt. This can be worked around by specifying the key that's required for the authentication in the PuTTY configuration (see <a href="config-ssh-privkey.html#config-ssh-privkey">section 4.21.8</a>); PuTTY will ignore any other keys Pageant may have, but will ask Pageant to do the authentication, so that you don't have to type your passphrase.
+</p>
+<p>
+On the server, this can be worked around by disabling public-key authentication or (for Sun SSH only) by increasing <code>MaxAuthTries</code> in <code>sshd_config</code>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

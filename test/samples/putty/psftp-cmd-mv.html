@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The mv command: move and rename remote files</title>
+<link rel="previous" href="psftp-cmd-rmdir.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-cmd-pling.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-cmd-mv"></a>6.2.18 The <code>mv</code> command: move and <a name="i0"></a>rename remote files</h1>
+<p>
+To rename a single file on the server, type <code>mv</code>, then the current file name, and then the new file name:
+</p>
+<pre><code>mv oldfile newname
+</code></pre>
+<p>
+You can also move the file into a different directory and change the name:
+</p>
+<pre><code>mv oldfile dir/newname
+</code></pre>
+<p>
+To move one or more files into an existing subdirectory, specify the files (using wildcards if desired), and then the destination directory:
+</p>
+<pre><code>mv file dir
+mv file1 dir1/file2 dir2
+mv *.c *.h ..
+</code></pre>
+<p>
+The <code>rename</code> and <code>ren</code> commands work exactly the same way as <code>mv</code>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

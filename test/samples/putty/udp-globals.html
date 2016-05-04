@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Multiple sessions per process on some platforms</title>
+<link rel="previous" href="udp-multi-backend.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="udp-pure-c.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="udp-globals"></a>D.3 Multiple sessions per process on some platforms</h1>
+<p>
+Some ports of PuTTY - notably the in-progress Mac port - are constrained by the operating system to run as a single process potentially managing multiple sessions.
+</p>
+<p>
+Therefore, the platform-independent parts of PuTTY never use global variables to store per-session data. The global variables that do exist are tolerated because they are not specific to a particular login session: <code>flags</code> defines properties that are expected to apply equally to <em>all</em> the sessions run by a single PuTTY process, the random number state in <code>sshrand.c</code> and the timer list in <code>timing.c</code> serve all sessions equally, and so on. But most data is specific to a particular network session, and is therefore stored in dynamically allocated data structures, and pointers to these structures are passed around between functions.
+</p>
+<p>
+Platform-specific code can reverse this decision if it likes. The Windows code, for historical reasons, stores most of its data as global variables. That's OK, because <em>on Windows</em> we know there is only one session per PuTTY process, so it's safe to do that. But changes to the platform-independent code should avoid introducing global variables, unless they are genuinely cross-session.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,6 @@
+/test/ export-ignore
+/.* export-ignore
+/*.yml export-ignore
+/*.xml export-ignore
+/README.md
+/composer-travis-ci.json

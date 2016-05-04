@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Using keepalives to prevent disconnection</title>
+<link rel="previous" href="config-connection.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-nodelay.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-keepalive"></a>4.13.1 Using <a name="i0"></a>keepalives to prevent disconnection</h1>
+<p>
+If you find your sessions are closing unexpectedly (most often with &#8216;Connection reset by peer&#8217;) after they have been idle for a while, you might want to try using this option.
+</p>
+<p>
+Some network <a name="i1"></a>routers and <a name="i2"></a>firewalls need to keep track of all connections through them. Usually, these firewalls will assume a connection is dead if no data is transferred in either direction after a certain time interval. This can cause PuTTY sessions to be unexpectedly closed by the firewall if no traffic is seen in the session for some time.
+</p>
+<p>
+The keepalive option (&#8216;Seconds between keepalives&#8217;) allows you to configure PuTTY to send data through the session at regular intervals, in a way that does not disrupt the actual terminal session. If you find your firewall is cutting <a name="i3"></a>idle connections off, you can try entering a non-zero value in this field. The value is measured in seconds; so, for example, if your firewall cuts connections off after ten minutes then you might want to enter 300 seconds (5 minutes) in the box.
+</p>
+<p>
+Note that keepalives are not always helpful. They help if you have a firewall which drops your connection after an idle period; but if the network between you and the server suffers from <a name="i4"></a>breaks in connectivity then keepalives can actually make things worse. If a session is idle, and connectivity is temporarily lost between the endpoints, but the connectivity is restored before either side tries to send anything, then there will be no problem - neither endpoint will notice that anything was wrong. However, if one side does send something during the break, it will repeatedly try to re-send, and eventually give up and abandon the connection. Then when connectivity is restored, the other side will find that the first side doesn't believe there is an open connection any more. Keepalives can make this sort of problem worse, because they increase the probability that PuTTY will attempt to send data during a break in connectivity. (Other types of periodic network activity can cause this behaviour; in particular, SSH-2 re-keys can have this effect. See <a href="config-ssh-kex-rekey.html#config-ssh-kex-rekey">section 4.19.2</a>.)
+</p>
+<p>
+Therefore, you might find that keepalives help connection loss, or you might find they make it worse, depending on what <em>kind</em> of network problems you have between you and the server.
+</p>
+<p>
+Keepalives are only supported in Telnet and SSH; the Rlogin and Raw protocols offer no way of implementing them. (For an alternative, see <a href="config-tcp-keepalives.html#config-tcp-keepalives">section 4.13.3</a>.)
+</p>
+<p>
+Note that if you are using <a name="i5"></a>SSH-1 and the server has a bug that makes it unable to deal with SSH-1 ignore messages (see <a href="config-ssh-bug-ignore1.html#config-ssh-bug-ignore1">section 4.26.1</a>), enabling keepalives will have no effect.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

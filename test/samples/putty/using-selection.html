@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Copying and pasting text</title>
+<link rel="previous" href="using-session.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="using-scrollback.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="using-selection"></a>3.1.1 Copying and pasting text</h1>
+<p>
+<a name="i0"></a>Often in a PuTTY session you will find text on your terminal screen which you want to type in again. Like most other terminal emulators, PuTTY allows you to copy and paste the text rather than having to type it again. Also, copy and paste uses the <a name="i1"></a>Windows <a name="i2"></a>clipboard, so that you can paste (for example) URLs into a web browser, or paste from a word processor or spreadsheet into your terminal session.
+</p>
+<p>
+PuTTY's copy and paste works entirely with the <a name="i3"></a>mouse. In order to copy text to the clipboard, you just click the <a name="i4"></a>left mouse button in the <a name="i5"></a>terminal window, and drag to <a name="i6"></a>select text. When you let go of the button, the text is <em>automatically</em> copied to the clipboard. You do not need to press Ctrl-C or Ctrl-Ins; in fact, if you do press Ctrl-C, PuTTY will send a Ctrl-C character down your session to the server where it will probably cause a process to be interrupted.
+</p>
+<p>
+Pasting is done using the right button (or the middle mouse button, if you have a <a name="i7"></a>three-button mouse and have set it up; see <a href="config-mouse.html#config-mouse">section 4.11.2</a>). (Pressing <a name="i8"></a>Shift-Ins, or selecting &#8216;Paste&#8217; from the <a name="i9"></a>Ctrl+right-click <a name="i10"></a>context menu, have the same effect.) When you click the <a name="i11"></a>right mouse button, PuTTY will read whatever is in the Windows clipboard and paste it into your session, <em>exactly</em> as if it had been typed at the keyboard. (Therefore, be careful of pasting formatted text into an editor that does automatic indenting; you may find that the spaces pasted from the clipboard plus the spaces added by the editor add up to too many spaces and ruin the formatting. There is nothing PuTTY can do about this.)
+</p>
+<p>
+If you <a name="i12"></a>double-click the left mouse button, PuTTY will <a name="i13"></a>select a whole word. If you double-click, hold down the second click, and drag the mouse, PuTTY will select a sequence of whole words. (You can adjust precisely what PuTTY considers to be part of a word; see <a href="config-charclasses.html#config-charclasses">section 4.11.5</a>.) If you <em>triple</em>-click, or <a name="i14"></a>triple-click and drag, then PuTTY will <a name="i15"></a>select a whole line or sequence of lines.
+</p>
+<p>
+If you want to select a <a name="i16"></a>rectangular region instead of selecting to the end of each line, you can do this by holding down Alt when you make your selection. You can also configure rectangular selection to be the default, and then holding down Alt gives the normal behaviour instead: see <a href="config-rectselect.html#config-rectselect">section 4.11.4</a> for details.
+</p>
+<p>
+(In some Unix environments, Alt+drag is intercepted by the window manager. Shift+Alt+drag should work for rectangular selection as well, so you could try that instead.)
+</p>
+<p>
+If you have a <a name="i17"></a>middle mouse button, then you can use it to <a name="i18"></a>adjust an existing selection if you selected something slightly wrong. (If you have configured the middle mouse button to paste, then the right mouse button does this instead.) Click the button on the screen, and you can pick up the nearest end of the selection and drag it to somewhere else.
+</p>
+<p>
+It's possible for the server to ask to <a name="i19"></a>handle mouse clicks in the PuTTY window itself. If this happens, the <a name="i20"></a>mouse pointer will turn into an arrow, and using the mouse to copy and paste will only work if you hold down Shift. See <a href="config-features-mouse.html#config-features-mouse">section 4.6.2</a> and <a href="config-mouseshift.html#config-mouseshift">section 4.11.3</a> for details of this feature and how to configure it.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>-ls list remote files</title>
+<link rel="previous" href="pscp-usage-options.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="pscp-usage-options-p.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="pscp-usage-options-ls"></a>5.2.2.1 <a name="i0"></a><code>-ls</code> <a name="i1"></a>list remote files</h1>
+<p>
+If the <code>-ls</code> option is given, no files are transferred; instead, remote files are listed. Only a hostname specification and optional remote file specification need be given. For example:
+</p>
+<pre><code>pscp -ls fred@example.com:dir1
+</code></pre>
+<p>
+The SCP protocol does not contain within itself a means of listing files. If SCP is in use, this option therefore assumes that the server responds appropriately to the command <code>ls&nbsp;-la</code>; this may not work with all servers.
+</p>
+<p>
+If SFTP is in use, this option should work with all servers.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

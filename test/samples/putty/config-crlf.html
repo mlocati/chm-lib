@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Implicit CR in every LF&#8217;</title>
+<link rel="previous" href="config-decom.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-lfcr.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-crlf"></a>4.3.3 &#8216;Implicit CR in every LF&#8217;</h1>
+<p>
+Most servers send two control characters, <a name="i0"></a>CR and <a name="i1"></a>LF, to start a <a name="i2"></a>new line of the screen. The CR character makes the cursor return to the left-hand side of the screen. The LF character makes the cursor move one line down (and might make the screen scroll).
+</p>
+<p>
+Some servers only send LF, and expect the terminal to move the cursor over to the left automatically. If you come across a server that does this, you will see a <a name="i3"></a>stepped effect on the screen, like this:
+</p>
+<pre><code>First line of text
+                  Second line
+                             Third line
+</code></pre>
+<p>
+If this happens to you, try enabling the &#8216;Implicit CR in every LF&#8217; option, and things might go back to normal:
+</p>
+<pre><code>First line of text
+Second line
+Third line
+</code></pre>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

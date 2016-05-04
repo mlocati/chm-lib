@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Passive and active Telnet negotiation modes</title>
+<link rel="previous" href="config-oldenviron.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-telnetkey.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ptelnet"></a>4.16.2 Passive and active <a name="i0"></a>Telnet negotiation modes</h1>
+<p>
+In a Telnet connection, there are two types of data passed between the client and the server: actual text, and <em>negotiations</em> about which Telnet extra features to use.
+</p>
+<p>
+PuTTY can use two different strategies for negotiation:
+</p>
+<ul><li>
+In <a name="i1"></a><em>active</em> mode, PuTTY starts to send negotiations as soon as the connection is opened.
+</li>
+<li>
+In <a name="i2"></a><em>passive</em> mode, PuTTY will wait to negotiate until it sees a negotiation from the server.
+</li>
+</ul>
+<p>
+The obvious disadvantage of passive mode is that if the server is also operating in a passive mode, then negotiation will never begin at all. For this reason PuTTY defaults to active mode.
+</p>
+<p>
+However, sometimes passive mode is required in order to successfully get through certain types of firewall and <a name="i3"></a>Telnet proxy server. If you have confusing trouble with a <a name="i4"></a>firewall, you could try enabling passive mode to see if it helps.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

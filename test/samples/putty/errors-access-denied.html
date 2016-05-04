@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Access denied&#8217;, &#8216;Authentication refused&#8217;</title>
+<link rel="previous" href="errors-refused.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="errors-no-auth.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="errors-access-denied"></a>10.9 &#8216;Access denied&#8217;, &#8216;Authentication refused&#8217;</h1>
+<p>
+Various forms of this error are printed in the PuTTY window, or written to the PuTTY Event Log (see <a href="using-eventlog.html#using-eventlog">section 3.1.3.1</a>) during authentication.
+</p>
+<p>
+If you see one of these messages, it means that the server has refused all the forms of authentication PuTTY has tried and it has no further ideas.
+</p>
+<p>
+It may be worth checking the Event Log for diagnostic messages from the server giving more detail.
+</p>
+<p>
+This error can be caused by buggy SSH-1 servers that fail to cope with the various strategies we use for camouflaging passwords in transit. Upgrade your server, or use the workarounds described in <a href="config-ssh-bug-ignore1.html#config-ssh-bug-ignore1">section 4.26.1</a> and possibly <a href="config-ssh-bug-plainpw1.html#config-ssh-bug-plainpw1">section 4.26.2</a>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

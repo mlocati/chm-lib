@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Local line editing&#8217;</title>
+<link rel="previous" href="config-localecho.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-printing.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-localedit"></a>4.3.9 &#8216;<a name="i0"></a>Local line editing&#8217;</h1>
+<p>
+Normally, every character you type into the PuTTY window is sent immediately to the server the moment you type it.
+</p>
+<p>
+If you enable local line editing, this changes. PuTTY will let you edit a whole line at a time locally, and the line will only be sent to the server when you press Return. If you make a mistake, you can use the Backspace key to correct it before you press Return, and the server will never see the mistake.
+</p>
+<p>
+Since it is hard to edit a line locally without being able to see it, local line editing is mostly used in conjunction with <a name="i1"></a>local echo (<a href="config-localecho.html#config-localecho">section 4.3.8</a>). This makes it ideal for use in raw mode or when connecting to <a name="i2"></a>MUDs or <a name="i3"></a>talkers. (Although some more advanced MUDs do occasionally turn local line editing on and turn local echo off, in order to accept a password from the user.)
+</p>
+<p>
+Some types of session need local line editing, and many do not. In its default mode, PuTTY will automatically attempt to deduce whether or not local line editing is appropriate for the session you are working in. If you find it has made the wrong decision, you can use this configuration option to override its choice: you can force local line editing to be turned on, or force it to be turned off, instead of relying on the automatic detection.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

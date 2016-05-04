@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Controlling copy and paste of line drawing characters</title>
+<link rel="previous" href="config-linedraw.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-selection.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-linedrawpaste"></a>4.10.5 Controlling <a name="i0"></a>copy and paste of line drawing characters</h1>
+<p>
+By default, when you copy and paste a piece of the PuTTY screen that contains VT100 line and box drawing characters, PuTTY will paste them in the form they appear on the screen: either <a name="i1"></a>Unicode line drawing code points, or the &#8216;poor man's&#8217; line-drawing characters <code>+</code>, <code>-</code> and <code>|</code>. The checkbox &#8216;Copy and paste VT100 line drawing chars as lqqqk&#8217; disables this feature, so line-drawing characters will be pasted as the <a name="i2"></a>ASCII characters that were printed to produce them. This will typically mean they come out mostly as <code>q</code> and <code>x</code>, with a scattering of <code>jklmntuvw</code> at the corners. This might be useful if you were trying to recreate the same box layout in another program, for example.
+</p>
+<p>
+Note that this option only applies to line-drawing characters which <em>were</em> printed by using the VT100 mechanism. Line-drawing characters that were received as Unicode code points will paste as Unicode always.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

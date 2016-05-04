@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The rmdir command: remove remote directories</title>
+<link rel="previous" href="psftp-cmd-mkdir.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-cmd-mv.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-cmd-rmdir"></a>6.2.17 The <code>rmdir</code> command: remove remote directories</h1>
+<p>
+To <a name="i0"></a>remove a directory on the server, type <code>rmdir</code> and then the directory name or names:
+</p>
+<pre><code>rmdir oldstuff
+rmdir *.old ancient
+</code></pre>
+<p>
+Directories will be deleted without further prompting, even if multiple directories are specified.
+</p>
+<p>
+Most SFTP servers will probably refuse to remove a directory if the directory has anything in it, so you will need to delete the contents first.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

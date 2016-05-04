@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>How come PuTTY now supports DSA, when the website used to say how insecure it was?</title>
+<link rel="previous" href="faq-cleanup.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-virtuallock.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-dsa"></a>A.8.3 How come PuTTY now supports <a name="i0"></a>DSA, when the website used to say how insecure it was?</h1>
+<p>
+DSA has a major weakness <em>if badly implemented</em>: it relies on a random number generator to far too great an extent. If the random number generator produces a number an attacker can predict, the DSA private key is exposed - meaning that the attacker can log in as you on all systems that accept that key.
+</p>
+<p>
+The PuTTY policy changed because the developers were informed of ways to implement DSA which do not suffer nearly as badly from this weakness, and indeed which don't need to rely on random numbers at all. For this reason we now believe PuTTY's DSA implementation is probably OK. However, if you have the choice, we still recommend you use RSA instead.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>When I cat a binary file, my window title changes to a nonsense string.</title>
+<link rel="previous" href="faq-puttyputty.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-password-fails.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-wintitle"></a>A.7.13 When I <code>cat</code> a binary file, my <a name="i0"></a>window title changes to a nonsense string.</h1>
+<p>
+Don't do that, then.
+</p>
+<p>
+It is designed behaviour that PuTTY should have the ability to adjust the window title on instructions from the server. Normally the control sequence that does this should only be sent deliberately, by programs that know what they are doing and intend to put meaningful text in the window title. Writing a binary file to your terminal runs the risk of sending the same control sequence by accident, and cause unexpected changes in the window title. Don't do it.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

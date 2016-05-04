@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Replies to requests on closed channels&#8217;</title>
+<link rel="previous" href="config-ssh-bug-maxpkt2.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-bug-oldgex2.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-bug-chanreq"></a>4.26.12 &#8216;Replies to requests on closed channels&#8217;</h1>
+<p>
+The SSH protocol as published in RFC 4254 has an ambiguity which arises if one side of a connection tries to close a channel, while the other side simultaneously sends a request within the channel and asks for a reply. RFC 4254 leaves it unclear whether the closing side should reply to the channel request after having announced its intention to close the channel.
+</p>
+<p>
+Discussion on the <code>ietf-ssh</code> mailing list in April 2014 formed a clear consensus that the right answer is no. However, because of the ambiguity in the specification, some SSH servers have implemented the other policy; for example, <a href="https://bugzilla.mindrot.org/show_bug.cgi?id=1818">OpenSSH used to</a> until it was fixed.
+</p>
+<p>
+Because PuTTY sends channel requests with the &#8216;want reply&#8217; flag throughout channels' lifetime (see <a href="config-ssh-bug-winadj.html#config-ssh-bug-winadj">section 4.26.5</a>), it's possible that when connecting to such a server it might receive a reply to a request after it thinks the channel has entirely closed, and terminate with an error along the lines of &#8216;Received <code>SSH2_MSG_CHANNEL_FAILURE</code> for nonexistent channel 256&#8217;.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

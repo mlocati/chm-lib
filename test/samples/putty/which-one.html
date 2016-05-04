@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>How do SSH, Telnet and Rlogin differ?</title>
+<link rel="previous" href="you-what.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="gs.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="which-one"></a>1.2 How do SSH, Telnet and Rlogin differ?</h1>
+<p>
+This list summarises some of the <a name="i0"></a>differences between SSH, Telnet and Rlogin.
+</p>
+<ul><li>
+SSH (which stands for &#8216;<a name="i1"></a>secure shell&#8217;) is a recently designed, high-security protocol. It uses strong cryptography to protect your connection against eavesdropping, hijacking and other attacks. Telnet and Rlogin are both older protocols offering minimal security.
+</li>
+<li>
+SSH and Rlogin both allow you to <a name="i2"></a>log in to the server without having to type a password. (Rlogin's method of doing this is insecure, and can allow an attacker to access your account on the server. SSH's method is much more secure, and typically breaking the security requires the attacker to have gained access to your actual client machine.)
+</li>
+<li>
+SSH allows you to connect to the server and automatically send a command, so that the server will run that command and then disconnect. So you can use it in automated processing.
+</li>
+</ul>
+<p>
+The Internet is a hostile environment and security is everybody's responsibility. If you are connecting across the open Internet, then we recommend you use SSH. If the server you want to connect to doesn't support SSH, it might be worth trying to persuade the administrator to install it.
+</p>
+<p>
+If your client and server are both behind the same (good) firewall, it is more likely to be safe to use Telnet or Rlogin, but we still recommend you use SSH.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

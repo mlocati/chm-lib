@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Configuring PuTTY</title>
+<link rel="previous" href="using-cmdline-sshlog.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-session.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config"></a>Chapter 4: Configuring PuTTY</h1>
+<p>
+This chapter describes all the <a name="i0"></a>configuration options in PuTTY.
+</p>
+<p>
+PuTTY is configured using the control panel that comes up before you start a session. Some options can also be changed in the middle of a session, by selecting &#8216;Change Settings&#8217; from the window menu.
+</p>
+
+<ul>
+<li><a href="config-session.html#config-session">4.1 The Session panel</a>
+<ul>
+<li><a href="config-hostname.html#config-hostname">4.1.1 The host name section</a></li>
+<li><a href="config-saving.html#config-saving">4.1.2 Loading and storing saved sessions</a></li>
+<li><a href="config-closeonexit.html#config-closeonexit">4.1.3 &#8216;Close Window on Exit&#8217;</a></li>
+</ul></li>
+<li><a href="config-logging.html#config-logging">4.2 The Logging panel</a>
+<ul>
+<li><a href="config-logfilename.html#config-logfilename">4.2.1 &#8216;Log file name&#8217;</a></li>
+<li><a href="config-logfileexists.html#config-logfileexists">4.2.2 &#8216;What to do if the log file already exists&#8217;</a></li>
+<li><a href="config-logflush.html#config-logflush">4.2.3 &#8216;Flush log file frequently&#8217;</a></li>
+<li><a href="config-logssh.html#config-logssh">4.2.4 Options specific to SSH packet logging</a></li>
+</ul></li>
+<li><a href="config-terminal.html#config-terminal">4.3 The Terminal panel</a>
+<ul>
+<li><a href="config-autowrap.html#config-autowrap">4.3.1 &#8216;Auto wrap mode initially on&#8217;</a></li>
+<li><a href="config-decom.html#config-decom">4.3.2 &#8216;DEC Origin Mode initially on&#8217;</a></li>
+<li><a href="config-crlf.html#config-crlf">4.3.3 &#8216;Implicit CR in every LF&#8217;</a></li>
+<li><a href="config-lfcr.html#config-lfcr">4.3.4 &#8216;Implicit LF in every CR&#8217;</a></li>
+<li><a href="config-erase.html#config-erase">4.3.5 &#8216;Use background colour to erase screen&#8217;</a></li>
+<li><a href="config-blink.html#config-blink">4.3.6 &#8216;Enable blinking text&#8217;</a></li>
+<li><a href="config-answerback.html#config-answerback">4.3.7 &#8216;Answerback to ^E&#8217;</a></li>
+<li><a href="config-localecho.html#config-localecho">4.3.8 &#8216;Local echo&#8217;</a></li>
+<li><a href="config-localedit.html#config-localedit">4.3.9 &#8216;Local line editing&#8217;</a></li>
+<li><a href="config-printing.html#config-printing">4.3.10 Remote-controlled printing</a></li>
+</ul></li>
+<li><a href="config-keyboard.html#config-keyboard">4.4 The Keyboard panel</a>
+<ul>
+<li><a href="config-backspace.html#config-backspace">4.4.1 Changing the action of the Backspace key</a></li>
+<li><a href="config-homeend.html#config-homeend">4.4.2 Changing the action of the Home and End keys</a></li>
+<li><a href="config-funkeys.html#config-funkeys">4.4.3 Changing the action of the function keys and keypad</a></li>
+<li><a href="config-appcursor.html#config-appcursor">4.4.4 Controlling Application Cursor Keys mode</a></li>
+<li><a href="config-appkeypad.html#config-appkeypad">4.4.5 Controlling Application Keypad mode</a></li>
+<li><a href="config-nethack.html#config-nethack">4.4.6 Using NetHack keypad mode</a></li>
+<li><a href="config-compose.html#config-compose">4.4.7 Enabling a DEC-like Compose key</a></li>
+<li><a href="config-ctrlalt.html#config-ctrlalt">4.4.8 &#8216;Control-Alt is different from AltGr&#8217;</a></li>
+</ul></li>
+<li><a href="config-bell.html#config-bell">4.5 The Bell panel</a>
+<ul>
+<li><a href="config-bellstyle.html#config-bellstyle">4.5.1 &#8216;Set the style of bell&#8217;</a></li>
+<li><a href="config-belltaskbar.html#config-belltaskbar">4.5.2 &#8216;Taskbar/caption indication on bell&#8217;</a></li>
+<li><a href="config-bellovl.html#config-bellovl">4.5.3 &#8216;Control the bell overload behaviour&#8217;</a></li>
+</ul></li>
+<li><a href="config-features.html#config-features">4.6 The Features panel</a>
+<ul>
+<li><a href="config-features-application.html#config-features-application">4.6.1 Disabling application keypad and cursor keys</a></li>
+<li><a href="config-features-mouse.html#config-features-mouse">4.6.2 Disabling <code>xterm</code>-style mouse reporting</a></li>
+<li><a href="config-features-resize.html#config-features-resize">4.6.3 Disabling remote terminal resizing</a></li>
+<li><a href="config-features-altscreen.html#config-features-altscreen">4.6.4 Disabling switching to the alternate screen</a></li>
+<li><a href="config-features-retitle.html#config-features-retitle">4.6.5 Disabling remote window title changing</a></li>
+<li><a href="config-features-qtitle.html#config-features-qtitle">4.6.6 Response to remote window title querying</a></li>
+<li><a href="config-features-dbackspace.html#config-features-dbackspace">4.6.7 Disabling destructive backspace</a></li>
+<li><a href="config-features-charset.html#config-features-charset">4.6.8 Disabling remote character set configuration</a></li>
+<li><a href="config-features-shaping.html#config-features-shaping">4.6.9 Disabling Arabic text shaping</a></li>
+<li><a href="config-features-bidi.html#config-features-bidi">4.6.10 Disabling bidirectional text display</a></li>
+</ul></li>
+<li><a href="config-window.html#config-window">4.7 The Window panel</a>
+<ul>
+<li><a href="config-winsize.html#config-winsize">4.7.1 Setting the size of the PuTTY window</a></li>
+<li><a href="config-winsizelock.html#config-winsizelock">4.7.2 What to do when the window is resized</a></li>
+<li><a href="config-scrollback.html#config-scrollback">4.7.3 Controlling scrollback</a></li>
+<li><a href="config-erasetoscrollback.html#config-erasetoscrollback">4.7.4 &#8216;Push erased text into scrollback&#8217;</a></li>
+</ul></li>
+<li><a href="config-appearance.html#config-appearance">4.8 The Appearance panel</a>
+<ul>
+<li><a href="config-cursor.html#config-cursor">4.8.1 Controlling the appearance of the cursor</a></li>
+<li><a href="config-font.html#config-font">4.8.2 Controlling the font used in the terminal window</a></li>
+<li><a href="config-mouseptr.html#config-mouseptr">4.8.3 &#8216;Hide mouse pointer when typing in window&#8217;</a></li>
+<li><a href="config-winborder.html#config-winborder">4.8.4 Controlling the window border</a></li>
+</ul></li>
+<li><a href="config-behaviour.html#config-behaviour">4.9 The Behaviour panel</a>
+<ul>
+<li><a href="config-title.html#config-title">4.9.1 Controlling the window title</a></li>
+<li><a href="config-warnonclose.html#config-warnonclose">4.9.2 &#8216;Warn before closing window&#8217;</a></li>
+<li><a href="config-altf4.html#config-altf4">4.9.3 &#8216;Window closes on ALT-F4&#8217;</a></li>
+<li><a href="config-altspace.html#config-altspace">4.9.4 &#8216;System menu appears on ALT-Space&#8217;</a></li>
+<li><a href="config-altonly.html#config-altonly">4.9.5 &#8216;System menu appears on Alt alone&#8217;</a></li>
+<li><a href="config-alwaysontop.html#config-alwaysontop">4.9.6 &#8216;Ensure window is always on top&#8217;</a></li>
+<li><a href="config-fullscreen.html#config-fullscreen">4.9.7 &#8216;Full screen on Alt-Enter&#8217;</a></li>
+</ul></li>
+<li><a href="config-translation.html#config-translation">4.10 The Translation panel</a>
+<ul>
+<li><a href="config-charset.html#config-charset">4.10.1 Controlling character set translation</a></li>
+<li><a href="config-cjk-ambig-wide.html#config-cjk-ambig-wide">4.10.2 &#8216;Treat CJK ambiguous characters as wide&#8217;</a></li>
+<li><a href="config-cyr.html#config-cyr">4.10.3 &#8216;Caps Lock acts as Cyrillic switch&#8217;</a></li>
+<li><a href="config-linedraw.html#config-linedraw">4.10.4 Controlling display of line-drawing characters</a></li>
+<li><a href="config-linedrawpaste.html#config-linedrawpaste">4.10.5 Controlling copy and paste of line drawing characters</a></li>
+</ul></li>
+<li><a href="config-selection.html#config-selection">4.11 The Selection panel</a>
+<ul>
+<li><a href="config-rtfpaste.html#config-rtfpaste">4.11.1 Pasting in Rich Text Format</a></li>
+<li><a href="config-mouse.html#config-mouse">4.11.2 Changing the actions of the mouse buttons</a></li>
+<li><a href="config-mouseshift.html#config-mouseshift">4.11.3 &#8216;Shift overrides application's use of mouse&#8217;</a></li>
+<li><a href="config-rectselect.html#config-rectselect">4.11.4 Default selection mode</a></li>
+<li><a href="config-charclasses.html#config-charclasses">4.11.5 Configuring word-by-word selection</a></li>
+</ul></li>
+<li><a href="config-colours.html#config-colours">4.12 The Colours panel</a>
+<ul>
+<li><a href="config-ansicolour.html#config-ansicolour">4.12.1 &#8216;Allow terminal to specify ANSI colours&#8217;</a></li>
+<li><a href="config-xtermcolour.html#config-xtermcolour">4.12.2 &#8216;Allow terminal to use xterm 256-colour mode&#8217;</a></li>
+<li><a href="config-boldcolour.html#config-boldcolour">4.12.3 &#8216;Indicate bolded text by changing...&#8217;</a></li>
+<li><a href="config-logpalette.html#config-logpalette">4.12.4 &#8216;Attempt to use logical palettes&#8217;</a></li>
+<li><a href="config-syscolour.html#config-syscolour">4.12.5 &#8216;Use system colours&#8217;</a></li>
+<li><a href="config-colourcfg.html#config-colourcfg">4.12.6 Adjusting the colours in the terminal window</a></li>
+</ul></li>
+<li><a href="config-connection.html#config-connection">4.13 The Connection panel</a>
+<ul>
+<li><a href="config-keepalive.html#config-keepalive">4.13.1 Using keepalives to prevent disconnection</a></li>
+<li><a href="config-nodelay.html#config-nodelay">4.13.2 &#8216;Disable Nagle's algorithm&#8217;</a></li>
+<li><a href="config-tcp-keepalives.html#config-tcp-keepalives">4.13.3 &#8216;Enable TCP keepalives&#8217;</a></li>
+<li><a href="config-address-family.html#config-address-family">4.13.4 &#8216;Internet protocol&#8217;</a></li>
+<li><a href="config-loghost.html#config-loghost">4.13.5 &#8216;Logical name of remote host&#8217;</a></li>
+</ul></li>
+<li><a href="config-data.html#config-data">4.14 The Data panel</a>
+<ul>
+<li><a href="config-username.html#config-username">4.14.1 &#8216;Auto-login username&#8217;</a></li>
+<li><a href="config-username-from-env.html#config-username-from-env">4.14.2 Use of system username</a></li>
+<li><a href="config-termtype.html#config-termtype">4.14.3 &#8216;Terminal-type string&#8217;</a></li>
+<li><a href="config-termspeed.html#config-termspeed">4.14.4 &#8216;Terminal speeds&#8217;</a></li>
+<li><a href="config-environ.html#config-environ">4.14.5 Setting environment variables on the server</a></li>
+</ul></li>
+<li><a href="config-proxy.html#config-proxy">4.15 The Proxy panel</a>
+<ul>
+<li><a href="config-proxy-type.html#config-proxy-type">4.15.1 Setting the proxy type</a></li>
+<li><a href="config-proxy-exclude.html#config-proxy-exclude">4.15.2 Excluding parts of the network from proxying</a></li>
+<li><a href="config-proxy-dns.html#config-proxy-dns">4.15.3 Name resolution when using a proxy</a></li>
+<li><a href="config-proxy-auth.html#config-proxy-auth">4.15.4 Username and password</a></li>
+<li><a href="config-proxy-command.html#config-proxy-command">4.15.5 Specifying the Telnet or Local proxy command</a></li>
+</ul></li>
+<li><a href="config-telnet.html#config-telnet">4.16 The Telnet panel</a>
+<ul>
+<li><a href="config-oldenviron.html#config-oldenviron">4.16.1 &#8216;Handling of OLD_ENVIRON ambiguity&#8217;</a></li>
+<li><a href="config-ptelnet.html#config-ptelnet">4.16.2 Passive and active Telnet negotiation modes</a></li>
+<li><a href="config-telnetkey.html#config-telnetkey">4.16.3 &#8216;Keyboard sends Telnet special commands&#8217;</a></li>
+<li><a href="config-telnetnl.html#config-telnetnl">4.16.4 &#8216;Return key sends Telnet New Line instead of ^M&#8217;</a></li>
+</ul></li>
+<li><a href="config-rlogin.html#config-rlogin">4.17 The Rlogin panel</a>
+<ul>
+<li><a href="config-rlogin-localuser.html#config-rlogin-localuser">4.17.1 &#8216;Local username&#8217;</a></li>
+</ul></li>
+<li><a href="config-ssh.html#config-ssh">4.18 The SSH panel</a>
+<ul>
+<li><a href="config-command.html#config-command">4.18.1 Executing a specific command on the server</a></li>
+<li><a href="config-ssh-noshell.html#config-ssh-noshell">4.18.2 &#8216;Don't start a shell or command at all&#8217;</a></li>
+<li><a href="config-ssh-comp.html#config-ssh-comp">4.18.3 &#8216;Enable compression&#8217;</a></li>
+<li><a href="config-ssh-prot.html#config-ssh-prot">4.18.4 &#8216;Preferred SSH protocol version&#8217;</a></li>
+<li><a href="config-ssh-sharing.html#config-ssh-sharing">4.18.5 Sharing an SSH connection between PuTTY tools</a></li>
+</ul></li>
+<li><a href="config-ssh-kex.html#config-ssh-kex">4.19 The Kex panel</a>
+<ul>
+<li><a href="config-ssh-kex-order.html#config-ssh-kex-order">4.19.1 Key exchange algorithm selection</a></li>
+<li><a href="config-ssh-kex-rekey.html#config-ssh-kex-rekey">4.19.2 Repeat key exchange</a></li>
+<li><a href="config-ssh-kex-manual-hostkeys.html#config-ssh-kex-manual-hostkeys">4.19.3 Manually configuring host keys</a></li>
+</ul></li>
+<li><a href="config-ssh-encryption.html#config-ssh-encryption">4.20 The Cipher panel</a></li>
+<li><a href="config-ssh-auth.html#config-ssh-auth">4.21 The Auth panel</a>
+<ul>
+<li><a href="config-ssh-noauth.html#config-ssh-noauth">4.21.1 &#8216;Bypass authentication entirely&#8217;</a></li>
+<li><a href="config-ssh-banner.html#config-ssh-banner">4.21.2 &#8216;Display pre-authentication banner&#8217;</a></li>
+<li><a href="config-ssh-tryagent.html#config-ssh-tryagent">4.21.3 &#8216;Attempt authentication using Pageant&#8217;</a></li>
+<li><a href="config-ssh-tis.html#config-ssh-tis">4.21.4 &#8216;Attempt TIS or CryptoCard authentication&#8217;</a></li>
+<li><a href="config-ssh-ki.html#config-ssh-ki">4.21.5 &#8216;Attempt keyboard-interactive authentication&#8217;</a></li>
+<li><a href="config-ssh-agentfwd.html#config-ssh-agentfwd">4.21.6 &#8216;Allow agent forwarding&#8217;</a></li>
+<li><a href="config-ssh-changeuser.html#config-ssh-changeuser">4.21.7 &#8216;Allow attempted changes of username in SSH-2&#8217;</a></li>
+<li><a href="config-ssh-privkey.html#config-ssh-privkey">4.21.8 &#8216;Private key file for authentication&#8217;</a></li>
+</ul></li>
+<li><a href="config-ssh-auth-gssapi.html#config-ssh-auth-gssapi">4.22 The GSSAPI panel</a>
+<ul>
+<li><a href="config-ssh-auth-gssapi-delegation.html#config-ssh-auth-gssapi-delegation">4.22.1 &#8216;Allow GSSAPI credential delegation&#8217;</a></li>
+<li><a href="config-ssh-auth-gssapi-libraries.html#config-ssh-auth-gssapi-libraries">4.22.2 Preference order for GSSAPI libraries</a></li>
+</ul></li>
+<li><a href="config-ssh-tty.html#config-ssh-tty">4.23 The TTY panel</a>
+<ul>
+<li><a href="config-ssh-pty.html#config-ssh-pty">4.23.1 &#8216;Don't allocate a pseudo-terminal&#8217;</a></li>
+<li><a href="config-ttymodes.html#config-ttymodes">4.23.2 Sending terminal modes</a></li>
+</ul></li>
+<li><a href="config-ssh-x11.html#config-ssh-x11">4.24 The X11 panel</a>
+<ul>
+<li><a href="config-ssh-x11auth.html#config-ssh-x11auth">4.24.1 Remote X11 authentication</a></li>
+<li><a href="config-ssh-xauthority.html#config-ssh-xauthority">4.24.2 X authority file for local display</a></li>
+</ul></li>
+<li><a href="config-ssh-portfwd.html#config-ssh-portfwd">4.25 The Tunnels panel</a>
+<ul>
+<li><a href="config-ssh-portfwd-localhost.html#config-ssh-portfwd-localhost">4.25.1 Controlling the visibility of forwarded ports</a></li>
+<li><a href="config-ssh-portfwd-address-family.html#config-ssh-portfwd-address-family">4.25.2 Selecting Internet protocol version for forwarded ports</a></li>
+</ul></li>
+<li><a href="config-ssh-bugs.html#config-ssh-bugs">4.26 The Bugs and More Bugs panels</a>
+<ul>
+<li><a href="config-ssh-bug-ignore1.html#config-ssh-bug-ignore1">4.26.1 &#8216;Chokes on SSH-1 ignore messages&#8217;</a></li>
+<li><a href="config-ssh-bug-plainpw1.html#config-ssh-bug-plainpw1">4.26.2 &#8216;Refuses all SSH-1 password camouflage&#8217;</a></li>
+<li><a href="config-ssh-bug-rsa1.html#config-ssh-bug-rsa1">4.26.3 &#8216;Chokes on SSH-1 RSA authentication&#8217;</a></li>
+<li><a href="config-ssh-bug-ignore2.html#config-ssh-bug-ignore2">4.26.4 &#8216;Chokes on SSH-2 ignore messages&#8217;</a></li>
+<li><a href="config-ssh-bug-winadj.html#config-ssh-bug-winadj">4.26.5 &#8216;Chokes on PuTTY's SSH-2 &#8216;<code>winadj</code>&#8217; requests&#8217;</a></li>
+<li><a href="config-ssh-bug-hmac2.html#config-ssh-bug-hmac2">4.26.6 &#8216;Miscomputes SSH-2 HMAC keys&#8217;</a></li>
+<li><a href="config-ssh-bug-derivekey2.html#config-ssh-bug-derivekey2">4.26.7 &#8216;Miscomputes SSH-2 encryption keys&#8217;</a></li>
+<li><a href="config-ssh-bug-sig.html#config-ssh-bug-sig">4.26.8 &#8216;Requires padding on SSH-2 RSA signatures&#8217;</a></li>
+<li><a href="config-ssh-bug-pksessid2.html#config-ssh-bug-pksessid2">4.26.9 &#8216;Misuses the session ID in SSH-2 PK auth&#8217;</a></li>
+<li><a href="config-ssh-bug-rekey.html#config-ssh-bug-rekey">4.26.10 &#8216;Handles SSH-2 key re-exchange badly&#8217;</a></li>
+<li><a href="config-ssh-bug-maxpkt2.html#config-ssh-bug-maxpkt2">4.26.11 &#8216;Ignores SSH-2 maximum packet size&#8217;</a></li>
+<li><a href="config-ssh-bug-chanreq.html#config-ssh-bug-chanreq">4.26.12 &#8216;Replies to requests on closed channels&#8217;</a></li>
+<li><a href="config-ssh-bug-oldgex2.html#config-ssh-bug-oldgex2">4.26.13 &#8216;Only supports pre-RFC4419 SSH-2 DH GEX&#8217;</a></li>
+</ul></li>
+<li><a href="config-serial.html#config-serial">4.27 The Serial panel</a>
+<ul>
+<li><a href="config-serial-line.html#config-serial-line">4.27.1 Selecting a serial line to connect to</a></li>
+<li><a href="config-serial-speed.html#config-serial-speed">4.27.2 Selecting the speed of your serial line</a></li>
+<li><a href="config-serial-databits.html#config-serial-databits">4.27.3 Selecting the number of data bits</a></li>
+<li><a href="config-serial-stopbits.html#config-serial-stopbits">4.27.4 Selecting the number of stop bits</a></li>
+<li><a href="config-serial-parity.html#config-serial-parity">4.27.5 Selecting the serial parity checking scheme</a></li>
+<li><a href="config-serial-flow.html#config-serial-flow">4.27.6 Selecting the serial flow control scheme</a></li>
+</ul></li>
+<li><a href="config-file.html#config-file">4.28 Storing configuration in a file</a></li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

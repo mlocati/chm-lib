@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Sharing an SSH connection between PuTTY tools</title>
+<link rel="previous" href="config-ssh-prot.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-kex.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-sharing"></a>4.18.5 Sharing an SSH connection between PuTTY tools</h1>
+<p>
+The controls in this box allow you to configure PuTTY to reuse an existing SSH connection, where possible.
+</p>
+<p>
+The SSH-2 protocol permits you to run multiple data channels over the same SSH connection, so that you can log in just once (and do the expensive encryption setup just once) and then have more than one terminal window open.
+</p>
+<p>
+Each instance of PuTTY can still run at most one terminal session, but using the controls in this box, you can configure PuTTY to check if another instance of itself has already connected to the target host, and if so, share that instance's SSH connection instead of starting a separate new one.
+</p>
+<p>
+To enable this feature, just tick the box &#8216;Share SSH connections if possible&#8217;. Then, whenever you start up a PuTTY session connecting to a particular host, it will try to reuse an existing SSH connection if one is available. For example, selecting &#8216;Duplicate Session&#8217; from the system menu will launch another session on the same host, and if sharing is enabled then it will reuse the existing SSH connection.
+</p>
+<p>
+When this mode is in use, the first PuTTY that connected to a given server becomes the &#8216;upstream&#8217;, which means that it is the one managing the real SSH connection. All subsequent PuTTYs which reuse the connection are referred to as &#8216;downstreams&#8217;: they do not connect to the real server at all, but instead connect to the upstream PuTTY via local inter-process communication methods.
+</p>
+<p>
+For this system to be activated, <em>both</em> the upstream and downstream instances of PuTTY must have the sharing option enabled.
+</p>
+<p>
+The upstream PuTTY can therefore not terminate until all its downstreams have closed. This is similar to the effect you get with port forwarding or X11 forwarding, in which a PuTTY whose terminal session has already finished will still remain open so as to keep serving forwarded connections.
+</p>
+<p>
+In case you need to configure this system in more detail, there are two additional checkboxes which allow you to specify whether a particular PuTTY can act as an upstream or a downstream or both. (These boxes only take effect if the main &#8216;Share SSH connections if possible&#8217; box is also ticked.) By default both of these boxes are ticked, so that multiple PuTTYs started from the same configuration will designate one of themselves as the upstream and share a single connection; but if for some reason you need a particular PuTTY configuration <em>not</em> to be an upstream (e.g. because you definitely need it to close promptly) or not to be a downstream (e.g. because it needs to do its own authentication using a special private key) then you can untick one or the other of these boxes.
+</p>
+<p>
+I have referred to &#8216;PuTTY&#8217; throughout the above discussion, but all the other PuTTY tools which make SSH connections can use this mechanism too. For example, if PSCP or PSFTP loads a configuration with sharing enabled, then it can act as a downstream and use an existing SSH connection set up by an instance of GUI PuTTY. The one special case is that PSCP and PSFTP will <em>never</em> act as upstreams.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

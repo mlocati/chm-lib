@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The del command: delete remote files</title>
+<link rel="previous" href="psftp-cmd-chmod.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-cmd-mkdir.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-cmd-del"></a>6.2.15 The <code>del</code> command: delete remote files</h1>
+<p>
+To <a name="i0"></a>delete a file on the server, type <code>del</code> and then the filename or filenames:
+</p>
+<pre><code>del oldfile.dat
+del file1.txt file2.txt
+del *.o
+</code></pre>
+<p>
+Files will be deleted without further prompting, even if multiple files are specified.
+</p>
+<p>
+<code>del</code> will only delete files. You cannot use it to delete directories; use <code>rmdir</code> for that.
+</p>
+<p>
+The <code>rm</code> command works exactly the same way as <code>del</code>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Connecting to a local serial line</title>
+<link rel="previous" href="using-rawprot.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="using-cmdline.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="using-serial"></a>3.7 Connecting to a local serial line</h1>
+<p>
+PuTTY can connect directly to a local serial line as an alternative to making a network connection. In this mode, text typed into the PuTTY window will be sent straight out of your computer's serial port, and data received through that port will be displayed in the PuTTY window. You might use this mode, for example, if your serial port is connected to another computer which has a serial connection.
+</p>
+<p>
+To make a connection of this type, simply select &#8216;Serial&#8217; from the &#8216;Connection type&#8217; radio buttons on the &#8216;Session&#8217; configuration panel (see <a href="config-hostname.html#config-hostname">section 4.1.1</a>). The &#8216;Host Name&#8217; and &#8216;Port&#8217; boxes will transform into &#8216;Serial line&#8217; and &#8216;Speed&#8217;, allowing you to specify which serial line to use (if your computer has more than one) and what speed (baud rate) to use when transferring data. For further configuration options (data bits, stop bits, parity, flow control), you can use the &#8216;Serial&#8217; configuration panel (see <a href="config-serial.html#config-serial">section 4.27</a>).
+</p>
+<p>
+After you start up PuTTY in serial mode, you might find that you have to make the first move, by sending some data out of the serial line in order to notify the device at the other end that someone is there for it to talk to. This probably depends on the device. If you start up a PuTTY serial session and nothing appears in the window, try pressing Return a few times and see if that helps.
+</p>
+<p>
+A serial line provides no well defined means for one end of the connection to notify the other that the connection is finished. Therefore, PuTTY in serial mode will remain connected until you close the window using the close button.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

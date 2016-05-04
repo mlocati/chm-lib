@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;WARNING - POTENTIAL SECURITY BREACH!&#8217;</title>
+<link rel="previous" href="errors-hostkey-absent.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="errors-cipher-warning.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="errors-hostkey-wrong"></a>10.2 &#8216;WARNING - POTENTIAL SECURITY BREACH!&#8217;</h1>
+<p>
+This message, followed by &#8216;The server's host key does not match the one PuTTY has cached in the registry&#8217;, means that PuTTY has connected to the SSH server before, knows what its host key <em>should</em> be, but has found a different one.
+</p>
+<p>
+This may mean that a malicious attacker has replaced your server with a different one, or has redirected your network connection to their own machine. On the other hand, it may simply mean that the administrator of your server has accidentally changed the key while upgrading the SSH software; this <em>shouldn't</em> happen but it is unfortunately possible.
+</p>
+<p>
+You should contact your server's administrator and see whether they expect the host key to have changed. If so, verify the new host key in the same way as you would if it was new.
+</p>
+<p>
+See <a href="gs-hostkey.html#gs-hostkey">section 2.2</a> for more information on host keys.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

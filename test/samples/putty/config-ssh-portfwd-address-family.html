@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Selecting Internet protocol version for forwarded ports</title>
+<link rel="previous" href="config-ssh-portfwd-localhost.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-bugs.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-portfwd-address-family"></a>4.25.2 Selecting <a name="i0"></a>Internet protocol version for forwarded ports</h1>
+<p>
+This switch allows you to select a specific Internet protocol (<a name="i1"></a>IPv4 or <a name="i2"></a>IPv6) for the local end of a forwarded port. By default, it is set on &#8216;Auto&#8217;, which means that:
+</p>
+<ul><li>
+for a local-to-remote port forwarding, PuTTY will listen for incoming connections in both IPv4 and (if available) IPv6
+</li>
+<li>
+for a remote-to-local port forwarding, PuTTY will choose a sensible protocol for the outgoing connection.
+</li>
+</ul>
+<p>
+This overrides the general Internet protocol version preference on the Connection panel (see <a href="config-address-family.html#config-address-family">section 4.13.4</a>).
+</p>
+<p>
+Note that some operating systems may listen for incoming connections in IPv4 even if you specifically asked for IPv6, because their IPv4 and IPv6 protocol stacks are linked together. Apparently <a name="i3"></a>Linux does this, and Windows does not. So if you're running PuTTY on Windows and you tick &#8216;IPv6&#8217; for a local or dynamic port forwarding, it will <em>only</em> be usable by connecting to it using IPv6; whereas if you do the same on Linux, you can also use it with IPv4. However, ticking &#8216;Auto&#8217; should always give you a port which you can connect to using either protocol.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

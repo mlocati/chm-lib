@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Cross-OS portability</title>
+<link rel="previous" href="udp.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="udp-multi-backend.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="udp-portability"></a>D.1 Cross-OS portability</h1>
+<p>
+Despite Windows being its main area of fame, PuTTY is no longer a Windows-only application suite. It has a working Unix port; a Mac port is in progress; more ports may or may not happen at a later date.
+</p>
+<p>
+Therefore, embedding Windows-specific code in core modules such as <code>ssh.c</code> is not acceptable. We went to great lengths to <em>remove</em> all the Windows-specific stuff from our core modules, and to shift it out into Windows-specific modules. Adding large amounts of Windows-specific stuff in parts of the code that should be portable is almost guaranteed to make us reject a contribution.
+</p>
+<p>
+The PuTTY source base is divided into platform-specific modules and platform-generic modules. The Unix-specific modules are all in the <code>unix</code> subdirectory; the Mac-specific modules are in the <code>mac</code> subdirectory; the Windows-specific modules are in the <code>windows</code> subdirectory.
+</p>
+<p>
+All the modules in the main source directory - notably <em>all</em> of the code for the various back ends - are platform-generic. We want to keep them that way.
+</p>
+<p>
+This also means you should stick to what you are guaranteed by ANSI/ISO C (that is, the original C89/C90 standard, not C99). Try not to make assumptions about the precise size of basic types such as <code>int</code> and <code>long int</code>; don't use pointer casts to do endianness-dependent operations, and so on.
+</p>
+<p>
+(There are one or two aspects of ANSI C portability which we <em>don't</em> care about. In particular, we expect PuTTY to be compiled on 32-bit architectures <em>or bigger</em>; so it's safe to assume that <code>int</code> is at least 32 bits wide, not just the 16 you are guaranteed by ANSI C. Similarly, we assume that the execution character encoding is a superset of the printable characters of ASCII, though we don't assume the numeric values of control characters, particularly <code>'\n'</code> and <code>'\r'</code>.)
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

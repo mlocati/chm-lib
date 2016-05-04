@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Omit known password fields&#8217;</title>
+<link rel="previous" href="config-logssh.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-logssh-omitdata.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-logssh-omitpw"></a>4.2.4.1 &#8216;Omit known password fields&#8217;</h1>
+<p>
+When checked, decrypted password fields are removed from the log of transmitted packets. (This includes any user responses to challenge-response authentication methods such as &#8216;keyboard-interactive&#8217;.) This does not include X11 authentication data if using X11 forwarding.
+</p>
+<p>
+Note that this will only omit data that PuTTY <em>knows</em> to be a password. However, if you start another login session within your PuTTY session, for instance, any password used will appear in the clear in the packet log. The next option may be of use to protect against this.
+</p>
+<p>
+This option is enabled by default.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

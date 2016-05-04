@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Controlling the visibility of forwarded ports</title>
+<link rel="previous" href="config-ssh-portfwd.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-portfwd-address-family.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-portfwd-localhost"></a>4.25.1 Controlling the visibility of forwarded ports</h1>
+<p>
+The source port for a forwarded connection usually does not accept connections from any machine except the <a name="i0"></a>SSH client or server machine itself (for local and remote forwardings respectively). There are controls in the Tunnels panel to change this:
+</p>
+<ul><li>
+The &#8216;Local ports accept connections from other hosts&#8217; option allows you to set up local-to-remote port forwardings in such a way that machines other than your client PC can connect to the forwarded port. (This also applies to dynamic SOCKS forwarding.)
+</li>
+<li>
+The &#8216;Remote ports do the same&#8217; option does the same thing for remote-to-local port forwardings (so that machines other than the SSH server machine can connect to the forwarded port.) Note that this feature is only available in the SSH-2 protocol, and not all SSH-2 servers support it (<a name="i1"></a>OpenSSH 3.0 does not, for example).
+</li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=US-ASCII">
+</HEAD><BODY><UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PuTTY User Manual"><PARAM NAME="Local" VALUE="index.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Introduction to PuTTY"><PARAM NAME="Local" VALUE="intro.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What are SSH, Telnet and Rlogin?"><PARAM NAME="Local" VALUE="you-what.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How do SSH, Telnet and Rlogin differ?"><PARAM NAME="Local" VALUE="which-one.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Getting started with PuTTY"><PARAM NAME="Local" VALUE="gs.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Starting a session"><PARAM NAME="Local" VALUE="gs-insecure.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Verifying the host key (SSH only)"><PARAM NAME="Local" VALUE="gs-hostkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Logging in"><PARAM NAME="Local" VALUE="gs-login.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="After logging in"><PARAM NAME="Local" VALUE="gs-session.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Logging out"><PARAM NAME="Local" VALUE="gs-logout.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using PuTTY"><PARAM NAME="Local" VALUE="using.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="During your session"><PARAM NAME="Local" VALUE="using-session.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Copying and pasting text"><PARAM NAME="Local" VALUE="using-selection.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Scrolling the screen back"><PARAM NAME="Local" VALUE="using-scrollback.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The System menu"><PARAM NAME="Local" VALUE="using-sysmenu.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The PuTTY Event Log"><PARAM NAME="Local" VALUE="using-eventlog.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Special commands"><PARAM NAME="Local" VALUE="using-specials.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Starting new sessions"><PARAM NAME="Local" VALUE="using-newsession.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Changing your session settings"><PARAM NAME="Local" VALUE="using-changesettings.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Copy All to Clipboard"><PARAM NAME="Local" VALUE="using-copyall.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Clearing and resetting the terminal"><PARAM NAME="Local" VALUE="reset-terminal.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Full screen mode"><PARAM NAME="Local" VALUE="using-fullscreen.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Creating a log file of your session"><PARAM NAME="Local" VALUE="using-logging.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Altering your character set configuration"><PARAM NAME="Local" VALUE="using-translation.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using X11 forwarding in SSH"><PARAM NAME="Local" VALUE="using-x-forwarding.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using port forwarding in SSH"><PARAM NAME="Local" VALUE="using-port-forwarding.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Making raw TCP connections"><PARAM NAME="Local" VALUE="using-rawprot.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Connecting to a local serial line"><PARAM NAME="Local" VALUE="using-serial.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The PuTTY command line"><PARAM NAME="Local" VALUE="using-cmdline.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Starting a session from the command line"><PARAM NAME="Local" VALUE="using-cmdline-session.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-cleanup"><PARAM NAME="Local" VALUE="using-cleanup.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Standard command-line options"><PARAM NAME="Local" VALUE="using-general-opts.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-load: load a saved session"><PARAM NAME="Local" VALUE="using-cmdline-load.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting a protocol: -ssh, -telnet, -rlogin, -raw -serial"><PARAM NAME="Local" VALUE="using-cmdline-protocol.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-v: increase verbosity"><PARAM NAME="Local" VALUE="using-cmdline-v.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-l: specify a login name"><PARAM NAME="Local" VALUE="using-cmdline-l.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-L, -R and -D: set up port forwardings"><PARAM NAME="Local" VALUE="using-cmdline-portfwd.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-m: read a remote command or script from a file"><PARAM NAME="Local" VALUE="using-cmdline-m.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-P: specify a port number"><PARAM NAME="Local" VALUE="using-cmdline-p.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-pw: specify a password"><PARAM NAME="Local" VALUE="using-cmdline-pw.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-agent and -noagent: control use of Pageant for authentication"><PARAM NAME="Local" VALUE="using-cmdline-agentauth.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-A and -a: control agent forwarding"><PARAM NAME="Local" VALUE="using-cmdline-agent.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-X and -x: control X11 forwarding"><PARAM NAME="Local" VALUE="using-cmdline-x11.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-t and -T: control pseudo-terminal allocation"><PARAM NAME="Local" VALUE="using-cmdline-pty.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-N: suppress starting a shell or command"><PARAM NAME="Local" VALUE="using-cmdline-noshell.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-nc: make a remote network connection in place of a remote shell or command"><PARAM NAME="Local" VALUE="using-cmdline-ncmode.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-C: enable compression"><PARAM NAME="Local" VALUE="using-cmdline-compress.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-1 and -2: specify an SSH protocol version"><PARAM NAME="Local" VALUE="using-cmdline-sshprot.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-4 and -6: specify an Internet protocol version"><PARAM NAME="Local" VALUE="using-cmdline-ipversion.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-i: specify an SSH private key"><PARAM NAME="Local" VALUE="using-cmdline-identity.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-loghost: specify a logical host name"><PARAM NAME="Local" VALUE="using-cmdline-loghost.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-hostkey: manually specify an expected host key"><PARAM NAME="Local" VALUE="using-cmdline-hostkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-pgpfp: display PGP key fingerprints"><PARAM NAME="Local" VALUE="using-cmdline-pgpfp.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-sercfg: specify serial port configuration"><PARAM NAME="Local" VALUE="using-cmdline-sercfg.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-sessionlog, -sshlog, -sshrawlog: specify session logging"><PARAM NAME="Local" VALUE="using-cmdline-sshlog.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+</UL>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Configuring PuTTY"><PARAM NAME="Local" VALUE="config.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Session panel"><PARAM NAME="Local" VALUE="config-session.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The host name section"><PARAM NAME="Local" VALUE="config-hostname.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Loading and storing saved sessions"><PARAM NAME="Local" VALUE="config-saving.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Close Window on Exit’"><PARAM NAME="Local" VALUE="config-closeonexit.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Logging panel"><PARAM NAME="Local" VALUE="config-logging.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Log file name’"><PARAM NAME="Local" VALUE="config-logfilename.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘What to do if the log file already exists’"><PARAM NAME="Local" VALUE="config-logfileexists.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Flush log file frequently’"><PARAM NAME="Local" VALUE="config-logflush.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Options specific to SSH packet logging"><PARAM NAME="Local" VALUE="config-logssh.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Omit known password fields’"><PARAM NAME="Local" VALUE="config-logssh-omitpw.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Omit session data’"><PARAM NAME="Local" VALUE="config-logssh-omitdata.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Terminal panel"><PARAM NAME="Local" VALUE="config-terminal.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Auto wrap mode initially on’"><PARAM NAME="Local" VALUE="config-autowrap.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘DEC Origin Mode initially on’"><PARAM NAME="Local" VALUE="config-decom.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Implicit CR in every LF’"><PARAM NAME="Local" VALUE="config-crlf.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Implicit LF in every CR’"><PARAM NAME="Local" VALUE="config-lfcr.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Use background colour to erase screen’"><PARAM NAME="Local" VALUE="config-erase.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Enable blinking text’"><PARAM NAME="Local" VALUE="config-blink.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Answerback to ^E’"><PARAM NAME="Local" VALUE="config-answerback.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Local echo’"><PARAM NAME="Local" VALUE="config-localecho.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Local line editing’"><PARAM NAME="Local" VALUE="config-localedit.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Remote-controlled printing"><PARAM NAME="Local" VALUE="config-printing.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Keyboard panel"><PARAM NAME="Local" VALUE="config-keyboard.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Changing the action of the Backspace key"><PARAM NAME="Local" VALUE="config-backspace.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Changing the action of the Home and End keys"><PARAM NAME="Local" VALUE="config-homeend.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Changing the action of the function keys and keypad"><PARAM NAME="Local" VALUE="config-funkeys.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling Application Cursor Keys mode"><PARAM NAME="Local" VALUE="config-appcursor.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling Application Keypad mode"><PARAM NAME="Local" VALUE="config-appkeypad.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using NetHack keypad mode"><PARAM NAME="Local" VALUE="config-nethack.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Enabling a DEC-like Compose key"><PARAM NAME="Local" VALUE="config-compose.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Control-Alt is different from AltGr’"><PARAM NAME="Local" VALUE="config-ctrlalt.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Bell panel"><PARAM NAME="Local" VALUE="config-bell.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Set the style of bell’"><PARAM NAME="Local" VALUE="config-bellstyle.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Taskbar/caption indication on bell’"><PARAM NAME="Local" VALUE="config-belltaskbar.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Control the bell overload behaviour’"><PARAM NAME="Local" VALUE="config-bellovl.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Features panel"><PARAM NAME="Local" VALUE="config-features.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling application keypad and cursor keys"><PARAM NAME="Local" VALUE="config-features-application.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling xterm-style mouse reporting"><PARAM NAME="Local" VALUE="config-features-mouse.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling remote terminal resizing"><PARAM NAME="Local" VALUE="config-features-resize.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling switching to the alternate screen"><PARAM NAME="Local" VALUE="config-features-altscreen.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling remote window title changing"><PARAM NAME="Local" VALUE="config-features-retitle.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Response to remote window title querying"><PARAM NAME="Local" VALUE="config-features-qtitle.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling destructive backspace"><PARAM NAME="Local" VALUE="config-features-dbackspace.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling remote character set configuration"><PARAM NAME="Local" VALUE="config-features-charset.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling Arabic text shaping"><PARAM NAME="Local" VALUE="config-features-shaping.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Disabling bidirectional text display"><PARAM NAME="Local" VALUE="config-features-bidi.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Window panel"><PARAM NAME="Local" VALUE="config-window.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Setting the size of the PuTTY window"><PARAM NAME="Local" VALUE="config-winsize.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What to do when the window is resized"><PARAM NAME="Local" VALUE="config-winsizelock.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling scrollback"><PARAM NAME="Local" VALUE="config-scrollback.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Push erased text into scrollback’"><PARAM NAME="Local" VALUE="config-erasetoscrollback.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Appearance panel"><PARAM NAME="Local" VALUE="config-appearance.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling the appearance of the cursor"><PARAM NAME="Local" VALUE="config-cursor.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling the font used in the terminal window"><PARAM NAME="Local" VALUE="config-font.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Hide mouse pointer when typing in window’"><PARAM NAME="Local" VALUE="config-mouseptr.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling the window border"><PARAM NAME="Local" VALUE="config-winborder.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Behaviour panel"><PARAM NAME="Local" VALUE="config-behaviour.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling the window title"><PARAM NAME="Local" VALUE="config-title.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Warn before closing window’"><PARAM NAME="Local" VALUE="config-warnonclose.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Window closes on ALT-F4’"><PARAM NAME="Local" VALUE="config-altf4.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘System menu appears on ALT-Space’"><PARAM NAME="Local" VALUE="config-altspace.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘System menu appears on Alt alone’"><PARAM NAME="Local" VALUE="config-altonly.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Ensure window is always on top’"><PARAM NAME="Local" VALUE="config-alwaysontop.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Full screen on Alt-Enter’"><PARAM NAME="Local" VALUE="config-fullscreen.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Translation panel"><PARAM NAME="Local" VALUE="config-translation.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling character set translation"><PARAM NAME="Local" VALUE="config-charset.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Treat CJK ambiguous characters as wide’"><PARAM NAME="Local" VALUE="config-cjk-ambig-wide.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Caps Lock acts as Cyrillic switch’"><PARAM NAME="Local" VALUE="config-cyr.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling display of line-drawing characters"><PARAM NAME="Local" VALUE="config-linedraw.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling copy and paste of line drawing characters"><PARAM NAME="Local" VALUE="config-linedrawpaste.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Selection panel"><PARAM NAME="Local" VALUE="config-selection.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Pasting in Rich Text Format"><PARAM NAME="Local" VALUE="config-rtfpaste.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Changing the actions of the mouse buttons"><PARAM NAME="Local" VALUE="config-mouse.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Shift overrides application's use of mouse’"><PARAM NAME="Local" VALUE="config-mouseshift.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Default selection mode"><PARAM NAME="Local" VALUE="config-rectselect.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Configuring word-by-word selection"><PARAM NAME="Local" VALUE="config-charclasses.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Colours panel"><PARAM NAME="Local" VALUE="config-colours.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Allow terminal to specify ANSI colours’"><PARAM NAME="Local" VALUE="config-ansicolour.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Allow terminal to use xterm 256-colour mode’"><PARAM NAME="Local" VALUE="config-xtermcolour.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Indicate bolded text by changing...’"><PARAM NAME="Local" VALUE="config-boldcolour.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Attempt to use logical palettes’"><PARAM NAME="Local" VALUE="config-logpalette.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Use system colours’"><PARAM NAME="Local" VALUE="config-syscolour.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Adjusting the colours in the terminal window"><PARAM NAME="Local" VALUE="config-colourcfg.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Connection panel"><PARAM NAME="Local" VALUE="config-connection.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using keepalives to prevent disconnection"><PARAM NAME="Local" VALUE="config-keepalive.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Disable Nagle's algorithm’"><PARAM NAME="Local" VALUE="config-nodelay.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Enable TCP keepalives’"><PARAM NAME="Local" VALUE="config-tcp-keepalives.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Internet protocol’"><PARAM NAME="Local" VALUE="config-address-family.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Logical name of remote host’"><PARAM NAME="Local" VALUE="config-loghost.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Data panel"><PARAM NAME="Local" VALUE="config-data.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Auto-login username’"><PARAM NAME="Local" VALUE="config-username.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Use of system username"><PARAM NAME="Local" VALUE="config-username-from-env.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Terminal-type string’"><PARAM NAME="Local" VALUE="config-termtype.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Terminal speeds’"><PARAM NAME="Local" VALUE="config-termspeed.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Setting environment variables on the server"><PARAM NAME="Local" VALUE="config-environ.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Proxy panel"><PARAM NAME="Local" VALUE="config-proxy.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Setting the proxy type"><PARAM NAME="Local" VALUE="config-proxy-type.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Excluding parts of the network from proxying"><PARAM NAME="Local" VALUE="config-proxy-exclude.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Name resolution when using a proxy"><PARAM NAME="Local" VALUE="config-proxy-dns.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Username and password"><PARAM NAME="Local" VALUE="config-proxy-auth.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Specifying the Telnet or Local proxy command"><PARAM NAME="Local" VALUE="config-proxy-command.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Telnet panel"><PARAM NAME="Local" VALUE="config-telnet.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Handling of OLD_ENVIRON ambiguity’"><PARAM NAME="Local" VALUE="config-oldenviron.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Passive and active Telnet negotiation modes"><PARAM NAME="Local" VALUE="config-ptelnet.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Keyboard sends Telnet special commands’"><PARAM NAME="Local" VALUE="config-telnetkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Return key sends Telnet New Line instead of ^M’"><PARAM NAME="Local" VALUE="config-telnetnl.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Rlogin panel"><PARAM NAME="Local" VALUE="config-rlogin.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Local username’"><PARAM NAME="Local" VALUE="config-rlogin-localuser.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The SSH panel"><PARAM NAME="Local" VALUE="config-ssh.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Executing a specific command on the server"><PARAM NAME="Local" VALUE="config-command.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Don't start a shell or command at all’"><PARAM NAME="Local" VALUE="config-ssh-noshell.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Enable compression’"><PARAM NAME="Local" VALUE="config-ssh-comp.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Preferred SSH protocol version’"><PARAM NAME="Local" VALUE="config-ssh-prot.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Sharing an SSH connection between PuTTY tools"><PARAM NAME="Local" VALUE="config-ssh-sharing.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Kex panel"><PARAM NAME="Local" VALUE="config-ssh-kex.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Key exchange algorithm selection"><PARAM NAME="Local" VALUE="config-ssh-kex-order.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Repeat key exchange"><PARAM NAME="Local" VALUE="config-ssh-kex-rekey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Manually configuring host keys"><PARAM NAME="Local" VALUE="config-ssh-kex-manual-hostkeys.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Cipher panel"><PARAM NAME="Local" VALUE="config-ssh-encryption.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Auth panel"><PARAM NAME="Local" VALUE="config-ssh-auth.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Bypass authentication entirely’"><PARAM NAME="Local" VALUE="config-ssh-noauth.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Display pre-authentication banner’"><PARAM NAME="Local" VALUE="config-ssh-banner.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Attempt authentication using Pageant’"><PARAM NAME="Local" VALUE="config-ssh-tryagent.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Attempt TIS or CryptoCard authentication’"><PARAM NAME="Local" VALUE="config-ssh-tis.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Attempt keyboard-interactive authentication’"><PARAM NAME="Local" VALUE="config-ssh-ki.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Allow agent forwarding’"><PARAM NAME="Local" VALUE="config-ssh-agentfwd.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Allow attempted changes of username in SSH-2’"><PARAM NAME="Local" VALUE="config-ssh-changeuser.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Private key file for authentication’"><PARAM NAME="Local" VALUE="config-ssh-privkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The GSSAPI panel"><PARAM NAME="Local" VALUE="config-ssh-auth-gssapi.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Allow GSSAPI credential delegation’"><PARAM NAME="Local" VALUE="config-ssh-auth-gssapi-delegation.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Preference order for GSSAPI libraries"><PARAM NAME="Local" VALUE="config-ssh-auth-gssapi-libraries.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The TTY panel"><PARAM NAME="Local" VALUE="config-ssh-tty.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Don't allocate a pseudo-terminal’"><PARAM NAME="Local" VALUE="config-ssh-pty.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Sending terminal modes"><PARAM NAME="Local" VALUE="config-ttymodes.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The X11 panel"><PARAM NAME="Local" VALUE="config-ssh-x11.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Remote X11 authentication"><PARAM NAME="Local" VALUE="config-ssh-x11auth.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="X authority file for local display"><PARAM NAME="Local" VALUE="config-ssh-xauthority.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Tunnels panel"><PARAM NAME="Local" VALUE="config-ssh-portfwd.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Controlling the visibility of forwarded ports"><PARAM NAME="Local" VALUE="config-ssh-portfwd-localhost.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting Internet protocol version for forwarded ports"><PARAM NAME="Local" VALUE="config-ssh-portfwd-address-family.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Bugs and More Bugs panels"><PARAM NAME="Local" VALUE="config-ssh-bugs.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Chokes on SSH-1 ignore messages’"><PARAM NAME="Local" VALUE="config-ssh-bug-ignore1.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Refuses all SSH-1 password camouflage’"><PARAM NAME="Local" VALUE="config-ssh-bug-plainpw1.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Chokes on SSH-1 RSA authentication’"><PARAM NAME="Local" VALUE="config-ssh-bug-rsa1.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Chokes on SSH-2 ignore messages’"><PARAM NAME="Local" VALUE="config-ssh-bug-ignore2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Chokes on PuTTY's SSH-2 ‘winadj’ requests’"><PARAM NAME="Local" VALUE="config-ssh-bug-winadj.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Miscomputes SSH-2 HMAC keys’"><PARAM NAME="Local" VALUE="config-ssh-bug-hmac2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Miscomputes SSH-2 encryption keys’"><PARAM NAME="Local" VALUE="config-ssh-bug-derivekey2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Requires padding on SSH-2 RSA signatures’"><PARAM NAME="Local" VALUE="config-ssh-bug-sig.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Misuses the session ID in SSH-2 PK auth’"><PARAM NAME="Local" VALUE="config-ssh-bug-pksessid2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Handles SSH-2 key re-exchange badly’"><PARAM NAME="Local" VALUE="config-ssh-bug-rekey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Ignores SSH-2 maximum packet size’"><PARAM NAME="Local" VALUE="config-ssh-bug-maxpkt2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Replies to requests on closed channels’"><PARAM NAME="Local" VALUE="config-ssh-bug-chanreq.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Only supports pre-RFC4419 SSH-2 DH GEX’"><PARAM NAME="Local" VALUE="config-ssh-bug-oldgex2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Serial panel"><PARAM NAME="Local" VALUE="config-serial.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting a serial line to connect to"><PARAM NAME="Local" VALUE="config-serial-line.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting the speed of your serial line"><PARAM NAME="Local" VALUE="config-serial-speed.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting the number of data bits"><PARAM NAME="Local" VALUE="config-serial-databits.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting the number of stop bits"><PARAM NAME="Local" VALUE="config-serial-stopbits.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting the serial parity checking scheme"><PARAM NAME="Local" VALUE="config-serial-parity.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting the serial flow control scheme"><PARAM NAME="Local" VALUE="config-serial-flow.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Storing configuration in a file"><PARAM NAME="Local" VALUE="config-file.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using PSCP to transfer files securely"><PARAM NAME="Local" VALUE="pscp.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Starting PSCP"><PARAM NAME="Local" VALUE="pscp-starting.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PSCP Usage"><PARAM NAME="Local" VALUE="pscp-usage.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The basics"><PARAM NAME="Local" VALUE="pscp-usage-basics.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="user"><PARAM NAME="Local" VALUE="pscp-usage-basics-user.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="host"><PARAM NAME="Local" VALUE="pscp-usage-basics-host.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="source"><PARAM NAME="Local" VALUE="pscp-usage-basics-source.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="target"><PARAM NAME="Local" VALUE="pscp-usage-basics-target.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Options"><PARAM NAME="Local" VALUE="pscp-usage-options.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-ls list remote files"><PARAM NAME="Local" VALUE="pscp-usage-options-ls.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-p preserve file attributes"><PARAM NAME="Local" VALUE="pscp-usage-options-p.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-q quiet, don't show statistics"><PARAM NAME="Local" VALUE="pscp-usage-options-q.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-r copies directories recursively"><PARAM NAME="Local" VALUE="pscp-usage-options-r.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-batch avoid interactive prompts"><PARAM NAME="Local" VALUE="pscp-usage-options-batch.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-sftp, -scp force use of particular protocol"><PARAM NAME="Local" VALUE="pscp-usage-options-backend.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Return value"><PARAM NAME="Local" VALUE="pscp-retval.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using public key authentication with PSCP"><PARAM NAME="Local" VALUE="pscp-pubkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using PSFTP to transfer files securely"><PARAM NAME="Local" VALUE="psftp.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Starting PSFTP"><PARAM NAME="Local" VALUE="psftp-starting.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-b: specify a file containing batch commands"><PARAM NAME="Local" VALUE="psftp-option-b.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-bc: display batch commands as they are run"><PARAM NAME="Local" VALUE="psftp-option-bc.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-be: continue batch processing on errors"><PARAM NAME="Local" VALUE="psftp-option-be.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-batch: avoid interactive prompts"><PARAM NAME="Local" VALUE="psftp-usage-options-batch.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Running PSFTP"><PARAM NAME="Local" VALUE="psftp-commands.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="General quoting rules for PSFTP commands"><PARAM NAME="Local" VALUE="psftp-quoting.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Wildcards in PSFTP"><PARAM NAME="Local" VALUE="psftp-wildcards.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The open command: start a session"><PARAM NAME="Local" VALUE="psftp-cmd-open.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The quit command: end your session"><PARAM NAME="Local" VALUE="psftp-cmd-quit.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The close command: close your connection"><PARAM NAME="Local" VALUE="psftp-cmd-close.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The help command: get quick online help"><PARAM NAME="Local" VALUE="psftp-cmd-help.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The cd and pwd commands: changing the remote working directory"><PARAM NAME="Local" VALUE="psftp-cmd-cd.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The lcd and lpwd commands: changing the local working directory"><PARAM NAME="Local" VALUE="psftp-cmd-lcd.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The get command: fetch a file from the server"><PARAM NAME="Local" VALUE="psftp-cmd-get.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The put command: send a file to the server"><PARAM NAME="Local" VALUE="psftp-cmd-put.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The mget and mput commands: fetch or send multiple files"><PARAM NAME="Local" VALUE="psftp-cmd-mgetput.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The reget and reput commands: resuming file transfers"><PARAM NAME="Local" VALUE="psftp-cmd-regetput.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The dir command: list remote files"><PARAM NAME="Local" VALUE="psftp-cmd-dir.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The chmod command: change permissions on remote files"><PARAM NAME="Local" VALUE="psftp-cmd-chmod.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The del command: delete remote files"><PARAM NAME="Local" VALUE="psftp-cmd-del.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The mkdir command: create remote directories"><PARAM NAME="Local" VALUE="psftp-cmd-mkdir.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The rmdir command: remove remote directories"><PARAM NAME="Local" VALUE="psftp-cmd-rmdir.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The mv command: move and rename remote files"><PARAM NAME="Local" VALUE="psftp-cmd-mv.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The ! command: run a local Windows command"><PARAM NAME="Local" VALUE="psftp-cmd-pling.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using public key authentication with PSFTP"><PARAM NAME="Local" VALUE="psftp-pubkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using the command-line connection tool Plink"><PARAM NAME="Local" VALUE="plink.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Starting Plink"><PARAM NAME="Local" VALUE="plink-starting.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using Plink"><PARAM NAME="Local" VALUE="plink-usage.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using Plink for interactive logins"><PARAM NAME="Local" VALUE="plink-usage-interactive.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using Plink for automated connections"><PARAM NAME="Local" VALUE="plink-usage-batch.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Plink command line options"><PARAM NAME="Local" VALUE="plink-options.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-batch: disable all interactive prompts"><PARAM NAME="Local" VALUE="plink-option-batch.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="-s: remote command is SSH subsystem"><PARAM NAME="Local" VALUE="plink-option-s.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using Plink in batch files and scripts"><PARAM NAME="Local" VALUE="plink-batch.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using Plink with CVS"><PARAM NAME="Local" VALUE="plink-cvs.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using Plink with WinCVS"><PARAM NAME="Local" VALUE="plink-wincvs.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using public keys for SSH authentication"><PARAM NAME="Local" VALUE="pubkey.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Public key authentication - an introduction"><PARAM NAME="Local" VALUE="pubkey-intro.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using PuTTYgen, the PuTTY key generator"><PARAM NAME="Local" VALUE="pubkey-puttygen.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Generating a new key"><PARAM NAME="Local" VALUE="puttygen-generating.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting the type of key"><PARAM NAME="Local" VALUE="puttygen-keytype.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Selecting the size (strength) of the key"><PARAM NAME="Local" VALUE="puttygen-strength.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The ‘Generate’ button"><PARAM NAME="Local" VALUE="puttygen-generate.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The ‘Key fingerprint’ box"><PARAM NAME="Local" VALUE="puttygen-fingerprint.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Setting a comment for your key"><PARAM NAME="Local" VALUE="puttygen-comment.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Setting a passphrase for your key"><PARAM NAME="Local" VALUE="puttygen-passphrase.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Saving your private key to a disk file"><PARAM NAME="Local" VALUE="puttygen-savepriv.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Saving your public key to a disk file"><PARAM NAME="Local" VALUE="puttygen-savepub.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Public key for pasting into authorized_keys file’"><PARAM NAME="Local" VALUE="puttygen-pastekey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Reloading a private key"><PARAM NAME="Local" VALUE="puttygen-load.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Dealing with private keys in other formats"><PARAM NAME="Local" VALUE="puttygen-conversions.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Getting ready for public key authentication"><PARAM NAME="Local" VALUE="pubkey-gettingready.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using Pageant for authentication"><PARAM NAME="Local" VALUE="pageant.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Getting started with Pageant"><PARAM NAME="Local" VALUE="pageant-start.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Pageant main window"><PARAM NAME="Local" VALUE="pageant-mainwin.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The key list box"><PARAM NAME="Local" VALUE="pageant-mainwin-keylist.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The ‘Add Key’ button"><PARAM NAME="Local" VALUE="pageant-mainwin-addkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The ‘Remove Key’ button"><PARAM NAME="Local" VALUE="pageant-mainwin-remkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Pageant command line"><PARAM NAME="Local" VALUE="pageant-cmdline.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Making Pageant automatically load keys on startup"><PARAM NAME="Local" VALUE="pageant-cmdline-loadkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Making Pageant run another program"><PARAM NAME="Local" VALUE="pageant-cmdline-command.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Using agent forwarding"><PARAM NAME="Local" VALUE="pageant-forward.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Security considerations"><PARAM NAME="Local" VALUE="pageant-security.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Common error messages"><PARAM NAME="Local" VALUE="errors.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘The server's host key is not cached in the registry’"><PARAM NAME="Local" VALUE="errors-hostkey-absent.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘WARNING - POTENTIAL SECURITY BREACH!’"><PARAM NAME="Local" VALUE="errors-hostkey-wrong.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘The first cipher supported by the server is ... below the configured warning threshold’"><PARAM NAME="Local" VALUE="errors-cipher-warning.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Server sent disconnect message type 2 (protocol error): &quot;Too many authentication failures for root&quot;’"><PARAM NAME="Local" VALUE="errors-toomanyauth.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Out of memory’"><PARAM NAME="Local" VALUE="errors-memory.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Internal error’, ‘Internal fault’, ‘Assertion failed’"><PARAM NAME="Local" VALUE="errors-internal.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Unable to use this private key file’, ‘Couldn't load private key’, ‘Key is of wrong type’"><PARAM NAME="Local" VALUE="errors-cant-load-key.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Server refused our public key’ or ‘Key refused’"><PARAM NAME="Local" VALUE="errors-refused.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Access denied’, ‘Authentication refused’"><PARAM NAME="Local" VALUE="errors-access-denied.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘No supported authentication methods available’"><PARAM NAME="Local" VALUE="errors-no-auth.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Incorrect CRC received on packet’ or ‘Incorrect MAC received on packet’"><PARAM NAME="Local" VALUE="errors-crc.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Incoming packet was garbled on decryption’"><PARAM NAME="Local" VALUE="errors-garbled.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘PuTTY X11 proxy: various errors’"><PARAM NAME="Local" VALUE="errors-x11-proxy.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Network error: Software caused connection abort’"><PARAM NAME="Local" VALUE="errors-connaborted.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Network error: Connection reset by peer’"><PARAM NAME="Local" VALUE="errors-connreset.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Network error: Connection refused’"><PARAM NAME="Local" VALUE="errors-connrefused.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Network error: Connection timed out’"><PARAM NAME="Local" VALUE="errors-conntimedout.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="‘Network error: Cannot assign requested address’"><PARAM NAME="Local" VALUE="errors-cannotassignaddress.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PuTTY FAQ"><PARAM NAME="Local" VALUE="faq.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Introduction"><PARAM NAME="Local" VALUE="faq-intro.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What is PuTTY?"><PARAM NAME="Local" VALUE="faq-what.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Features supported in PuTTY"><PARAM NAME="Local" VALUE="faq-support.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY support SSH-2?"><PARAM NAME="Local" VALUE="faq-ssh2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY support reading OpenSSH or ssh.com SSH-2 private key files?"><PARAM NAME="Local" VALUE="faq-ssh2-keyfmt.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY support SSH-1?"><PARAM NAME="Local" VALUE="faq-ssh1.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY support local echo?"><PARAM NAME="Local" VALUE="faq-localecho.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY support storing settings, so I don't have to change them every time?"><PARAM NAME="Local" VALUE="faq-savedsettings.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY support storing its settings in a disk file?"><PARAM NAME="Local" VALUE="faq-disksettings.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY support full-screen mode, like a DOS box?"><PARAM NAME="Local" VALUE="faq-fullscreen.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Does PuTTY have the ability to remember my password so I don't have to type it every time?"><PARAM NAME="Local" VALUE="faq-password-remember.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Is there an option to turn off the annoying host key prompts?"><PARAM NAME="Local" VALUE="faq-hostkeys.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Will you write an SSH server for the PuTTY suite, to go with the client?"><PARAM NAME="Local" VALUE="faq-server.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Can PSCP or PSFTP transfer files in ASCII mode?"><PARAM NAME="Local" VALUE="faq-pscp-ascii.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Ports to other operating systems"><PARAM NAME="Local" VALUE="faq-ports.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What ports of PuTTY exist?"><PARAM NAME="Local" VALUE="faq-ports-general.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Is there a port to Unix?"><PARAM NAME="Local" VALUE="faq-unix.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What's the point of the Unix port? Unix has OpenSSH."><PARAM NAME="Local" VALUE="faq-unix-why.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Will there be a port to Windows CE or PocketPC?"><PARAM NAME="Local" VALUE="faq-wince.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Is there a port to Windows 3.1?"><PARAM NAME="Local" VALUE="faq-win31.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Will there be a port to the Mac?"><PARAM NAME="Local" VALUE="faq-mac-port.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Will there be a port to EPOC?"><PARAM NAME="Local" VALUE="faq-epoc.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Will there be a port to the iPhone?"><PARAM NAME="Local" VALUE="faq-iphone.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Embedding PuTTY in other programs"><PARAM NAME="Local" VALUE="faq-embedding.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Is the SSH or Telnet code available as a DLL?"><PARAM NAME="Local" VALUE="faq-dll.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Is the SSH or Telnet code available as a Visual Basic component?"><PARAM NAME="Local" VALUE="faq-vb.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How can I use PuTTY to make an SSH connection from within another program?"><PARAM NAME="Local" VALUE="faq-ipc.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Details of PuTTY's operation"><PARAM NAME="Local" VALUE="faq-details.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What terminal type does PuTTY use?"><PARAM NAME="Local" VALUE="faq-term.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Where does PuTTY store its data?"><PARAM NAME="Local" VALUE="faq-settings.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="HOWTO questions"><PARAM NAME="Local" VALUE="faq-howto.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What login name / password should I use?"><PARAM NAME="Local" VALUE="faq-login.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What commands can I type into my PuTTY terminal window?"><PARAM NAME="Local" VALUE="faq-commands.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How can I make PuTTY start up maximised?"><PARAM NAME="Local" VALUE="faq-startmax.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How can I create a Windows shortcut to start a particular saved session directly?"><PARAM NAME="Local" VALUE="faq-startsess.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How can I start an SSH session straight from the command line?"><PARAM NAME="Local" VALUE="faq-startssh.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How do I copy and paste between PuTTY and other Windows applications?"><PARAM NAME="Local" VALUE="faq-cutpaste.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How do I use all PuTTY's features (public keys, proxying, cipher selection, etc.) in PSCP, PSFTP and Plink?"><PARAM NAME="Local" VALUE="faq-options.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How do I use PSCP.EXE? When I double-click it gives me a command prompt window which then closes instantly."><PARAM NAME="Local" VALUE="faq-pscp.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How do I use PSCP to copy a file whose name has spaces in?"><PARAM NAME="Local" VALUE="faq-pscp-spaces.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Troubleshooting"><PARAM NAME="Local" VALUE="faq-trouble.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Why do I see ‘Incorrect MAC received on packet’?"><PARAM NAME="Local" VALUE="faq-incorrect-mac.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Why do I see ‘Fatal: Protocol error: Expected control record’ in PSCP?"><PARAM NAME="Local" VALUE="faq-pscp-protocol.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="I clicked on a colour in the Colours panel, and the colour didn't change in my terminal."><PARAM NAME="Local" VALUE="faq-colours.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Plink on Windows 95 says it can't find WS2_32.DLL."><PARAM NAME="Local" VALUE="faq-winsock2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="After trying to establish an SSH-2 connection, PuTTY says ‘Out of memory’ and dies."><PARAM NAME="Local" VALUE="faq-outofmem.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="When attempting a file transfer, either PSCP or PSFTP says ‘Out of memory’ and dies."><PARAM NAME="Local" VALUE="faq-outofmem2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PSFTP transfers files much slower than PSCP."><PARAM NAME="Local" VALUE="faq-psftp-slow.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="When I run full-colour applications, I see areas of black space where colour ought to be, or vice versa."><PARAM NAME="Local" VALUE="faq-bce.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="When I change some terminal settings, nothing happens."><PARAM NAME="Local" VALUE="faq-resetterm.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="My PuTTY sessions unexpectedly close after they are idle for a while."><PARAM NAME="Local" VALUE="faq-idleout.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PuTTY's network connections time out too quickly when network connectivity is temporarily lost."><PARAM NAME="Local" VALUE="faq-timeout.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="When I cat a binary file, I get ‘PuTTYPuTTYPuTTY’ on my command line."><PARAM NAME="Local" VALUE="faq-puttyputty.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="When I cat a binary file, my window title changes to a nonsense string."><PARAM NAME="Local" VALUE="faq-wintitle.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="My keyboard stops working once PuTTY displays the password prompt."><PARAM NAME="Local" VALUE="faq-password-fails.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="One or more function keys don't do what I expected in a server-side application."><PARAM NAME="Local" VALUE="faq-keyboard.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Since my SSH server was upgraded to OpenSSH 3.1p1/3.4p1, I can no longer connect with PuTTY."><PARAM NAME="Local" VALUE="faq-openssh-bad-openssl.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Why do I see ‘Couldn't load private key from ...’? Why can PuTTYgen load my key but not PuTTY?"><PARAM NAME="Local" VALUE="faq-ssh2key-ssh1conn.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="When I'm connected to a Red Hat Linux 8.0 system, some characters don't display properly."><PARAM NAME="Local" VALUE="faq-rh8-utf8.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Since I upgraded to PuTTY 0.54, the scrollback has stopped working when I run screen."><PARAM NAME="Local" VALUE="faq-screen.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Since I upgraded Windows XP to Service Pack 2, I can't use addresses like 127.0.0.2."><PARAM NAME="Local" VALUE="faq-alternate-localhost.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PSFTP commands seem to be missing a directory separator (slash)."><PARAM NAME="Local" VALUE="faq-missing-slash.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Do you want to hear about ‘Software caused connection abort’?"><PARAM NAME="Local" VALUE="faq-connaborted.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="My SSH-2 session locks up for a few seconds every so often."><PARAM NAME="Local" VALUE="faq-rekey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PuTTY fails to start up. Windows claims that ‘the application configuration is incorrect’."><PARAM NAME="Local" VALUE="faq-xpwontrun.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="When I put PuTTY in C:\WINDOWS\SYSTEM32 on my 64-bit Windows system, ‘Duplicate Session’ doesn't work."><PARAM NAME="Local" VALUE="faq-system32.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Security questions"><PARAM NAME="Local" VALUE="faq-secure.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Is it safe for me to download PuTTY and use it on a public PC?"><PARAM NAME="Local" VALUE="faq-publicpc.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What does PuTTY leave on a system? How can I clean up after it?"><PARAM NAME="Local" VALUE="faq-cleanup.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How come PuTTY now supports DSA, when the website used to say how insecure it was?"><PARAM NAME="Local" VALUE="faq-dsa.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Couldn't Pageant use VirtualLock() to stop private keys being written to disk?"><PARAM NAME="Local" VALUE="faq-virtuallock.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Administrative questions"><PARAM NAME="Local" VALUE="faq-admin.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Would you like me to register you a nicer domain name?"><PARAM NAME="Local" VALUE="faq-domain.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Would you like free web hosting for the PuTTY web site?"><PARAM NAME="Local" VALUE="faq-webhosting.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Would you link to my web site from the PuTTY web site?"><PARAM NAME="Local" VALUE="faq-link.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Why don't you move PuTTY to SourceForge?"><PARAM NAME="Local" VALUE="faq-sourceforge.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Why can't I subscribe to the putty-bugs mailing list?"><PARAM NAME="Local" VALUE="faq-mailinglist1.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="If putty-bugs isn't a general-subscription mailing list, what is?"><PARAM NAME="Local" VALUE="faq-mailinglist2.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How can I donate to PuTTY development?"><PARAM NAME="Local" VALUE="faq-donations.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Can I have permission to put PuTTY on a cover disk / distribute it with other software / etc?"><PARAM NAME="Local" VALUE="faq-permission.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Can you sign an agreement indemnifying us against security problems in PuTTY?"><PARAM NAME="Local" VALUE="faq-indemnity.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Can you sign this form granting us permission to use/distribute PuTTY?"><PARAM NAME="Local" VALUE="faq-permission-form.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Can you write us a formal notice of permission to use PuTTY?"><PARAM NAME="Local" VALUE="faq-permission-future.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Can you sign anything for us?"><PARAM NAME="Local" VALUE="faq-permission-general.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="If you won't sign anything, can you give us some sort of assurance that you won't make PuTTY closed-source in future?"><PARAM NAME="Local" VALUE="faq-permission-assurance.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Can you provide us with export control information / FIPS certification for PuTTY?"><PARAM NAME="Local" VALUE="faq-export-cert.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="As one of our existing software vendors, can you just fill in this questionnaire for us?"><PARAM NAME="Local" VALUE="faq-vendor.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The sha1sums / sha256sums / etc files on your download page don't match the binaries."><PARAM NAME="Local" VALUE="faq-checksums.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Miscellaneous questions"><PARAM NAME="Local" VALUE="faq-misc.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Is PuTTY a port of OpenSSH, or based on OpenSSH or OpenSSL?"><PARAM NAME="Local" VALUE="faq-openssh.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Where can I buy silly putty?"><PARAM NAME="Local" VALUE="faq-sillyputty.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="What does ‘PuTTY’ mean?"><PARAM NAME="Local" VALUE="faq-meaning.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="How do I pronounce ‘PuTTY’?"><PARAM NAME="Local" VALUE="faq-pronounce.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Feedback and bug reporting"><PARAM NAME="Local" VALUE="feedback.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="General guidelines"><PARAM NAME="Local" VALUE="feedback-general.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Sending large attachments"><PARAM NAME="Local" VALUE="feedback-largefiles.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Other places to ask for help"><PARAM NAME="Local" VALUE="feedback-other-fora.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Reporting bugs"><PARAM NAME="Local" VALUE="feedback-bugs.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Requesting extra features"><PARAM NAME="Local" VALUE="feedback-features.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Requesting features that have already been requested"><PARAM NAME="Local" VALUE="feedback-feature-priority.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Support requests"><PARAM NAME="Local" VALUE="feedback-support.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Web server administration"><PARAM NAME="Local" VALUE="feedback-webadmin.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Asking permission for things"><PARAM NAME="Local" VALUE="feedback-permission.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Mirroring the PuTTY web site"><PARAM NAME="Local" VALUE="feedback-mirrors.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Praise and compliments"><PARAM NAME="Local" VALUE="feedback-compliments.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="E-mail address"><PARAM NAME="Local" VALUE="feedback-address.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PuTTY Licence"><PARAM NAME="Local" VALUE="licence.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PuTTY hacking guide"><PARAM NAME="Local" VALUE="udp.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Cross-OS portability"><PARAM NAME="Local" VALUE="udp-portability.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Multiple backends treated equally"><PARAM NAME="Local" VALUE="udp-multi-backend.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Multiple sessions per process on some platforms"><PARAM NAME="Local" VALUE="udp-globals.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="C, not C++"><PARAM NAME="Local" VALUE="udp-pure-c.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Security-conscious coding"><PARAM NAME="Local" VALUE="udp-security.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Independence of specific compiler"><PARAM NAME="Local" VALUE="udp-multi-compiler.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Small code size"><PARAM NAME="Local" VALUE="udp-small.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Single-threaded code"><PARAM NAME="Local" VALUE="udp-single-threaded.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Keystrokes sent to the server wherever possible"><PARAM NAME="Local" VALUE="udp-keystrokes.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="640×480 friendliness in configuration panels"><PARAM NAME="Local" VALUE="udp-640x480.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Automatically generated Makefiles"><PARAM NAME="Local" VALUE="udp-makefiles-auto.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Coroutines in ssh.c"><PARAM NAME="Local" VALUE="udp-ssh-coroutines.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Single compilation of each source file"><PARAM NAME="Local" VALUE="udp-compile-once.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Do as we say, not as we do"><PARAM NAME="Local" VALUE="udp-perfection.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="PuTTY download keys and signatures"><PARAM NAME="Local" VALUE="pgpkeys.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Public keys"><PARAM NAME="Local" VALUE="pgpkeys-pubkey.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Security details"><PARAM NAME="Local" VALUE="pgpkeys-security.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Development Snapshots key"><PARAM NAME="Local" VALUE="pgpkeys-snapshot.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Releases key"><PARAM NAME="Local" VALUE="pgpkeys-release.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Secure Contact Key"><PARAM NAME="Local" VALUE="pgpkeys-contact.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="The Master Keys"><PARAM NAME="Local" VALUE="pgpkeys-master.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Key rollover"><PARAM NAME="Local" VALUE="pgpkeys-rollover.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="SSH-2 names specified for PuTTY"><PARAM NAME="Local" VALUE="sshnames.html"><PARAM NAME="ImageNumber" VALUE="1"></OBJECT>
+<UL>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Connection protocol channel request names"><PARAM NAME="Local" VALUE="sshnames-channel.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Key exchange method names"><PARAM NAME="Local" VALUE="sshnames-kex.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+<LI><OBJECT TYPE="text/sitemap"><PARAM NAME="Name" VALUE="Encryption algorithm names"><PARAM NAME="Local" VALUE="sshnames-encrypt.html"><PARAM NAME="ImageNumber" VALUE="11"></OBJECT>
+</UL>
+</UL></BODY></HTML>

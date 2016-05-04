@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Allow attempted changes of username in SSH-2&#8217;</title>
+<link rel="previous" href="config-ssh-agentfwd.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-privkey.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ssh-changeuser"></a>4.21.7 &#8216;Allow attempted <a name="i0"></a>changes of username in SSH-2&#8217;</h1>
+<p>
+In the SSH-1 protocol, it is impossible to change username after failing to authenticate. So if you mis-type your username at the PuTTY &#8216;login as:&#8217; prompt, you will not be able to change it except by restarting PuTTY.
+</p>
+<p>
+The SSH-2 protocol <em>does</em> allow changes of username, in principle, but does not make it mandatory for SSH-2 servers to accept them. In particular, <a name="i1"></a>OpenSSH does not accept a change of username; once you have sent one username, it will reject attempts to try to authenticate as another user. (Depending on the version of OpenSSH, it may quietly return failure for all login attempts, or it may send an error message.)
+</p>
+<p>
+For this reason, PuTTY will by default not prompt you for your username more than once, in case the server complains. If you know your server can cope with it, you can enable the &#8216;Allow attempted changes of username&#8217; option to modify PuTTY's behaviour.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

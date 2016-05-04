@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Wildcards in PSFTP</title>
+<link rel="previous" href="psftp-quoting.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-cmd-open.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-wildcards"></a>6.2.2 Wildcards in PSFTP</h1>
+<p>
+Several commands in PSFTP support &#8216;<a name="i0"></a>wildcards&#8217; to select multiple files.
+</p>
+<p>
+For <em>local</em> file specifications (such as the first argument to <code>put</code>), wildcard rules for the local operating system are used. For instance, PSFTP running on Windows might require the use of <code>*.*</code> where PSFTP on Unix would need <code>*</code>.
+</p>
+<p>
+For <em>remote</em> file specifications (such as the first argument to <code>get</code>), PSFTP uses a standard wildcard syntax (similar to <a name="i1"></a>POSIX wildcards):
+</p>
+<ul><li>
+<code>*</code> matches any sequence of characters (including a zero-length sequence).
+</li>
+<li>
+<code>?</code> matches exactly one character.
+</li>
+<li>
+<code>[abc]</code> matches exactly one character which can be <code>a</code>, <code>b</code>, or <code>c</code>.
+<p>
+<code>[a-z]</code> matches any character in the range <code>a</code> to <code>z</code>.
+</p>
+<p>
+<code>[^abc]</code> matches a single character that is <em>not</em> <code>a</code>, <code>b</code>, or <code>c</code>.
+</p>
+<p>
+Special cases: <code>[-a]</code> matches a literal hyphen (<code>-</code>) or <code>a</code>; <code>[^-a]</code> matches all other characters. <code>[a^]</code> matches a literal caret (<code>^</code>) or <code>a</code>.
+</p>
+
+</li>
+<li>
+<code>\</code> (backslash) before any of the above characters (or itself) removes that character's special meaning.
+</li>
+</ul>
+<p>
+A leading period (<code>.</code>) on a filename is not treated specially, unlike in some Unix contexts; <code>get *</code> will fetch all files, whether or not they start with a leading period.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>-b: specify a file containing batch commands</title>
+<link rel="previous" href="psftp-starting.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-option-bc.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-option-b"></a>6.1.1 <a name="i0"></a><code>-b</code>: specify a file containing batch commands</h1>
+<p>
+In normal operation, PSFTP is an interactive program which displays a command line and accepts commands from the keyboard.
+</p>
+<p>
+If you need to do automated tasks with PSFTP, you would probably prefer to <a name="i1"></a>specify a set of commands in advance and have them executed automatically. The <code>-b</code> option allows you to do this. You use it with a file name containing batch commands. For example, you might create a file called <code>myscript.scr</code> containing lines like this:
+</p>
+<pre><code>cd /home/ftp/users/jeff
+del jam-old.tar.gz
+ren jam.tar.gz jam-old.tar.gz
+put jam.tar.gz
+chmod a+r jam.tar.gz
+</code></pre>
+<p>
+and then you could run the script by typing
+</p>
+<pre><code>psftp user@hostname -b myscript.scr
+</code></pre>
+<p>
+When you run a batch script in this way, PSFTP will abort the script if any command fails to complete successfully. To change this behaviour, you can add the <code>-be</code> option (<a href="psftp-option-be.html#psftp-option-be">section 6.1.3</a>).
+</p>
+<p>
+PSFTP will terminate after it finishes executing the batch script.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

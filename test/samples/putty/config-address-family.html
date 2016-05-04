@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Internet protocol&#8217;</title>
+<link rel="previous" href="config-tcp-keepalives.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-loghost.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-address-family"></a>4.13.4 <a name="i0"></a>&#8216;Internet protocol&#8217;</h1>
+<p>
+This option allows the user to select between the old and new Internet protocols and addressing schemes (<a name="i1"></a>IPv4 and <a name="i2"></a>IPv6). The selected protocol will be used for most outgoing network connections (including connections to <a name="i3"></a>proxies); however, tunnels have their own configuration, for which see <a href="config-ssh-portfwd-address-family.html#config-ssh-portfwd-address-family">section 4.25.2</a>.
+</p>
+<p>
+The default setting is &#8216;Auto&#8217;, which means PuTTY will do something sensible and try to guess which protocol you wanted. (If you specify a literal <a name="i4"></a>Internet address, it will use whichever protocol that address implies. If you provide a <a name="i5"></a>hostname, it will see what kinds of address exist for that hostname; it will use IPv6 if there is an IPv6 address available, and fall back to IPv4 if not.)
+</p>
+<p>
+If you need to force PuTTY to use a particular protocol, you can explicitly set this to &#8216;IPv4&#8217; or &#8216;IPv6&#8217;.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

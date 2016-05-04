@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>How do I use PSCP to copy a file whose name has spaces in?</title>
+<link rel="previous" href="faq-pscp.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-trouble.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-pscp-spaces"></a>A.6.9 <a name="i0"></a>How do I use PSCP to copy a file whose name has spaces in?</h1>
+<p>
+If PSCP is using the traditional SCP protocol, this is confusing. If you're specifying a file at the local end, you just use one set of quotes as you would normally do:
+</p>
+<pre><code>pscp "local filename with spaces" user@host:
+pscp user@host:myfile "local filename with spaces"
+</code></pre>
+<p>
+But if the filename you're specifying is on the <em>remote</em> side, you have to use backslashes and two sets of quotes:
+</p>
+<pre><code>pscp user@host:"\"remote filename with spaces\"" local_filename
+pscp local_filename user@host:"\"remote filename with spaces\""
+</code></pre>
+<p>
+Worse still, in a remote-to-local copy you have to specify the local file name explicitly, otherwise PSCP will complain that they don't match (unless you specified the <code>-unsafe</code> option). The following command will give an error message:
+</p>
+<pre><code>c:\&gt;pscp user@host:"\"oo er\"" .
+warning: remote host tried to write to a file called 'oo er'
+         when we requested a file called '"oo er"'.
+</code></pre>
+<p>
+Instead, you need to specify the local file name in full:
+</p>
+<pre><code>c:\&gt;pscp user@host:"\"oo er\"" "oo er"
+</code></pre>
+<p>
+If PSCP is using the newer SFTP protocol, none of this is a problem, and all filenames with spaces in are specified using a single pair of quotes in the obvious way:
+</p>
+<pre><code>pscp "local file" user@host:
+pscp user@host:"remote file" .
+</code></pre>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

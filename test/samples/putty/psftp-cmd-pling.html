@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>The ! command: run a local Windows command</title>
+<link rel="previous" href="psftp-cmd-mv.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="psftp-pubkey.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="psftp-cmd-pling"></a>6.2.19 The <code>!</code> command: run a <a name="i0"></a>local Windows command</h1>
+<p>
+You can run local Windows commands using the <code>!</code> command. This is the only PSFTP command that is not subject to the command quoting rules given in <a href="psftp-quoting.html#psftp-quoting">section 6.2.1</a>. If any command line begins with the <code>!</code> character, then the rest of the line will be passed straight to Windows without further translation.
+</p>
+<p>
+For example, if you want to move an existing copy of a file out of the way before downloading an updated version, you might type:
+</p>
+<pre><code>psftp&gt; !ren myfile.dat myfile.bak
+psftp&gt; get myfile.dat
+</code></pre>
+<p>
+using the Windows <code>ren</code> command to rename files on your local PC.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

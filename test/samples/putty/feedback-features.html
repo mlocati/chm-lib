@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Requesting extra features</title>
+<link rel="previous" href="feedback-bugs.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="feedback-feature-priority.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="feedback-features"></a>B.3 Requesting extra features</h1>
+<p>
+If you want to request a new feature in PuTTY, the very first things you should do are:
+</p>
+<ul><li>
+Check the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/">Wishlist page</a> on the PuTTY website, and see if your feature is already on the list. If it is, it probably won't achieve very much to repeat the request. (But see <a href="feedback-feature-priority.html#feedback-feature-priority">section B.4</a> if you want to persuade us to give your particular feature higher priority.)
+</li>
+<li>
+Check the Wishlist and <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html">Change Log</a> on the PuTTY website, and see if we have already added your feature in the development snapshots. If it isn't clear, download the latest development snapshot and see if the feature is present. If it is, then it will also be in the next release and there is no need to mail us at all.
+</li>
+</ul>
+<p>
+If you can't find your feature in either the development snapshots <em>or</em> the Wishlist, then you probably do need to submit a feature request. Since the PuTTY authors are very busy, it helps if you try to do some of the work for us:
+</p>
+<ul><li>
+Do as much of the design as you can. Think about &#8216;corner cases&#8217;; think about how your feature interacts with other existing features. Think about the user interface; if you can't come up with a simple and intuitive interface to your feature, you shouldn't be surprised if we can't either. Always imagine whether it's possible for there to be more than one, or less than one, of something you'd assumed there would be one of. (For example, if you were to want PuTTY to put an icon in the System tray rather than the Taskbar, you should think about what happens if there's more than one PuTTY active; how would the user tell which was which?)
+</li>
+<li>
+If you can program, it may be worth offering to write the feature yourself and send us a patch. However, it is likely to be helpful if you confer with us first; there may be design issues you haven't thought of, or we may be about to make big changes to the code which your patch would clash with, or something. If you check with the maintainers first, there is a better chance of your code actually being usable. Also, read the design principles listed in <a href="udp.html#udp">appendix D</a>: if you do not conform to them, we will probably not be able to accept your patch.
+</li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

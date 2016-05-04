@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Terminal speeds&#8217;</title>
+<link rel="previous" href="config-termtype.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-environ.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-termspeed"></a>4.14.4 &#8216;<a name="i0"></a>Terminal speeds&#8217;</h1>
+<p>
+The Telnet, Rlogin, and SSH protocols allow the client to specify terminal speeds to the server.
+</p>
+<p>
+This parameter does <em>not</em> affect the actual speed of the connection, which is always &#8216;as fast as possible&#8217;; it is just a hint that is sometimes used by server software to modify its behaviour. For instance, if a slow speed is indicated, the server may switch to a less <a name="i1"></a>bandwidth-hungry display mode.
+</p>
+<p>
+The value is usually meaningless in a network environment, but PuTTY lets you configure it, in case you find the server is reacting badly to the default value.
+</p>
+<p>
+The format is a pair of numbers separated by a comma, for instance, <code>38400,38400</code>. The first number represents the output speed (<em>from</em> the server) in bits per second, and the second is the input speed (<em>to</em> the server). (Only the first is used in the Rlogin protocol.)
+</p>
+<p>
+This option has no effect on Raw connections.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

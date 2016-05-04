@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Use background colour to erase screen&#8217;</title>
+<link rel="previous" href="config-lfcr.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-blink.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-erase"></a>4.3.5 &#8216;Use <a name="i0"></a>background colour to erase screen&#8217;</h1>
+<p>
+Not all terminals agree on what colour to turn the screen when the server sends a &#8216;<a name="i1"></a>clear screen&#8217; sequence. Some terminals believe the screen should always be cleared to the <em>default</em> background colour. Others believe the screen should be cleared to whatever the server has selected as a background colour.
+</p>
+<p>
+There exist applications that expect both kinds of behaviour. Therefore, PuTTY can be configured to do either.
+</p>
+<p>
+With this option disabled, screen clearing is always done in the default background colour. With this option enabled, it is done in the <em>current</em> background colour.
+</p>
+<p>
+Background-colour erase can be turned on and off by <a name="i2"></a>control sequences sent by the server. This configuration option controls the <em>default</em> state, which will be restored when you reset the terminal (see <a href="reset-terminal.html#reset-terminal">section 3.1.3.6</a>). However, if you modify this option in mid-session using &#8216;Change Settings&#8217;, it will take effect immediately.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

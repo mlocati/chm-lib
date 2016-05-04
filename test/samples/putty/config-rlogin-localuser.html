@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Local username&#8217;</title>
+<link rel="previous" href="config-rlogin.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-rlogin-localuser"></a>4.17.1 <a name="i0"></a>&#8216;Local username&#8217;</h1>
+<p>
+Rlogin allows an automated (password-free) form of login by means of a file called <a name="i1"></a><code>.rhosts</code> on the server. You put a line in your <code>.rhosts</code> file saying something like <code>jbloggs@pc1.example.com</code>, and then when you make an Rlogin connection the client transmits the username of the user running the Rlogin client. The server checks the username and hostname against <code>.rhosts</code>, and if they match it <a name="i2"></a>does not ask for a password.
+</p>
+<p>
+This only works because Unix systems contain a safeguard to stop a user from pretending to be another user in an Rlogin connection. Rlogin connections have to come from <a name="i3"></a>port numbers below 1024, and Unix systems prohibit this to unprivileged processes; so when the server sees a connection from a low-numbered port, it assumes the client end of the connection is held by a privileged (and therefore trusted) process, so it believes the claim of who the user is.
+</p>
+<p>
+Windows does not have this restriction: <em>any</em> user can initiate an outgoing connection from a low-numbered port. Hence, the Rlogin <code>.rhosts</code> mechanism is completely useless for securely distinguishing several different users on a Windows machine. If you have a <code>.rhosts</code> entry pointing at a Windows PC, you should assume that <em>anyone</em> using that PC can <a name="i4"></a>spoof your username in an Rlogin connection and access your account on the server.
+</p>
+<p>
+The &#8216;Local username&#8217; control allows you to specify what user name PuTTY should claim you have, in case it doesn't match your <a name="i5"></a>Windows user name (or in case you didn't bother to set up a Windows user name).
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Starting a session from the command line</title>
+<link rel="previous" href="using-cmdline.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="using-cleanup.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="using-cmdline-session"></a>3.8.1 Starting a session from the command line</h1>
+<p>
+<a name="i0"></a><a name="i1"></a><a name="i2"></a><a name="i3"></a><a name="i4"></a>These options allow you to bypass the configuration window and launch straight into a session.
+</p>
+<p>
+To start a connection to a server called <code>host</code>:
+</p>
+<pre><code>putty.exe [-ssh | -telnet | -rlogin | -raw] [user@]host
+</code></pre>
+<p>
+If this syntax is used, settings are taken from the <a name="i5"></a>Default Settings (see <a href="config-saving.html#config-saving">section 4.1.2</a>); <code>user</code> overrides these settings if supplied. Also, you can specify a protocol, which will override the default protocol (see <a href="using-cmdline-protocol.html#using-cmdline-protocol">section 3.8.3.2</a>).
+</p>
+<p>
+For telnet sessions, the following alternative syntax is supported (this makes PuTTY suitable for use as a URL handler for <a name="i6"></a>telnet URLs in <a name="i7"></a>web browsers):
+</p>
+<pre><code>putty.exe telnet://host[:port]/
+</code></pre>
+<p>
+To start a connection to a serial port, e.g. COM1:
+</p>
+<pre><code>putty.exe -serial com1
+</code></pre>
+<p>
+In order to start an existing saved session called <code>sessionname</code>, use the <code>-load</code> option (described in <a href="using-cmdline-load.html#using-cmdline-load">section 3.8.3.1</a>).
+</p>
+<pre><code>putty.exe -load "session name"
+</code></pre>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

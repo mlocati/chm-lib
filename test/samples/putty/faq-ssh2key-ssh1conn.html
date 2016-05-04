@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Why do I see &#8216;Couldn't load private key from ...&#8217;? Why can PuTTYgen load my key but not PuTTY?</title>
+<link rel="previous" href="faq-openssh-bad-openssl.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-rh8-utf8.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-ssh2key-ssh1conn"></a>A.7.17 Why do I see &#8216;Couldn't load private key from ...&#8217;? Why can PuTTYgen load my key but not PuTTY?</h1>
+<p>
+It's likely that you've generated an SSH protocol 2 key with PuTTYgen, but you're trying to use it in an SSH-1 connection. SSH-1 and SSH-2 keys have different formats, and (at least in 0.52) PuTTY's reporting of a key in the wrong format isn't optimal.
+</p>
+<p>
+To connect using SSH-2 to a server that supports both versions, you need to change the configuration from the default (see <a href="faq-ssh2.html#faq-ssh2">question A.2.1</a>).
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

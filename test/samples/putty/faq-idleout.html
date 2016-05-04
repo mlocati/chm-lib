@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>My PuTTY sessions unexpectedly close after they are idle for a while.</title>
+<link rel="previous" href="faq-resetterm.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="faq-timeout.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="faq-idleout"></a>A.7.10 My PuTTY sessions unexpectedly close after they are <a name="i0"></a>idle for a while.</h1>
+<p>
+Some types of <a name="i1"></a>firewall, and almost any router doing Network Address Translation (<a name="i2"></a>NAT, also known as IP masquerading), will forget about a connection through them if the connection does nothing for too long. This will cause the connection to be rudely cut off when contact is resumed.
+</p>
+<p>
+You can try to combat this by telling PuTTY to send <em>keepalives</em>: packets of data which have no effect on the actual session, but which reassure the router or firewall that the network connection is still active and worth remembering about.
+</p>
+<p>
+Keepalives don't solve everything, unfortunately; although they cause greater robustness against this sort of router, they can also cause a <em>loss</em> of robustness against network dropouts. See <a href="config-keepalive.html#config-keepalive">section 4.13.1</a> in the documentation for more discussion of this.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

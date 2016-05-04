@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Sending terminal modes</title>
+<link rel="previous" href="config-ssh-pty.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-ssh-x11.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-ttymodes"></a>4.23.2 Sending <a name="i0"></a>terminal modes</h1>
+<p>
+The SSH protocol allows the client to send &#8216;terminal modes&#8217; for the remote pseudo-terminal. These usually control the server's expectation of the local terminal's behaviour.
+</p>
+<p>
+If your server does not have sensible defaults for these modes, you may find that changing them here helps. If you don't understand any of this, it's safe to leave these settings alone.
+</p>
+<p>
+(None of these settings will have any effect if no pseudo-terminal is requested or allocated.)
+</p>
+<p>
+You can add or modify a mode by selecting it from the drop-down list, choosing whether it's set automatically or to a specific value with the radio buttons and edit box, and hitting &#8216;Add&#8217;. A mode (or several) can be removed from the list by selecting them and hitting &#8216;Remove&#8217;. The effect of the mode list is as follows:
+</p>
+<ul><li>
+If a mode is not on the list, it will not be specified to the server under any circumstances.
+</li>
+<li>
+If a mode is on the list:
+<ul><li>
+If the &#8216;Auto&#8217; option is selected, the PuTTY tools will decide whether to specify that mode to the server, and if so, will send a sensible value.
+<p>
+PuTTY proper will send modes that it has an opinion on (currently only the code for the Backspace key, <code>ERASE</code>). Plink on Unix will propagate appropriate modes from the local terminal, if any.
+</p>
+
+</li>
+<li>
+If a value is specified, it will be sent to the server under all circumstances. The precise syntax of the value box depends on the mode.
+</li>
+</ul>
+
+</li>
+</ul>
+<p>
+By default, all of the available modes are listed as &#8216;Auto&#8217;, which should do the right thing in most circumstances.
+</p>
+<p>
+The precise effect of each setting, if any, is up to the server. Their names come from <a name="i1"></a>POSIX and other Unix systems, and they are most likely to have a useful effect on such systems. (These are the same settings that can usually be changed using the <a name="i2"></a><code>stty</code> command once logged in to such servers.)
+</p>
+<p>
+Some notable modes are described below; for fuller explanations, see your server documentation.
+</p>
+<ul><li>
+<a name="i3"></a><code>ERASE</code> is the character that when typed by the user will delete one space to the left. When set to &#8216;Auto&#8217; (the default setting), this follows the setting of the local Backspace key in PuTTY (see <a href="config-backspace.html#config-backspace">section 4.4.1</a>).
+<p>
+This and other <a name="i4"></a>special characters are specified using <code>^C</code> notation for Ctrl-C, and so on. Use <code>^&lt;27&gt;</code> or <code>^&lt;0x1B&gt;</code> to specify a character numerically, and <code>^~</code> to get a literal <code>^</code>. Other non-control characters are denoted by themselves. Leaving the box entirely blank indicates that <em>no</em> character should be assigned to the specified function, although this may not be supported by all servers. 
+</p>
+
+</li>
+<li>
+<a name="i5"></a><code>QUIT</code> is a special character that usually forcefully ends the current process on the server (<code>SIGQUIT</code>). On many servers its default setting is Ctrl-backslash (<code>^\</code>), which is easy to accidentally invoke on many keyboards. If this is getting in your way, you may want to change it to another character or turn it off entirely.
+</li>
+<li>
+Boolean modes such as <code>ECHO</code> and <code>ICANON</code> can be specified in PuTTY in a variety of ways, such as <code>true</code>/<code>false</code>, <code>yes</code>/<code>no</code>, and <code>0</code>/<code>1</code>.
+</li>
+<li>
+Terminal speeds are configured elsewhere; see <a href="config-termspeed.html#config-termspeed">section 4.14.4</a>.
+</li>
+</ul>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

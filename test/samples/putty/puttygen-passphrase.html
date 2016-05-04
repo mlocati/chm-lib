@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Setting a passphrase for your key</title>
+<link rel="previous" href="puttygen-comment.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="puttygen-savepriv.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="puttygen-passphrase"></a>8.2.7 Setting a <a name="i0"></a>passphrase for your key</h1>
+<p>
+The &#8216;Key passphrase&#8217; and &#8216;Confirm passphrase&#8217; boxes allow you to choose a passphrase for your key. The passphrase will be used to <a name="i1"></a>encrypt the key on disk, so you will not be able to use the key without first entering the passphrase.
+</p>
+<p>
+When you save the key, PuTTYgen will check that the &#8216;Key passphrase&#8217; and &#8216;Confirm passphrase&#8217; boxes both contain exactly the same passphrase, and will refuse to save the key otherwise.
+</p>
+<p>
+If you leave the passphrase fields blank, the key will be saved unencrypted. You should <em>not</em> do this without good reason; if you do, your private key file on disk will be all an attacker needs to gain access to any machine configured to accept that key. If you want to be able to <a name="i2"></a>log in without having to type a passphrase every time, you should consider using Pageant (<a href="pageant.html#pageant">chapter 9</a>) so that your decrypted key is only held in memory rather than on disk.
+</p>
+<p>
+Under special circumstances you may genuinely <em>need</em> to use a key with no passphrase; for example, if you need to run an automated batch script that needs to make an SSH connection, you can't be there to type the passphrase. In this case we recommend you generate a special key for each specific batch script (or whatever) that needs one, and on the server side you should arrange that each key is <em>restricted</em> so that it can only be used for that specific purpose. The documentation for your SSH server should explain how to do this (it will probably vary between servers).
+</p>
+<p>
+Choosing a good passphrase is difficult. Just as you shouldn't use a dictionary word as a password because it's easy for an attacker to run through a whole dictionary, you should not use a song lyric, quotation or other well-known sentence as a passphrase. <a name="i3"></a>DiceWare (<a href="http://www.diceware.com/"><code>www.diceware.com</code></a>) recommends using at least five words each generated randomly by rolling five dice, which gives over 2^64 possible passphrases and is probably not a bad scheme. If you want your passphrase to make grammatical sense, this cuts down the possibilities a lot and you should use a longer one as a result.
+</p>
+<p>
+<em>Do not forget your passphrase</em>. There is no way to recover it.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

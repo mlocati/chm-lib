@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>&#8216;Shift overrides application's use of mouse&#8217;</title>
+<link rel="previous" href="config-mouse.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-rectselect.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-mouseshift"></a>4.11.3 &#8216;Shift overrides application's use of mouse&#8217;</h1>
+<p>
+PuTTY allows the server to send <a name="i0"></a>control codes that let it <a name="i1"></a>take over the mouse and use it for purposes other than <a name="i2"></a>copy and paste. Applications which use this feature include the text-mode web browser <code>links</code>, the Usenet newsreader <code>trn</code> version 4, and the file manager <code>mc</code> (Midnight Commander).
+</p>
+<p>
+When running one of these applications, pressing the mouse buttons no longer performs copy and paste. If you do need to copy and paste, you can still do so if you hold down Shift while you do your mouse clicks.
+</p>
+<p>
+However, it is possible in theory for applications to even detect and make use of Shift + mouse clicks. We don't know of any applications that do this, but in case someone ever writes one, unchecking the &#8216;Shift overrides application's use of mouse&#8217; checkbox will cause Shift + mouse clicks to go to the server as well (so that mouse-driven copy and paste will be completely disabled).
+</p>
+<p>
+If you want to prevent the application from taking over the mouse at all, you can do this using the Features control panel; see <a href="config-features-mouse.html#config-features-mouse">section 4.6.2</a>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>

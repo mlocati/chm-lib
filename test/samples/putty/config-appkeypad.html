@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>Controlling Application Keypad mode</title>
+<link rel="previous" href="config-appcursor.html">
+<link rel="ToC" href="index.html">
+<link rel="next" href="config-nethack.html">
+<link rel="stylesheet" type="text/css" href="chm.css"></head>
+<body>
+<h1><a name="config-appkeypad"></a>4.4.5 Controlling <a name="i0"></a>Application Keypad mode</h1>
+<p>
+Application Keypad mode is a way for the server to change the behaviour of the numeric keypad.
+</p>
+<p>
+In normal mode, the keypad behaves like a normal Windows keypad: with <a name="i1"></a>NumLock on, the number keys generate numbers, and with NumLock off they act like the arrow keys and Home, End etc.
+</p>
+<p>
+In application mode, all the keypad keys send special control sequences, <em>including</em> Num Lock. Num Lock stops behaving like Num Lock and becomes another function key.
+</p>
+<p>
+Depending on which version of Windows you run, you may find the Num Lock light still flashes on and off every time you press Num Lock, even when application mode is active and Num Lock is acting like a function key. This is unavoidable.
+</p>
+<p>
+Application keypad mode can be turned on and off by the server, depending on the application. PuTTY allows you to configure the initial state.
+</p>
+<p>
+You can also disable application keypad mode completely, using the &#8216;Features&#8217; configuration panel; see <a href="config-features-application.html#config-features-application">section 4.6.1</a>.
+</p>
+
+<!-- version IDs:
+PuTTY release 0.67
+-->
+</body>
+</html>
