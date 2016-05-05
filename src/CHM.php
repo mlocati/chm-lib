@@ -49,6 +49,20 @@ class CHM
     protected $sections;
 
     /**
+     * The TOC.
+     *
+     * @var TOCIndex\Tree|null|false
+     */
+    protected $toc;
+
+    /**
+     * The index.
+     *
+     * @var TOCIndex\Tree|null|false
+     */
+    protected $index;
+
+    /**
      * Initializes the instance.
      *
      * @param Reader $reader The reader that provides the data.
@@ -84,6 +98,9 @@ class CHM
         $this->entries = $this->retrieveEntryList();
 
         $this->retrieveSectionList();
+
+        $this->toc = null;
+        $this->index = null;
     }
 
     /**
@@ -263,5 +280,47 @@ class CHM
                     throw new Exception("Unknown data section: $name");
             }
         }
+    }
+
+    /**
+     * Get the TOC of this CHM file (if available).
+     *
+     * @return SpecialEntry\TOC|null
+     */
+    public function getTOC()
+    {
+        if ($this->toc === null) {
+            $r = false;
+            foreach ($this->entries as $entry) {
+                if ($entry->isFile() && strcasecmp(substr($entry->getPath(), -4), '.hhc') === 0) {
+                    $r = TOCIndex\Tree::fromString($this, $entry->getContents());
+                    break;
+                }
+            }
+            $this->toc = $r;
+        }
+
+        return ($this->toc === false) ? null : $this->toc;
+    }
+
+    /**
+     * Get the index of this CHM file (if available).
+     *
+     * @return TOCIndex\Tree|null
+     */
+    public function getIndex()
+    {
+        if ($this->index === null) {
+            $r = false;
+            foreach ($this->entries as $entry) {
+                if ($entry->isFile() && strcasecmp(substr($entry->getPath(), -4), '.hhk') === 0) {
+                    $r = TOCIndex\Tree::fromString($this, $entry->getContents());
+                    break;
+                }
+            }
+            $this->index = $r;
+        }
+
+        return ($this->index === false) ? null : $this->index;
     }
 }
