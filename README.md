@@ -19,6 +19,8 @@ In the GitHub repo I included only one test file, but I tested locally all the C
 
 ## Sample usage
 
+### Extracting the contents of a CHM file
+
 ```php
 require_once 'CHMLib.php'; // You don't need this if you use Composer
 
@@ -27,4 +29,50 @@ foreach ($chm->getEntries(\CHMLib\Entry::TYPE_FILE) as $entry) {
     echo "File: ", $entry->getPath(), "\n";
     echo "Contents: ", $entry->getContents(), "\n\n";
 }
+```
+
+### Parsing Index and TOC
+
+```php
+require_once 'CHMLib.php'; // You don't need this if you use Composer
+
+function printTree($tree, $level)
+{
+    if ($tree !== null) {
+        foreach ($tree->getItems() as $child) {
+            echo str_repeat("\t", $level).print_r($child->getName(), 1)."\n";
+            printTree($child->getChildren(), $level + 1);
+        }
+    }
+}
+
+
+$chm = \CHMLib\CHM::fromFile('YourFile.chm');
+
+$toc = $chm->getTOC(); // Parse the contents of the .hhc file
+$index = $chm->getIndex(); // Parse the contents of the .hhk file
+
+printTree($toc, 0);
+```
+
+### Resolving multiple-CHM TOCs
+
+Some CHM file may come splitted into multiple CHM files.
+Let's assume that we have a main file (`main.chm`) that contains a TOC that references two other CHM files (`sub1.chm` and `sub2.chm`).
+
+This can easily be parsed with this code:
+
+```php
+require_once 'CHMLib.php'; // You don't need this if you use Composer
+
+$main = \CHMLib\CHM::fromFile('main.chm');
+$map = new \CHMLib\Map();
+$map->add('sub1.chm', \CHMLib\CHM::fromFile('sub1.chm'));
+$map->add('sub2.chm', \CHMLib\CHM::fromFile('sub2.chm'));
+
+$toc = $main->getTOC();
+$toc->resolve($map);
+
+// Now the TOC of the main CHM file contains references to the entries in the other two CHM files 
+printTree($toc, 0);
 ```
