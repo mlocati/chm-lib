@@ -41,7 +41,7 @@ class SampleData
      * @param string $chmFile The full path to the sample CHM filename.
      * @param string $extractedDirectory The full path to the directory that contains the extracted files.
      */
-    public function __construct($chmFile, $extractedDirectory)
+    protected function __construct($chmFile, $extractedDirectory)
     {
         $this->chmFile = $chmFile;
         $this->extractedDirectory = $extractedDirectory;
