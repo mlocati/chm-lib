@@ -203,7 +203,7 @@ class Item
     {
         return $this->isNew;
     }
-    
+
     /**
      * Get the comment of the tree item.
      *
