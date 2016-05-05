@@ -40,16 +40,6 @@ class Tree
     }
 
     /**
-     * Append to the children of this tree the children of another tree.
-     *
-     * @param Tree $tree
-     */
-    public function mergeItems(Tree $tree)
-    {
-        $this->items = array_merge($this->items, $tree->items);
-    }
-
-    /**
      * Resolve the items contained in other CHM files.
      *
      * @param Map $map
@@ -60,12 +50,7 @@ class Tree
     {
         $result = array();
         foreach ($this->items as $item) {
-            $merge = $item->getMerge();
-            if ($merge === null) {
-                $result[] = $item;
-            } else {
-                $result = array_merge($result, $item->resolve($map));
-            }
+            $result = array_merge($result, $item->resolve($map));
         }
 
         $this->items = $result;
@@ -90,7 +75,7 @@ class Tree
         $data = trim((string) $data);
         if (stripos($data, '<object') !== false) {
             $doc = new DOMDocument();
-            $charset = 'UTF-8';
+            $charset = 'ISO-8859-1';
             if (preg_match('%^<\?xml\s+encoding\s*=\s*"([^"]+)"%i', $data, $m)) {
                 $charset = $m[1];
             } else {

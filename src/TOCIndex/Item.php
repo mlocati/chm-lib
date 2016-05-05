@@ -27,6 +27,20 @@ class Item
     protected $name;
 
     /**
+     * Is this item marked as new?
+     *
+     * @var bool
+     */
+    protected $isNew;
+
+    /**
+     * The comment of the tree item.
+     *
+     * @var string
+     */
+    protected $comment;
+
+    /**
      * The keyword of the tree item.
      *
      * @var string
@@ -55,9 +69,23 @@ class Item
     protected $url;
 
     /**
+     * The frame name for this item.
+     *
+     * @var string;
+     */
+    protected $frameName;
+
+    /**
+     * The window name for this item.
+     *
+     * @var string;
+     */
+    protected $windowName;
+
+    /**
      * The path to an entry in another CHM file.
      *
-     * @var array|null If not null, it's an array with two keys: 'chm' and 'entry'.
+     * @var string|array|null If it's an array, it has two keys: 'chm' and 'entry'.
      */
     protected $merge;
 
@@ -89,10 +117,14 @@ class Item
     {
         $this->chm = $chm;
         $this->name = '';
+        $this->isNew = false;
+        $this->comment = '';
         $this->keyword = '';
         $this->seeAlso = '';
         $this->local = '';
         $this->url = '';
+        $this->frameName = '';
+        $this->windowName = '';
         $this->merge = null;
         $this->imageNumber = null;
         $this->children = new Tree();
@@ -105,6 +137,12 @@ class Item
                         // Multiple values are allowed: we keep only the last one
                         $this->name = $value;
                         break;
+                    case 'new':
+                        $this->isNew = !empty($value);
+                        break;
+                    case 'comment':
+                        $this->comment = $value;
+                        break;
                     case 'keyword':
                         $this->keyword = $value;
                         break;
@@ -112,16 +150,25 @@ class Item
                         $this->seeAlso = $value;
                         break;
                     case 'local':
-                        $this->local = '/'.str_replace('\\', '/', $value);
+                        $this->local = '/'.str_replace('\\', '/', str_replace('%20', ' ', $value));
                         break;
                     case 'url':
                         $this->url = $value;
                         break;
+                    case 'framename':
+                        $this->frameName = $value;
+                        break;
+                    case 'windowname':
+                        $this->windowName = $value;
+                        break;
                     case 'merge':
-                        if (!preg_match('%^([^:\\\\/]+)::(.+\.hh[ck])$%i', $value, $matches)) {
-                            throw new Exception("Invalid value of the '$name' attribute: $value");
+                        if ($value !== '') {
+                            if (preg_match('%^([^:\\\\/]+.chm)::(.+)$%i', $value, $matches)) {
+                                $this->merge = array('chm' => $matches[1], 'entry' => '/'.ltrim(str_replace('\\', '/', $matches[2]), '/'));
+                            } else {
+                                $this->merge = $value;
+                            }
                         }
-                        $this->merge = array('chm' => $matches[1], 'entry' => '/'.ltrim(str_replace('\\', '/', $matches[2]), '/'));
                         break;
                     case 'imagenumber':
                         if (is_numeric($value)) {
@@ -145,6 +192,26 @@ class Item
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Is this item marked as new?
+     *
+     * @return bool
+     */
+    public function isNew()
+    {
+        return $this->isNew;
+    }
+    
+    /**
+     * Get the comment of the tree item.
+     *
+     * @return string
+     */
+    public function getComment()
+    {
+        return $this->comment;
     }
 
     /**
@@ -188,6 +255,26 @@ class Item
     }
 
     /**
+     * Get the frame name for this item.
+     *
+     * @return string
+     */
+    public function getFrameName()
+    {
+        return $this->frameName;
+    }
+
+    /**
+     * Get the window name for this item.
+     *
+     * @return string
+     */
+    public function getWindowName()
+    {
+        return $this->frameName;
+    }
+
+    /**
      * Get the path to an entry in another CHM file.
      *
      * @var array|null If not null, it's an array with two keys: 'chm' and 'entry'.
@@ -228,9 +315,7 @@ class Item
      */
     public function resolve(Map $map)
     {
-        if ($this->merge === null) {
-            $result = array($this);
-        } else {
+        if (is_array($this->merge)) {
             $chm = $map->get($this->merge['chm']);
             if ($chm === null) {
                 throw new Exception("Missing CHM reference from map: {$this->merge['chm']}");
@@ -242,6 +327,11 @@ class Item
             $tree = Tree::fromString($chm, $entry->getContents());
             $tree->resolve($map);
             $result = $tree->getItems();
+        } else {
+            $result = array($this);
+        }
+        foreach ($result as $newItem) {
+            $newItem->children->resolve($map);
         }
 
         return $result;
