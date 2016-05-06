@@ -56,7 +56,7 @@ class Tree implements Iterator
     {
         $result = count($this->items);
         foreach ($this->items as $item) {
-            $result += $item->getChildren()->getTotalCount();
+            $result += $item->getChildren()->getItemsCount();
         }
 
         return $result;
