@@ -11,7 +11,7 @@ class Entry
 {
     /**
      * Is the content cache enabled?
-     * 
+     *
      * @var bool
      */
     protected static $contentCacheEnabled = false;
