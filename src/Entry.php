@@ -10,6 +10,33 @@ use Exception;
 class Entry
 {
     /**
+     * Is the content cache enabled?
+     * 
+     * @var bool
+    */
+    protected static $contentCacheEnabled = false;
+
+    /**
+     * Is the content cache enabled?
+     *
+     * @return bool
+     */
+    public static function getContentCacheEnabled()
+    {
+        return static::$contentCacheEnabled;
+    }
+
+    /**
+     * Enable/disable the content cache.
+     *
+     * @param bool $enabled
+     */
+    public static function setContentCacheEnabled($enabled)
+    {
+        static::$contentCacheEnabled = (bool) $enabled;
+    }
+
+    /**
      * Entry type: directory.
      *
      * @var int
@@ -80,6 +107,13 @@ class Entry
     protected $type;
 
     /**
+     * The previously read contents of this entry.
+     *
+     * @var string|null
+     */
+    protected $cachedContents;
+
+    /**
      * Initializes the instance.
      *
      * @param CHM $chm The parent CHM file.
@@ -105,6 +139,7 @@ class Entry
         } else {
             $this->type = static::TYPE_METADATA;
         }
+        $this->cachedContents = null;
     }
 
     /**
@@ -206,11 +241,18 @@ class Entry
      */
     public function getContents()
     {
-        $section = $this->chm->getSectionByIndex($this->contentSectionIndex);
-        if ($section === null) {
-            throw new Exception("The CHM file does not contain a data section with index {$this->contentSectionIndex}");
+        $cacheEnabled = static::getContentCacheEnabled();
+        if ($cacheEnabled && $this->cachedContents !== null) {
+            $result = $this->cachedContents;
+        } else {
+            $section = $this->chm->getSectionByIndex($this->contentSectionIndex);
+            if ($section === null) {
+                throw new Exception("The CHM file does not contain a data section with index {$this->contentSectionIndex}");
+            }
+            $result = $section->getContents($this->offset, $this->length);
+            $this->cachedContents = $cacheEnabled ? $result : null;
         }
 
-        return $section->getContents($this->offset, $this->length);
+        return $result;
     }
 }
