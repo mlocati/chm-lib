@@ -308,30 +308,36 @@ class Item
      * Resolve the items contained in other CHM files.
      *
      * @param Map $map
+     * @param bool $ignoreErrors Set to true to ignore missing CHM and/or entries.
      *
      * @throws Exception Throw an Exception in case of errors.
      *
      * @return static[]
      */
-    public function resolve(Map $map)
+    public function resolve(Map $map, $ignoreErrors = false)
     {
+        $result = array($this);
         if (is_array($this->merge)) {
             $chm = $map->get($this->merge['chm']);
             if ($chm === null) {
-                throw new Exception("Missing CHM reference from map: {$this->merge['chm']}");
+                if (!$ignoreErrors) {
+                    throw new Exception("Missing CHM reference from map: {$this->merge['chm']}");
+                }
+            } else {
+                $entry = $chm->getEntryByPath($this->merge['entry']);
+                if ($entry === null) {
+                    if (!$ignoreErrors) {
+                        throw new Exception("Missing entry '{$this->merge['entry']}' in CHM file {$this->merge['chm']}");
+                    }
+                } else {
+                    $tree = Tree::fromString($chm, $entry->getContents());
+                    $tree->resolve($map, $ignoreErrors);
+                    $result = $tree->getItems();
+                }
             }
-            $entry = $chm->getEntryByPath($this->merge['entry']);
-            if ($entry === null) {
-                throw new Exception("Missing entry '{$this->merge['entry']}' in CHM file {$this->merge['chm']}");
-            }
-            $tree = Tree::fromString($chm, $entry->getContents());
-            $tree->resolve($map);
-            $result = $tree->getItems();
-        } else {
-            $result = array($this);
         }
         foreach ($result as $newItem) {
-            $newItem->children->resolve($map);
+            $newItem->children->resolve($map, $ignoreErrors);
         }
 
         return $result;

@@ -43,14 +43,15 @@ class Tree
      * Resolve the items contained in other CHM files.
      *
      * @param Map $map
+     * @param bool $ignoreErrors Set to true to ignore missing CHM and/or entries.
      *
      * @throws Exception Throw an Exception in case of errors.
      */
-    public function resolve(Map $map)
+    public function resolve(Map $map, $ignoreErrors = false)
     {
         $result = array();
         foreach ($this->items as $item) {
-            $result = array_merge($result, $item->resolve($map));
+            $result = array_merge($result, $item->resolve($map, $ignoreErrors));
         }
 
         $this->items = $result;
