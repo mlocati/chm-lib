@@ -48,6 +48,21 @@ class Tree implements Iterator
     }
 
     /**
+     * Get the total number of items in this instance and in all the sub-instances.
+     *
+     * @return int
+     */
+    public function getItemsCount()
+    {
+        $result = count($this->items);
+        foreach ($this->items as $item) {
+            $result += $item->getChildren()->getTotalCount();
+        }
+
+        return $result;
+    }
+
+    /**
      * Resolve the items contained in other CHM files.
      *
      * @param Map $map
