@@ -342,4 +342,30 @@ class Item
 
         return $result;
     }
+
+    /**
+     * Search the associated entry in the CHM file.
+     *
+     * @return \CHMLib\Entry|null
+     */
+    public function findEntry()
+    {
+        $result = null;
+        if ($this->local !== '') {
+            $path = '/'.ltrim(str_replace('\\', '/', $this->local), '/');
+            $entry = $this->chm->getEntryByPath($path);
+            if ($entry === null) {
+                $p = strpos($path, '#');
+                if ($p !== false) {
+                    $path = substr($path, 0, $p);
+                    $entry = $this->chm->getEntryByPath($path);
+                }
+            }
+            if ($entry !== null && $entry->isFile()) {
+                $result = $entry;
+            }
+        }
+
+        return $result;
+    }
 }
