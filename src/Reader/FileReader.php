@@ -69,6 +69,16 @@ class FileReader extends Reader
     }
 
     /**
+     * Get the file name.
+     *
+     * @return string
+     */
+    public function getFilename()
+    {
+        return $this->filename;
+    }
+
+    /**
      * {@inheritdoc}
      *
      * @see Reader::setPosition()
