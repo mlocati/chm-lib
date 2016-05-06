@@ -8,11 +8,12 @@ use DOMDocument;
 use DOMElement;
 use DOMXpath;
 use Exception;
+use Iterator;
 
 /**
  * A list of items in the TOC or in the Index of an CHM file.
  */
-class Tree
+class Tree implements Iterator
 {
     /**
      * List of Item instances children of this tree.
@@ -20,6 +21,13 @@ class Tree
      * @var Item[]
      */
     protected $items;
+
+    /**
+     * The current index for the Iterator interface.
+     *
+     * @var int
+     */
+    protected $iteratorIndex;
 
     /**
      * Initializes the instance.
@@ -136,5 +144,55 @@ class Tree
                 }
             }
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @see Iterator::current()
+     */
+    public function current()
+    {
+        return isset($this->items[$this->iteratorIndex]) ? $this->items[$this->iteratorIndex] : null;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @see Iterator::key()
+     */
+    public function key()
+    {
+        return $this->iteratorIndex;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @see Iterator::next()
+     */
+    public function next()
+    {
+        ++$this->iteratorIndex;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @see Iterator::rewind()
+     */
+    public function rewind()
+    {
+        $this->iteratorIndex = 0;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @see Iterator::valid()
+     */
+    public function valid()
+    {
+        return $this->iteratorIndex < count($this->items);
     }
 }
