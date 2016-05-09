@@ -185,6 +185,16 @@ class Item
     }
 
     /**
+     * Get the parent CHM instance.
+     *
+     * @return CHM
+     */
+    public function getCHM()
+    {
+        return $this->chm;
+    }
+
+    /**
      * Get the name of the tree item.
      *
      * @return string
