@@ -143,6 +143,16 @@ class Entry
     }
 
     /**
+     * Get the parent CHM file.
+     *
+     * @return CHM
+     */
+    public function getCHM()
+    {
+        return $this->chm;
+    }
+
+    /**
      * Get the path of this entry.
      *
      * @return string
