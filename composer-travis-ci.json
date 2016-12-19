@@ -7,6 +7,6 @@
     "require": {
         "php": ">=5.3",
         "phpunit/phpunit": "4.6.10",
-        "satooshi/php-coveralls": "0.7.*"
+        "satooshi/php-coveralls": "^1.0"
     }
 }
