@@ -19,7 +19,7 @@ In the GitHub repo I included only one test file, but I tested locally all the C
 
 ## Sample usage
 
-### Extracting the contents of a CHM file
+### Analyzing the contents of a CHM file
 
 ```php
 require_once 'CHMLib.php'; // You don't need this if you use Composer
@@ -29,6 +29,45 @@ foreach ($chm->getEntries(\CHMLib\Entry::TYPE_FILE) as $entry) {
     echo "File: ", $entry->getPath(), "\n";
     echo "Contents: ", $entry->getContents(), "\n\n";
 }
+```
+
+### Extracting the contents of a CHM file to a local directory
+
+```php
+<?php
+use \CHMLib\CHM;
+use \CHMLib\Entry;
+
+// Specify the output directory
+$outputDirectory = 'output';
+
+// Specify the input CHM file
+$inputCHMFile = 'YourFile.chm';
+
+require_once 'CHMLib.php';
+
+if (!is_dir($outputDirectory)) {
+    mkdir($outputDirectory, 0777, true);
+}
+$chm = CHM::fromFile($inputCHMFile);
+foreach ($chm->getEntries(Entry::TYPE_FILE) as $entry) {
+    echo "Processing {$entry->getPath()}... ";
+    $entryPath = ltrim(str_replace('/', DIRECTORY_SEPARATOR, $entry->getPath()), DIRECTORY_SEPARATOR);
+    $parts = explode(DIRECTORY_SEPARATOR, $entryPath);
+    $subDirectory = count($parts) > 1 ? implode(DIRECTORY_SEPARATOR, array_splice($parts, 0, -1)) : '';
+    $filename = array_pop($parts);
+    $path = $outputDirectory;
+    if ($subDirectory !== '') {
+        $path .= DIRECTORY_SEPARATOR . $subDirectory;
+        if (!is_dir($path)) {
+            mkdir($path, 0777, true);
+        }
+    }
+    $path .= DIRECTORY_SEPARATOR . $filename;
+    file_put_contents($path, $entry->getContents());
+    echo "done.\n";
+}
+echo "\nAll done.\n";
 ```
 
 ### Parsing Index and TOC
