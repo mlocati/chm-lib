@@ -5,8 +5,9 @@ namespace CHMLib\Test;
 use CHMLib\CHM;
 use CHMLib\Map;
 use CHMLib\TOCIndex\Tree;
+use PHPUnit\Framework\TestCase;
 
-class MergeTocTest extends \PHPUnit_Framework_TestCase
+class MergeTocTest extends TestCase
 {
     public function testMergeToc()
     {
