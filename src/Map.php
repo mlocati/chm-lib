@@ -26,7 +26,7 @@ class Map
      * Add a parsed CHM file to this map.
      *
      * @param string $name The name to give the new CHM instance.
-     * @param CHM $chm The parsed CHM file.
+     * @param \CHMLib\CHM $chm The parsed CHM file.
      */
     public function add($name, CHM $chm)
     {
@@ -38,7 +38,7 @@ class Map
      *
      * @param string $name The mapped name.
      *
-     * @return CHM|null
+     * @return \CHMLib\CHM|null
      */
     public function get($name)
     {

@@ -198,21 +198,21 @@ class Inflater
     /**
      * The main Huffman tree.
      *
-     * @var Tree
+     * @var \CHMLib\LZX\Tree
      */
     protected $mainTree;
 
     /**
      * The length Huffman tree.
      *
-     * @var Tree
+     * @var \CHMLib\LZX\Tree
      */
     protected $lengthTree;
 
     /**
      * The aligned offset Huffman tree.
      *
-     * @var Tree
+     * @var \CHMLib\LZX\Tree
      */
     protected $alignedTree;
 
@@ -221,7 +221,7 @@ class Inflater
      *
      * @param int $windowSize The window size (determines the number of window subdivisions, or "position slots"),
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function __construct($windowSize)
     {
@@ -255,10 +255,10 @@ class Inflater
      * Uncompress bytes.
      *
      * @param bool $reset Reset the LXZ state?
-     * @param BitReader $reader The reader that provides the data.
+     * @param \CHMLib\Reader\BitReader $reader The reader that provides the data.
      * @param int $numberOfBytes The number of decompressed bytes to retrieve.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      *
      * @return string
      */

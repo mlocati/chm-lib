@@ -35,7 +35,7 @@ class FileReader extends Reader
      *
      * @param string $filename The file name to be read.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function __construct($filename)
     {
@@ -81,7 +81,7 @@ class FileReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::setPosition()
+     * @see \CHMLib\Reader\Reader::setPosition()
      */
     public function setPosition($position)
     {
@@ -93,7 +93,7 @@ class FileReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::getPosition()
+     * @see \CHMLib\Reader\Reader::getPosition()
      */
     public function getPosition()
     {
@@ -108,7 +108,7 @@ class FileReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::getLength()
+     * @see \CHMLib\Reader\Reader::getLength()
      */
     public function getLength()
     {
@@ -118,7 +118,7 @@ class FileReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::readString()
+     * @see \CHMLib\Reader\Reader::readString()
      */
     public function readString($length)
     {

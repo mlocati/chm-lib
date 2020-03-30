@@ -15,7 +15,7 @@ class Item
     /**
      * The parent CHM instance.
      *
-     * @var CHM
+     * @var \CHMLib\CHM
      */
     protected $chm;
 
@@ -99,17 +99,17 @@ class Item
     /**
      * The sub-elements of this Item.
      *
-     * @var Tree
+     * @var \CHMLib\TOCIndex\Tree
      */
     protected $children;
 
     /**
      * Initializes the instance.
      *
-     * @param CHM $chm The parent CHM instance.
-     * @param DOMElement $object The OBJECT element.
+     * @param \CHMLib\CHM $chm The parent CHM instance.
+     * @param \DOMElement $object The OBJECT element.
      *
-     * @throws Exception Throw an Exception in case of errors.
+     * @throws \Exception Throw an Exception in case of errors.
      *
      * @return static
      */
@@ -187,7 +187,7 @@ class Item
     /**
      * Get the parent CHM instance.
      *
-     * @return CHM
+     * @return \CHMLib\CHM
      */
     public function getCHM()
     {
@@ -307,7 +307,7 @@ class Item
     /**
      * Get the sub-elements of this Item.
      *
-     * @return Tree
+     * @return \CHMLib\TOCIndex\Tree
      */
     public function getChildren()
     {
@@ -317,10 +317,10 @@ class Item
     /**
      * Resolve the items contained in other CHM files.
      *
-     * @param Map $map
+     * @param \CHMLib\Map $map
      * @param bool $ignoreErrors Set to true to ignore missing CHM and/or entries.
      *
-     * @throws Exception Throw an Exception in case of errors.
+     * @throws \Exception Throw an Exception in case of errors.
      *
      * @return static[]
      */

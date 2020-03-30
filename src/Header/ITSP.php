@@ -66,7 +66,7 @@ class ITSP extends VersionedHeader
     /**
      * The language of the program that generated the CHM file.
      *
-     * @var Language
+     * @var \CHMLib\Windows\Language
      */
     protected $generatorLanguage;
 
@@ -82,8 +82,8 @@ class ITSP extends VersionedHeader
      *
      * @param Reader $reader The reader that provides the data.
      *
-     * @throws UnexpectedHeaderException Throws an UnexpectedHeaderException if the header signature is not valid.
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \CHMLib\Exception\UnexpectedHeaderException Throws an UnexpectedHeaderException if the header signature is not valid.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function __construct(Reader $reader)
     {
@@ -186,7 +186,7 @@ class ITSP extends VersionedHeader
     /**
      * Get the language of the program that generated the CHM file.
      *
-     * @return Language
+     * @return \CHMLib\Windows\Language
      */
     public function getGeneratorLanguage()
     {

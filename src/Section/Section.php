@@ -26,7 +26,7 @@ abstract class Section
     /**
      * Initializes the instance.
      *
-     * @param CHM $chm The parent CHM file.
+     * @param \CHMLib\CHM $chm The parent CHM file.
      */
     public function __construct(CHM $chm)
     {
@@ -39,7 +39,7 @@ abstract class Section
      * @param int $offset The position where the data starts (relative to the start of this section).
      * @param int $length The length of the (compressed) data.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      *
      * @return string
      */

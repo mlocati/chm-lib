@@ -60,7 +60,7 @@ class MSCompressedSection extends Section
     /**
      * The currently cached blocks.
      *
-     * @var LRUCache
+     * @var \CHMLib\LZX\LRUCache
      */
     protected $cachedBlocks;
 

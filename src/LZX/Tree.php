@@ -69,7 +69,7 @@ class Tree
     /**
      * Build a fast Huffman decoding table out of just a canonical Huffman code lengths table.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      *
      * @author This function was coded by David Tritscher.
      */
@@ -142,9 +142,9 @@ class Tree
     /**
      * Read the align lengths data.
      *
-     * @param BitReader $reader The reader that provides the data.
+     * @param \CHMLib\Reader\BitReader $reader The reader that provides the data.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function readAlignLengthTable(BitReader $reader)
     {
@@ -157,7 +157,7 @@ class Tree
      * Read in code lengths for symbols first to last in the given table.
      * The code lengths are stored in their own special LZX way.
      *
-     * @param BitReader $reader The reader that provides the data.
+     * @param \CHMLib\Reader\BitReader $reader The reader that provides the data.
      * @param int $first
      * @param int $last
      */
@@ -207,9 +207,9 @@ class Tree
     /**
      * Decode a Huffman symbol from the bitstream using the stated table and return it.
      *
-     * @param BitReader $reader The reader that provides the data.
+     * @param \CHMLib\Reader\BitReader $reader The reader that provides the data.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      *
      * @return int
      */

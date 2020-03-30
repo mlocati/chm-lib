@@ -67,7 +67,7 @@ class Entry
     /**
      * The parent CHM file.
      *
-     * @var CHM
+     * @var \CHMLib\CHM
      */
     protected $chm;
 
@@ -116,7 +116,7 @@ class Entry
     /**
      * Initializes the instance.
      *
-     * @param CHM $chm The parent CHM file.
+     * @param \CHMLib\CHM $chm The parent CHM file.
      */
     public function __construct(CHM $chm)
     {
@@ -145,7 +145,7 @@ class Entry
     /**
      * Get the parent CHM file.
      *
-     * @return CHM
+     * @return \CHMLib\CHM
      */
     public function getCHM()
     {
@@ -245,7 +245,7 @@ class Entry
     /**
      * Get the contents of this entry.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      *
      * @return string
      */

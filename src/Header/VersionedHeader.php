@@ -26,7 +26,7 @@ abstract class VersionedHeader extends Header
     /**
      * Initializes the instance.
      *
-     * @param Reader $reader The reader that provides the data.
+     * @param \CHMLib\Reader\Reader $reader The reader that provides the data.
      *
      * @throws \Exception Throws an Exception in case of errors.
      */
