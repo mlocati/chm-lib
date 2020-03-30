@@ -138,7 +138,6 @@ class MSCompressedSection extends Section
             $blockNo = $startBlockNo - $startBlockNo % $this->resetInterval;
             $inflater = new Inflater($this->windowSize);
 
-            $buf = array();
             $pos = 0;
             $bytesLeft = 0;
             $reader = $this->chm->getReader();
