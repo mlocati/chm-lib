@@ -97,6 +97,13 @@ class Item
     protected $imageNumber;
 
     /**
+     * The value of the X-Condition parameter.
+     *
+     * @var string
+     */
+    protected $xCondition;
+
+    /**
      * The sub-elements of this Item.
      *
      * @var \CHMLib\TOCIndex\Tree
@@ -127,6 +134,7 @@ class Item
         $this->windowName = '';
         $this->merge = null;
         $this->imageNumber = null;
+        $this->xCondition = '';
         $this->children = new Tree();
         $matches = null;
         foreach ($object->childNodes as $p) {
@@ -177,6 +185,9 @@ class Item
                         } elseif ($value !== '') {
                             throw new Exception("Invalid value of the '$name' attribute: $value");
                         }
+                        break;
+                    case 'x-condition':
+                        $this->xCondition = $value;
                         break;
                     default:
                         throw new Exception("Unknown parameter name '$name' of a tree item (value: '$value')");
@@ -303,6 +314,16 @@ class Item
     public function getImageNumber()
     {
         return $this->imageNumber;
+    }
+    
+    /**
+     * Get the value of the X-Condition parameter.
+     *
+     * @return string
+     */
+    public function getXCondition()
+    {
+        return $this->xCondition;
     }
 
     /**
