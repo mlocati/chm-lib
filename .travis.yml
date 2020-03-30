@@ -2,6 +2,10 @@ sudo: true
 
 language: php
 
+branches:
+  only:
+  - master
+
 env:
   - COMPOSER_DISABLE_XDEBUG_WARN=1
 
