@@ -6,7 +6,6 @@ use CHMLib\CHM;
 use CHMLib\Map;
 use DOMDocument;
 use DOMElement;
-use DOMXpath;
 use Exception;
 use Iterator;
 
@@ -98,6 +97,7 @@ class Tree implements Iterator
         $result = new static();
         $data = trim((string) $data);
         if (stripos($data, '<object') !== false) {
+            $m = null;
             $doc = new DOMDocument();
             $charset = 'ISO-8859-1';
             if (preg_match('%^<\?xml\s+encoding\s*=\s*"([^"]+)"%i', $data, $m)) {

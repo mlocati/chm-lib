@@ -221,7 +221,7 @@ class CHM
                     throw $x;
                 }
                 $this->reader->setPosition($offset);
-                $pmgi = new Header\PMGI($this->reader);
+                new Header\PMGI($this->reader);
                 $pmgl = null;
             }
             if ($pmgl !== null) {

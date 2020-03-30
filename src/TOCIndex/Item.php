@@ -128,6 +128,7 @@ class Item
         $this->merge = null;
         $this->imageNumber = null;
         $this->children = new Tree();
+        $matches = null;
         foreach ($object->childNodes as $p) {
             if ($p instanceof DOMElement && strcasecmp($p->tagName, 'param') === 0) {
                 $name = trim((string) $p->getAttribute('name'));
