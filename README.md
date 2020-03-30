@@ -1,6 +1,4 @@
 [![Build Status](https://api.travis-ci.org/mlocati/chm-lib.svg?branch=master)](https://travis-ci.org/mlocati/chm-lib)
-[![HHVM Status](http://hhvm.h4cc.de/badge/mlocati/chm-lib.svg?style=flat)](http://hhvm.h4cc.de/package/mlocati/chm-lib)
-[![StyleCI Status](https://styleci.io/repos/58052834/shield)](https://styleci.io/repos/58052834)
 [![Coverage Status](https://coveralls.io/repos/github/mlocati/chm-lib/badge.svg?branch=master)](https://coveralls.io/github/mlocati/chm-lib?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mlocati/chm-lib/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mlocati/chm-lib/?branch=master)
 
