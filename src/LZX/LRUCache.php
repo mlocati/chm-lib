@@ -12,7 +12,7 @@ class LRUCache
     /**
      * The cached items.
      *
-     * @var LRUCacheItem[]
+     * @var \CHMLib\LZX\LRUCacheItem[]
      */
     protected $cache;
 
@@ -28,7 +28,7 @@ class LRUCache
      *
      * @param int $capacity The maximim capacity of the cache.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function __construct($capacity)
     {

@@ -12,7 +12,7 @@ class UncompressedSection extends Section
     /**
      * Initializes the instance.
      *
-     * @param CHM $chm The parent CHM file.
+     * @param \CHMLib\CHM $chm The parent CHM file.
      */
     public function __construct(CHM $chm)
     {
@@ -23,7 +23,7 @@ class UncompressedSection extends Section
     /**
      * {@inheritdoc}
      *
-     * @see Section::getContents()
+     * @see \CHMLib\Section\Section::getContents()
      */
     public function getContents($offset, $length)
     {

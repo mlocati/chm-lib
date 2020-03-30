@@ -6,7 +6,6 @@ use CHMLib\CHM;
 use CHMLib\Map;
 use DOMDocument;
 use DOMElement;
-use DOMXpath;
 use Exception;
 use Iterator;
 
@@ -18,7 +17,7 @@ class Tree implements Iterator
     /**
      * List of Item instances children of this tree.
      *
-     * @var Item[]
+     * @var \CHMLib\TOCIndex\Item[]
      */
     protected $items;
 
@@ -40,7 +39,7 @@ class Tree implements Iterator
     /**
      * Get the items contained in this tree.
      *
-     * @return Item[]
+     * @return \CHMLib\TOCIndex\Item[]
      */
     public function getItems()
     {
@@ -65,10 +64,10 @@ class Tree implements Iterator
     /**
      * Resolve the items contained in other CHM files.
      *
-     * @param Map $map
+     * @param \CHMLib\Map $map
      * @param bool $ignoreErrors Set to true to ignore missing CHM and/or entries.
      *
-     * @throws Exception Throw an Exception in case of errors.
+     * @throws \Exception Throw an Exception in case of errors.
      */
     public function resolve(Map $map, $ignoreErrors = false)
     {
@@ -83,10 +82,10 @@ class Tree implements Iterator
     /**
      * Create a new instance starting from the whole TOC/Index source 'HTML'.
      *
-     * @param CHM $chm The parent CHM instance.
+     * @param \CHMLib\CHM $chm The parent CHM instance.
      * @param string $data The contents of the .hhc/.hhk file.
      *
-     * @throws Exception Throw an Exception in case of errors.
+     * @throws \Exception Throw an Exception in case of errors.
      *
      * @return static
      */
@@ -98,6 +97,7 @@ class Tree implements Iterator
         $result = new static();
         $data = trim((string) $data);
         if (stripos($data, '<object') !== false) {
+            $m = null;
             $doc = new DOMDocument();
             $charset = 'ISO-8859-1';
             if (preg_match('%^<\?xml\s+encoding\s*=\s*"([^"]+)"%i', $data, $m)) {
@@ -129,8 +129,8 @@ class Tree implements Iterator
     /**
      * Parse a DOMElement and read the items/sub trees.
      *
-     * @param CHM $chm
-     * @param DOMElement $parentElement
+     * @param \CHMLib\CHM $chm
+     * @param \DOMElement $parentElement
      * @param int $depth
      */
     protected function parseParentElement(CHM $chm, DOMElement $parentElement, $depth)
@@ -164,7 +164,7 @@ class Tree implements Iterator
     /**
      * {@inheritdoc}
      *
-     * @see Iterator::current()
+     * @see \Iterator::current()
      */
     public function current()
     {
@@ -174,7 +174,7 @@ class Tree implements Iterator
     /**
      * {@inheritdoc}
      *
-     * @see Iterator::key()
+     * @see \Iterator::key()
      */
     public function key()
     {
@@ -184,7 +184,7 @@ class Tree implements Iterator
     /**
      * {@inheritdoc}
      *
-     * @see Iterator::next()
+     * @see \Iterator::next()
      */
     public function next()
     {
@@ -194,7 +194,7 @@ class Tree implements Iterator
     /**
      * {@inheritdoc}
      *
-     * @see Iterator::rewind()
+     * @see \Iterator::rewind()
      */
     public function rewind()
     {
@@ -204,7 +204,7 @@ class Tree implements Iterator
     /**
      * {@inheritdoc}
      *
-     * @see Iterator::valid()
+     * @see \Iterator::valid()
      */
     public function valid()
     {

@@ -5,3 +5,4 @@
 /.project
 /.buildpath
 /composer.lock
+/coverage-clover.xml

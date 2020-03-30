@@ -15,7 +15,7 @@ class Item
     /**
      * The parent CHM instance.
      *
-     * @var CHM
+     * @var \CHMLib\CHM
      */
     protected $chm;
 
@@ -97,19 +97,26 @@ class Item
     protected $imageNumber;
 
     /**
+     * The value of the X-Condition parameter.
+     *
+     * @var string
+     */
+    protected $xCondition;
+
+    /**
      * The sub-elements of this Item.
      *
-     * @var Tree
+     * @var \CHMLib\TOCIndex\Tree
      */
     protected $children;
 
     /**
      * Initializes the instance.
      *
-     * @param CHM $chm The parent CHM instance.
-     * @param DOMElement $object The OBJECT element.
+     * @param \CHMLib\CHM $chm The parent CHM instance.
+     * @param \DOMElement $object The OBJECT element.
      *
-     * @throws Exception Throw an Exception in case of errors.
+     * @throws \Exception Throw an Exception in case of errors.
      *
      * @return static
      */
@@ -127,7 +134,9 @@ class Item
         $this->windowName = '';
         $this->merge = null;
         $this->imageNumber = null;
+        $this->xCondition = '';
         $this->children = new Tree();
+        $matches = null;
         foreach ($object->childNodes as $p) {
             if ($p instanceof DOMElement && strcasecmp($p->tagName, 'param') === 0) {
                 $name = trim((string) $p->getAttribute('name'));
@@ -177,6 +186,9 @@ class Item
                             throw new Exception("Invalid value of the '$name' attribute: $value");
                         }
                         break;
+                    case 'x-condition':
+                        $this->xCondition = $value;
+                        break;
                     default:
                         throw new Exception("Unknown parameter name '$name' of a tree item (value: '$value')");
                 }
@@ -187,7 +199,7 @@ class Item
     /**
      * Get the parent CHM instance.
      *
-     * @return CHM
+     * @return \CHMLib\CHM
      */
     public function getCHM()
     {
@@ -303,11 +315,21 @@ class Item
     {
         return $this->imageNumber;
     }
+    
+    /**
+     * Get the value of the X-Condition parameter.
+     *
+     * @return string
+     */
+    public function getXCondition()
+    {
+        return $this->xCondition;
+    }
 
     /**
      * Get the sub-elements of this Item.
      *
-     * @return Tree
+     * @return \CHMLib\TOCIndex\Tree
      */
     public function getChildren()
     {
@@ -317,10 +339,10 @@ class Item
     /**
      * Resolve the items contained in other CHM files.
      *
-     * @param Map $map
+     * @param \CHMLib\Map $map
      * @param bool $ignoreErrors Set to true to ignore missing CHM and/or entries.
      *
-     * @throws Exception Throw an Exception in case of errors.
+     * @throws \Exception Throw an Exception in case of errors.
      *
      * @return static[]
      */

@@ -45,7 +45,7 @@ class StringReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::setPosition()
+     * @see \CHMLib\Reader\Reader::setPosition()
      */
     public function setPosition($position)
     {
@@ -58,7 +58,7 @@ class StringReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::getPosition()
+     * @see \CHMLib\Reader\Reader::getPosition()
      */
     public function getPosition()
     {
@@ -68,7 +68,7 @@ class StringReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::getLength()
+     * @see \CHMLib\Reader\Reader::getLength()
      */
     public function getLength()
     {
@@ -78,7 +78,7 @@ class StringReader extends Reader
     /**
      * {@inheritdoc}
      *
-     * @see Reader::readString()
+     * @see \CHMLib\Reader\Reader::readString()
      */
     public function readString($length)
     {

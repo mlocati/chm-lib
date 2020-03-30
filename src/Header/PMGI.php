@@ -23,8 +23,8 @@ class PMGI extends Header
      *
      * @param Reader $reader The reader that provides the data.
      *
-     * @throws UnexpectedHeaderException Throws an UnexpectedHeaderException if the header signature is not valid.
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \CHMLib\Exception\UnexpectedHeaderException Throws an UnexpectedHeaderException if the header signature is not valid.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function __construct(Reader $reader)
     {

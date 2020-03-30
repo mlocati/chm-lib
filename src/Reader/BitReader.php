@@ -118,7 +118,7 @@ class BitReader extends StringReader
      *
      * @param int $n The number of bytes to skip.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function skip($n)
     {
@@ -134,7 +134,7 @@ class BitReader extends StringReader
      * @param int $offset The offset at which the data should be inserted.
      * @param int $length The number of bytes to read.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      *
      * @return array Return the $buffer array with filled-in bytes.
      */

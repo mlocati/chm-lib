@@ -16,58 +16,58 @@ class CHM
     /**
      * The reader that provides the data.
      *
-     * @var Reader
+     * @var \CHMLib\Reader\Reader
      */
     protected $reader;
 
     /**
      * The CHM initial header.
      *
-     * @var Header\ITSF
+     * @var \CHMLib\Header\ITSF
      */
     protected $itsf;
 
     /**
      * The directory listing header.
      *
-     * @var Header\ITSP
+     * @var \CHMLib\Header\ITSP
      */
     protected $itsp;
 
     /**
      * The entries found in this CHM.
      *
-     * @var Entry[]
+     * @var \CHMLib\Entry[]
      */
     protected $entries;
 
     /**
      * The data sections.
      *
-     * @var Section\Section[]
+     * @var \CHMLib\Section\Section[]
      */
     protected $sections;
 
     /**
      * The TOC.
      *
-     * @var TOCIndex\Tree|null|false
+     * @var \CHMLib\TOCIndex\Tree|null|false
      */
     protected $toc;
 
     /**
      * The index.
      *
-     * @var TOCIndex\Tree|null|false
+     * @var \CHMLib\TOCIndex\Tree|null|false
      */
     protected $index;
 
     /**
      * Initializes the instance.
      *
-     * @param Reader $reader The reader that provides the data.
+     * @param \CHMLib\Reader\Reader $reader The reader that provides the data.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     public function __construct(Reader $reader)
     {
@@ -128,7 +128,7 @@ class CHM
     /**
      * Get the reader that provides the data.
      *
-     * @return Reader
+     * @return \CHMLib\Reader\Reader
      */
     public function getReader()
     {
@@ -138,7 +138,7 @@ class CHM
     /**
      * Get the CHM initial header.
      *
-     * @return Header\ITSF
+     * @return \CHMLib\Header\ITSF
      */
     public function getITSF()
     {
@@ -148,7 +148,7 @@ class CHM
     /**
      * Get the directory listing header.
      *
-     * @return Header\ITSP
+     * @return \CHMLib\Header\ITSP
      */
     public function getITSP()
     {
@@ -160,7 +160,7 @@ class CHM
      *
      * @param string $path The full path (case sensitive) of the entry to look for.
      *
-     * @return Entry|null
+     * @return \CHMLib\Entry|null
      */
     public function getEntryByPath($path)
     {
@@ -192,7 +192,7 @@ class CHM
      *
      * @param int $i
      *
-     * @return Section\Section|null
+     * @return \CHMLib\Section\Section|null
      */
     public function getSectionByIndex($i)
     {
@@ -202,9 +202,9 @@ class CHM
     /**
      * Retrieve the list of the entries contained in this CHM.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      *
-     * @return Entry[]
+     * @return \CHMLib\Entry[]
      */
     protected function retrieveEntryList()
     {
@@ -221,7 +221,7 @@ class CHM
                     throw $x;
                 }
                 $this->reader->setPosition($offset);
-                $pmgi = new Header\PMGI($this->reader);
+                new Header\PMGI($this->reader);
                 $pmgl = null;
             }
             if ($pmgl !== null) {
@@ -242,7 +242,7 @@ class CHM
     /**
      * Retrieve the list of the data sections contained in this CHM.
      *
-     * @throws Exception Throws an Exception in case of errors.
+     * @throws \Exception Throws an Exception in case of errors.
      */
     protected function retrieveSectionList()
     {
@@ -285,7 +285,7 @@ class CHM
     /**
      * Get the TOC of this CHM file (if available).
      *
-     * @return SpecialEntry\TOC|null
+     * @return \CHMLib\TOCIndex\Tree|null
      */
     public function getTOC()
     {
@@ -306,7 +306,7 @@ class CHM
     /**
      * Get the index of this CHM file (if available).
      *
-     * @return TOCIndex\Tree|null
+     * @return \CHMLib\TOCIndex\Tree|null
      */
     public function getIndex()
     {
