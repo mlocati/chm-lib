@@ -158,13 +158,22 @@ class CHM
     /**
      * Get an entry given its full path.
      *
-     * @param string $path The full path (case sensitive) of the entry to look for.
+     * @param string $path The full path of the entry to look for.
+     * @param bool $caseSensitive Perform a case-sensitive search?
      *
      * @return \CHMLib\Entry|null
      */
-    public function getEntryByPath($path)
+    public function getEntryByPath($path, $caseSensitive = false)
     {
-        return isset($this->entries[$path]) ? $this->entries[$path] : null;
+        if (isset($this->entries[$path])) {
+            return $this->entries[$path];
+        }
+        if ($caseSensitive) {
+            return null;
+        }
+        $entries = array_change_key_case($this->entries, CASE_LOWER);
+        $path = strtolower($path);
+        return isset($entries[$path]) ? $entries[$path] : null;
     }
 
     /**
