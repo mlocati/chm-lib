@@ -17,23 +17,26 @@ class MergeTocTest extends TestCase
         $map->add('second.chm', CHM::fromFile($dir.'/second.chm'));
         $toc = $main->getTOC();
         $this->assertNotNull($toc);
-        $this->assertSame(
-            <<<EOT
+        $expected = <<<'EOT'
 Heading in main
     Topic in main
 second.chm>/second.hhc
 EOT
-            ,
+        ;
+        $this->assertSame(
+            str_replace("\r\n", "\n", $expected),
             rtrim(static::formatTree($toc, 0))
         );
         $toc->resolve($map);
-        $this->assertSame(<<<EOT
+        $expected = <<<'EOT'
 Heading in main
     Topic in main
 Heading in second
     Topic in second
 EOT
-            ,
+        ;
+        $this->assertSame(
+            str_replace("\r\n", "\n", $expected),
             rtrim(static::formatTree($toc, 0))
         );
     }
