@@ -25,12 +25,20 @@
             "CHMLib\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "CHMLib\\Test\\": "test/tests/"
+        }
+    },
     "require": {
         "php": ">=5.3.3",
 		"ext-dom": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8.36"
+        "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.5 || ^9.5"
+    },
+    "scripts": {
+        "test": "phpunit"
     },
     "funding": [
         {

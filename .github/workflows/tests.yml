@@ -1,0 +1,150 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+    tags-ignore:
+      - '**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  check-php-syntax:
+    name: PHP ${{ matrix.php-version }} Syntax
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version:
+          - "5.3"
+          - "7.4"
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: opcache
+          coverage: none
+          tools: none
+      -
+        name: Check syntax
+        uses: mlocati/check-php-syntax@v1
+        with:
+          fail-on-warnings: true
+          exclude: |
+            test/tests
+
+  check-development-leftovers:
+    name: Check Development Leftovers
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Search for debugger or xdebug_break
+        run: |
+          echo "Scanning for 'debugger' or 'xdebug_break'..."
+          matches=$(grep -Enr --include=\*.{js,php} '(^|[^a-zA-Z0-9_])(debugger|xdebug_break)\b' . || true)
+          if [[ -n "$matches" ]]; then
+            echo "Found the following matches:"
+            echo "$matches"
+            echo "::error::Development leftovers found in the codebase."
+            exit 1
+          else
+            echo "No development leftovers found."
+          fi
+
+  phpunit:
+    name: PHPUnit (php${{ matrix.php-version }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    needs:
+      - check-php-syntax
+      - check-development-leftovers
+    strategy:
+      matrix:
+        include:
+          -
+            os: ubuntu-latest
+            php-version: "5.3"
+          -
+            os: ubuntu-latest
+            php-version: "5.4"
+          -
+            os: ubuntu-latest
+            php-version: "5.5"
+          -
+            os: ubuntu-latest
+            php-version: "5.6"
+          -
+            os: ubuntu-latest
+            php-version: "7.0"
+          -
+            os: ubuntu-latest
+            php-version: "7.1"
+          -
+            os: ubuntu-latest
+            php-version: "7.2"
+          -
+            os: ubuntu-latest
+            php-version: "7.3"
+          -
+            os: ubuntu-latest
+            php-version: "7.4"
+            scrutinizer: yes
+          -
+            os: windows-latest
+            php-version: "5.6"
+          -
+            os: windows-latest
+            php-version: "7.4"
+    steps:
+      -
+        name: Configure job
+        id: configure
+        shell: pwsh
+        run: |
+          $coverageTools = 'none'
+          $phpunitOptions = ''
+          if ('${{ github.repository_owner }}' -eq 'mlocati' -and '${{ matrix.scrutinizer }}' -eq 'yes') {
+            $coverageTools = 'xdebug'
+            $phpunitOptions = '--coverage-clover coverage-clover.xml'
+          }
+          "coverage-tools=$coverageTools" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "phpunit-options=$phpunitOptions" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          Write-Output 'Results:'
+          Get-Content $env:GITHUB_OUTPUT
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+      -
+        name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: opcache
+          coverage: ${{ steps.configure.outputs.coverage-tools }}
+          tools: composer
+      -
+        name: Check composer.json
+        run: composer --ansi --no-interaction validate composer.json
+      -
+        name: Install dependencies
+        run: composer --ansi --no-interaction --no-progress update
+      -
+        name: Run PHPUnit
+        run: composer --ansi --no-interaction run-script test -- ${{ steps.configure.outputs.phpunit-options }}
+      -
+        name: Download Scrutinizer
+        if: steps.configure.outputs.coverage-tools != 'none'
+        run: curl -sSLf -o ocular.phar https://scrutinizer-ci.com/ocular.phar
+      -
+        name: Upload Scrutinizer data
+        if: steps.configure.outputs.coverage-tools != 'none'
+        run: php ocular.phar code-coverage:upload --format=php-clover --ansi --no-interaction coverage-clover.xml
