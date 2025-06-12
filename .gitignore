@@ -1,8 +1,6 @@
-/.settings/
 /test/samples/
 /tmp/
 /vendor/
-/.project
-/.buildpath
 /composer.lock
 /coverage-clover.xml
+/.phpunit.result.cache

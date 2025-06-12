@@ -1,15 +1,9 @@
 <?php
 
-require_once __DIR__.'/../CHMLib.php';
-
-spl_autoload_register(
-    function ($class) {
-        if (strpos($class, 'CHMLib\\Test\\') !== 0) {
-            return;
-        }
-        $file = __DIR__.DIRECTORY_SEPARATOR.'tests'.str_replace('\\', DIRECTORY_SEPARATOR, substr($class, strlen('CHMLib\\Test'))).'.php';
-        if (is_file($file)) {
-            require_once $file;
-        }
-    }
-);
+if (class_exists('PHPUnit\\Runner\\Version') && version_compare(PHPUnit\Runner\Version::id(), '9') >= 0) {
+    class_alias('CHMLib\\Test\\TestCase9', 'CHMLib\\Test\\TestCase');
+} elseif (class_exists('PHPUnit\\Runner\\Version') && version_compare(PHPUnit\Runner\Version::id(), '7') >= 0) {
+    class_alias('CHMLib\\Test\\TestCase7', 'CHMLib\\Test\\TestCase');
+} else {
+    class_alias('CHMLib\\Test\\TestCase4', 'CHMLib\\Test\\TestCase');
+}

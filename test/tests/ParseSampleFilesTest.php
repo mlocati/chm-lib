@@ -4,8 +4,9 @@ namespace CHMLib\Test;
 
 use CHMLib\CHM;
 use CHMLib\Entry;
+use CHMLib\Test\TestCase;
 
-class ParseSampleFilesTest extends \PHPUnit_Framework_TestCase
+class ParseSampleFilesTest extends TestCase
 {
     public function compareContentProvider()
     {

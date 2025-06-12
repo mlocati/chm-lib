@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/mlocati/chm-lib.svg?branch=master)](https://travis-ci.org/mlocati/chm-lib)
+[![Tests](https://github.com/concrete5-community/alert_popup/actions/workflows/tests.yml/badge.svg)](https://github.com/concrete5-community/alert_popup/actions/workflows/tests.yml)
 [![Coverage Status](https://coveralls.io/repos/github/mlocati/chm-lib/badge.svg?branch=master)](https://coveralls.io/github/mlocati/chm-lib?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mlocati/chm-lib/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mlocati/chm-lib/?branch=master)
 
